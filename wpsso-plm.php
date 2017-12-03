@@ -174,4 +174,3 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 	$wpssoplm =& WpssoPlm::get_instance();
 }
 
-?>

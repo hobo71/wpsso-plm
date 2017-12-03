@@ -625,4 +625,3 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 	}
 }
 
-?>

@@ -168,4 +168,3 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 	}
 }
 
-?>

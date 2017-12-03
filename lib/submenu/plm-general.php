@@ -294,4 +294,3 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 	}
 }
 
-?>

@@ -5,4 +5,3 @@ _x( '17:00', 'option value', 'wpsso-plm' );
 _x( 'local.business', 'option value', 'wpsso-plm' );
 _x( 'Place / Location', 'lib file description', 'wpsso-plm' );
 _x( 'WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.', 'plugin description', 'wpsso-plm' );
-?>
