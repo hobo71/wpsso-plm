@@ -106,8 +106,10 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 			),
 		);
 
-		public static function get_version() { 
-			return self::$cf['plugin']['wpssoplm']['version'];
+		public static function get_version( $add_slug = false ) {
+			$ext = 'wpssoplm';
+			$info =& self::$cf['plugin'][$ext];
+			return $add_slug ? $info['slug'].'-'.$info['version'] : $info['version'];
 		}
 
 		public static function set_constants( $plugin_filepath ) { 
