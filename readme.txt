@@ -140,7 +140,7 @@ The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_so
 
 == Changelog ==
 
-<h3>Free / Basic Version Repository</h3>
+<h3>Free / Basic Version Repositories</h3>
 
 * [GitHub](https://surniaulula.github.io/wpsso-plm/)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
