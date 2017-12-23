@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: WPSSO Place / Location and Local Business Meta
  * Plugin Slug: wpsso-plm
