@@ -362,7 +362,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 							! empty( $mt_business['place:business:day:'.$day.':open'] ) ) {
 	
 							$mt_day[] = array( array( '<noscript itemprop="openingHoursSpecification" '.
-								'itemscope itemtype="https://schema.org/OpeningHoursSpecification">'."\n" ) );
+								'itemscope itemtype="https://schema.org/OpeningHoursSpecification">' . "\n" ) );
 							$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
 								'openinghoursspecification.dayofweek', $day, '', $mod );
 	
@@ -377,7 +377,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 										$prop_name, $mt_business[$mt_key], '', $mod );
 								}
 	
-							$mt_day[] = array( array( '</noscript>'."\n" ) );
+							$mt_day[] = array( array( '</noscript>' . "\n" ) );
 						}
 						foreach ( $mt_day as $arr ) {
 							foreach ( $arr as $val ) {
