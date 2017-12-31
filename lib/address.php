@@ -1,5 +1,4 @@
 <?php
-
 /**
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
@@ -245,7 +244,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			}
 
 			if ( $wpsso->debug->enabled ) {
-				if ( $addr_opts === false ) {
+				if ( false === $addr_opts ) {
 					$wpsso->debug->log( 'no place options found' );
 				} else {
 					$wpsso->debug->log( count( $addr_opts ).' place options found' );

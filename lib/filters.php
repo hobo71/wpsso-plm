@@ -1,5 +1,4 @@
 <?php
-
 /**
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
@@ -78,7 +77,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_get_defaults( $def_opts ) {
 			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
-			/*
+			/**
 			 * Add options using a key prefix array and post type names.
 			 */
 			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array(
@@ -151,12 +150,12 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->log( 'returning open graph place meta tags' );
 			}
 
-			/*
+			/**
 			 * og:type
 			 */
 			$og['og:type'] = 'place';	// pre-define to optimize
 
-			/*
+			/**
 			 * place:name
 			 * place:street_address
 			 * place:po_box_number
@@ -171,7 +170,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 						$addr_opts[$key] : '';
 			}
 
-			/*
+			/**
 			 * og:latitude
 			 * og:longitude
 			 * og:altitude
@@ -189,7 +188,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				}
 			}
 
-			/*
+			/**
 			 * Non-standard meta tags for internal use (input to JSON-LD extension)
 			 */
 			$addr_defs = WpssoPlmConfig::$cf['form']['plm_addr_opts'];
@@ -242,7 +241,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_json_array_schema_type_ids( $type_ids, $mod ) {
-			/*
+			/**
 			 * Array (
 			 *	[local.business] => 1
 			 *	[website] => 1
@@ -341,7 +340,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_schema_noscript_array( $ret, $mod, $mt_og, $page_type_id ) {
-			/*
+			/**
 			 * Array (
 			 *	[place:business:day:monday:open] => 09:00
 			 *	[place:business:day:monday:close] => 17:00
@@ -391,7 +390,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_get_place_options( $opts, $mod, $place_id ) {
-			if ( $opts === false && ( $place_id === 'custom' || is_numeric( $place_id ) ) ) {
+			if ( false === $opts && ( $place_id === 'custom' || is_numeric( $place_id ) ) ) {
 				$addr_opts = WpssoPlmAddress::get_addr_id( $place_id, $mod );
 				if ( is_array( $addr_opts ) ) {	// just in xase
 					return SucomUtil::preg_grep_keys( '/^plm_addr_/', $addr_opts, false, 'place_' );	// rename plm_addr to place
