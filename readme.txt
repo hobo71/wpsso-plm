@@ -143,7 +143,7 @@ The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_so
 <h3>Free / Basic Version Repositories</h3>
 
 * [GitHub](https://surniaulula.github.io/wpsso-plm/)
-* [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
+* [WordPress.org](https://plugins.trac.wordpress.org/browser/wpsso-plm/)
 
 <h3>Version Numbering</h3>
 
