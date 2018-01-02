@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			}
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'post_plm_rows' => 4,			// $table_rows, $form, $head, $mod
+				'post_plm_rows' => 4,
 			) );
 		}
 

@@ -36,26 +36,26 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'get_defaults' => 1,					// option defaults
-				'get_md_defaults' => 1,					// meta data defaults
-				'rename_options_keys' => 1,				// meta data post options
-				'rename_md_options_keys' => 1,				// meta data post options
-				'og_type' => 2,						// open graph namespace
-				'og_seed' => 2,						// open graph meta tags
-				'json_prop_https_schema_org_potentialaction' => 5,	// $action_data, $mod, $mt_og, $page_type_id, $is_main
-				'json_array_schema_type_ids' => 2,			// $type_ids, $mod
-				'schema_meta_itemprop' => 4,				// $mt_schema, $mod, $mt_og, $page_type_id
-				'schema_noscript_array' => 4,				// $ret, $mod, $mt_og, $page_type_id
-				'schema_type_id' => 3,					// $type_id, $mod, $is_custom
-				'get_place_options' => 3,				// $opts, $mod, $place_id
-				'get_event_place_id' => 3,				// $place_id, $mod, $event_id
+				'get_defaults' => 1,
+				'get_md_defaults' => 1,
+				'rename_options_keys' => 1,
+				'rename_md_options_keys' => 1,
+				'og_type' => 2,
+				'og_seed' => 2,
+				'json_prop_https_schema_org_potentialaction' => 5,
+				'json_array_schema_type_ids' => 2,
+				'schema_meta_itemprop' => 4,
+				'schema_noscript_array' => 4,
+				'schema_type_id' => 3,
+				'get_place_options' => 3,
+				'get_event_place_id' => 3,
 			) );
 
 			if ( is_admin() ) {
 				$this->p->util->add_plugin_filters( $this, array( 
 					'save_options' => 3,
 					'option_type' => 2,
-					'post_custom_meta_tabs' => 3,		// $tabs, $mod, $metabox_id
+					'post_custom_meta_tabs' => 3,
 					'messages_tooltip' => 2,
 					'messages_tooltip_post' => 3,
 					'form_cache_place_addr_names' => 1,
@@ -63,7 +63,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->util->add_plugin_filters( $this, array( 
 					'status_gpl_features' => 4,
 					'status_pro_features' => 4,
-				), 10, 'wpssoplm' );			// hook into our own filters
+				), 10, 'wpssoplm' ); // hook into our own filters
 			}
 		}
 
