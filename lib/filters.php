@@ -602,7 +602,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $text;
 		}
 
-		public function filter_status_gpl_features( $features, $lca, $info, $pkg ) {
+		public function filter_status_gpl_features( $features, $ext, $info, $pkg ) {
 
 			$has_addr_for_home = $this->p->options['plm_addr_for_home'] === '' ||
 				$this->p->options['plm_addr_for_home'] === 'none' ? false : true;	// can be 0
@@ -614,7 +614,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $features;
 		}
 
-		public function filter_status_pro_features( $features, $lca, $info, $pkg ) {
+		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {
 			$features['(tool) Custom Place / Location and Local Business Meta'] = array( 
 				'td_class' => $pkg['aop'] ? '' : 'blank',
 				'purchase' => $pkg['purchase'],
