@@ -15,10 +15,10 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 
 		public static $cf = array(
 			'plugin' => array(
-				'wpssoplm' => array(
-					'version' => '2.3.10',		// plugin version
-					'opt_version' => '16',		// increment when changing default options
-					'short' => 'WPSSO PLM',		// short plugin name
+				'wpssoplm' => array(			// Plugin acronym.
+					'version' => '2.3.10',		// Plugin version.
+					'opt_version' => '16',		// Increment when changing default option values.
+					'short' => 'WPSSO PLM',		// Short plugin name.
 					'name' => 'WPSSO Place / Location and Local Business Meta',
 					'desc' => 'WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.',
 					'slug' => 'wpsso-plm',
@@ -38,9 +38,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						),
 					),
 					'lib' => array(
-						// submenu items must have unique keys
-						'submenu' => array (
-							'plm-general' => 'Place / Location',	// general settings
+						'submenu' => array(	// Note that submenu elements must have unique keys.
+							'plm-general' => 'Place / Location',
 						),
 						'gpl' => array(
 							'admin' => array(
