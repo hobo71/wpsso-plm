@@ -13,7 +13,7 @@
  * Description: WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
  * Requires PHP: 5.4
  * Requires At Least: 3.8
- * Tested Up To: 4.9.2
+ * Tested Up To: 4.9.3
  * Version: 2.3.10
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
