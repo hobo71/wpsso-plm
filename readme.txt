@@ -156,20 +156,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.10 (2017/11/24)**
+**Version 2.3.11 (2018/02/04)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* Added translation to the "Business Days + Hours" option labels.
+	* None
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed the WpssoSchema is_schema_type_child_of() method to is_schema_type_child().
+	* Maintenance release.
 
 == Upgrade Notice ==
 
-= 2.3.10 =
+= 2.3.11 =
 
-(2017/11/24) Added translation to the "Business Days + Hours" option labels. Renamed the WpssoSchema is_schema_type_child_of() method to is_schema_type_child().
+(2018/02/04) Maintenance release.
 
