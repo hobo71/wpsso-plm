@@ -370,11 +370,12 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 								'place:business:day:'.$day.':close' => 'openinghoursspecification.closes',
 								'place:business:season:from_date' => 'openinghoursspecification.validfrom',
 								'place:business:season:to_date' => 'openinghoursspecification.validthrough',
-							) as $mt_key => $prop_name )
+							) as $mt_key => $prop_name ) {
 								if ( isset( $mt_business[$mt_key] ) ) {
 									$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
 										$prop_name, $mt_business[$mt_key], '', $mod );
 								}
+							}
 	
 							$mt_day[] = array( array( '</noscript>' . "\n" ) );
 						}

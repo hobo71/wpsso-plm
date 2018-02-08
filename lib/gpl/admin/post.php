@@ -131,11 +131,8 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			$table_rows['plm_addr_season_dates'] = $form->get_th_html( _x( 'Business Dates (Season)',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_season_dates' ). 
-			'<td class="blank" colspan="3">'.
-				__( 'Open from', 'wpsso-plm' ).' '.
-				$form->get_no_input_date().' '.
-				__( 'through', 'wpsso-plm' ).' '.
-				$form->get_no_input_date().'</td>';
+			'<td class="blank" colspan="3">'.__( 'Open from', 'wpsso-plm' ).' '.$form->get_no_input_date().' '.
+				__( 'through', 'wpsso-plm' ).' '.$form->get_no_input_date().'</td>';
 
 			$table_rows['plm_addr_service_radius'] = $form->get_th_html( _x( 'Service Radius',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_service_radius' ). 
