@@ -57,7 +57,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 			'form' => array(
 				'plm_addr_opts' => array(
 					'plm_addr_name' => '',				// Name
-					'plm_addr_alt_name' => '',			// Altername Name
+					'plm_addr_name_alt' => '',			// Altername Name
 					'plm_addr_desc' => '',				// Description
 					'plm_addr_streetaddr' => '',			// Street Address
 					'plm_addr_po_box_number' => '',			// P.O. Box Number

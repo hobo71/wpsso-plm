@@ -18,7 +18,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 		public static $place_mt = array(
 			'plm_addr_name' => 'place:name',
-			'plm_addr_alt_name' => 'place:alt_name',
+			'plm_addr_name_alt' => 'place:name_alt',
 			'plm_addr_desc' => 'place:description',
 			'plm_addr_streetaddr' => 'place:street_address',
 			'plm_addr_po_box_number' => 'place:po_box_number',

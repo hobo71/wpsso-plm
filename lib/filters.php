@@ -459,7 +459,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case ( preg_match( '/^plm_addr_(country|type)$/', $key ) ? true : false ):
 					return 'not_blank';
 					break;
-				case ( preg_match( '/^plm_addr_(name|alt_name|desc|phone|streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(name|name_alt|desc|phone|streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
 				case ( preg_match( '/^plm_addr_(phone|price_range)$/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
