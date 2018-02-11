@@ -492,8 +492,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_post_custom_meta_tabs( $tabs, $mod, $metabox_id ) {
 			if ( $metabox_id === $this->p->cf['meta']['id'] ) {
 				if ( ! empty( $this->p->options['plm_add_to_'.$mod['post_type']] ) ) {
-					SucomUtil::add_after_key( $tabs, 'text', 'plm',
-						_x( 'Place / Location', 'metabox tab', 'wpsso-plm' ) );
+					SucomUtil::add_after_key( $tabs, 'edit', 'plm', _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ) );
 				}
 			}
 			return $tabs;
