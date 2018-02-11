@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.12-dev.1 (2018/02/04)**
+**Version 2.3.12-dev.2 (2018/02/04)**
 
 * *New Features*
 	* None
@@ -165,7 +165,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed the post 'text' tab index key to 'edit' for WPSSO v3.52.2.
+	* Renamed the post 'text' tab index key to 'edit' for WPSSO v3.53.0.
 
 **Version 2.3.11 (2018/02/04)**
 
@@ -180,9 +180,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.12-dev.1 =
+= 2.3.12-dev.2 =
 
-(2018/02/11) Renamed the post 'text' tab index key to 'edit' for WPSSO v3.52.2.
+(2018/02/11) Renamed the post 'text' tab index key to 'edit' for WPSSO v3.53.0.
 
 = 2.3.11 =
 
