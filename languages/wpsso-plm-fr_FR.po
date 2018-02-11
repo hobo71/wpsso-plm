@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.3.10\n"
+"Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.3.12\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2017-11-22 13:36-0600\n"
-"PO-Revision-Date: 2017-11-22 13:36-0600\n"
+"POT-Creation-Date: 2018-02-11 16:45-0600\n"
+"PO-Revision-Date: 2018-02-11 16:47-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -40,7 +40,7 @@ msgctxt "plugin description"
 msgid "WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags."
 msgstr "Extension WPSSO Core pour fournir des balises méta Pinterest place, Facebook / Open Graph de position, et Schéma d'entreprise locale."
 
-#: lib/filters.php:437
+#: lib/filters.php:438
 msgctxt "option value"
 msgid "Address #%d"
 msgstr "Adresse #%d"
@@ -308,65 +308,65 @@ msgid "Closes at"
 msgstr "Ferme à"
 
 #: lib/gpl/admin/post.php:132 lib/pro/admin/post.php:261
-#: lib/pro/admin/post.php:298 lib/submenu/plm-general.php:255
+#: lib/pro/admin/post.php:295 lib/submenu/plm-general.php:255
 msgctxt "option label"
 msgid "Business Dates (Season)"
 msgstr "Dates d'affaires (saison)"
 
-#: lib/gpl/admin/post.php:135 lib/pro/admin/post.php:263
-#: lib/pro/admin/post.php:300 lib/submenu/plm-general.php:257
+#: lib/gpl/admin/post.php:134 lib/pro/admin/post.php:262
+#: lib/pro/admin/post.php:297 lib/submenu/plm-general.php:257
 msgid "Open from"
 msgstr "Ouvert de"
 
-#: lib/gpl/admin/post.php:137 lib/pro/admin/post.php:265
-#: lib/pro/admin/post.php:302 lib/submenu/plm-general.php:259
+#: lib/gpl/admin/post.php:135 lib/pro/admin/post.php:263
+#: lib/pro/admin/post.php:299 lib/submenu/plm-general.php:259
 msgid "through"
 msgstr "jusqu'à"
 
-#: lib/gpl/admin/post.php:140 lib/pro/admin/post.php:269
-#: lib/pro/admin/post.php:306 lib/submenu/plm-general.php:263
+#: lib/gpl/admin/post.php:137 lib/pro/admin/post.php:266
+#: lib/pro/admin/post.php:303 lib/submenu/plm-general.php:263
 msgctxt "option label"
 msgid "Service Radius"
 msgstr "Rayon de service"
 
-#: lib/gpl/admin/post.php:143 lib/pro/admin/post.php:271
-#: lib/pro/admin/post.php:308 lib/submenu/plm-general.php:265
+#: lib/gpl/admin/post.php:140 lib/pro/admin/post.php:268
+#: lib/pro/admin/post.php:305 lib/submenu/plm-general.php:265
 msgctxt "option comment"
 msgid "meters from location"
 msgstr "mètres de la place / position"
 
-#: lib/gpl/admin/post.php:146 lib/pro/admin/post.php:274
-#: lib/pro/admin/post.php:311 lib/submenu/plm-general.php:268
+#: lib/gpl/admin/post.php:143 lib/pro/admin/post.php:271
+#: lib/pro/admin/post.php:308 lib/submenu/plm-general.php:268
 msgctxt "option label"
 msgid "Currencies Accepted"
 msgstr "Devises acceptées"
 
-#: lib/gpl/admin/post.php:147 lib/pro/admin/post.php:275
-#: lib/pro/admin/post.php:312 lib/submenu/plm-general.php:269
+#: lib/gpl/admin/post.php:144 lib/pro/admin/post.php:272
+#: lib/pro/admin/post.php:309 lib/submenu/plm-general.php:269
 msgctxt "option label"
 msgid "Payment Accepted"
 msgstr "Paiement accepté"
 
-#: lib/gpl/admin/post.php:148 lib/pro/admin/post.php:276
-#: lib/pro/admin/post.php:313 lib/submenu/plm-general.php:270
+#: lib/gpl/admin/post.php:145 lib/pro/admin/post.php:273
+#: lib/pro/admin/post.php:310 lib/submenu/plm-general.php:270
 msgctxt "option label"
 msgid "Price Range"
 msgstr "Échelle de prix"
 
-#: lib/gpl/admin/post.php:154 lib/pro/admin/post.php:284
-#: lib/pro/admin/post.php:322 lib/submenu/plm-general.php:278
+#: lib/gpl/admin/post.php:151 lib/pro/admin/post.php:281
+#: lib/pro/admin/post.php:319 lib/submenu/plm-general.php:278
 msgctxt "option label"
 msgid "Accepts Reservations"
 msgstr "Accepte des réservations"
 
-#: lib/gpl/admin/post.php:158 lib/pro/admin/post.php:288
-#: lib/pro/admin/post.php:326 lib/submenu/plm-general.php:282
+#: lib/gpl/admin/post.php:155 lib/pro/admin/post.php:285
+#: lib/pro/admin/post.php:323 lib/submenu/plm-general.php:282
 msgctxt "option label"
 msgid "Food Menu URL"
 msgstr "URL du menu alimentaire"
 
-#: lib/gpl/admin/post.php:162 lib/pro/admin/post.php:292
-#: lib/pro/admin/post.php:330 lib/submenu/plm-general.php:286
+#: lib/gpl/admin/post.php:159 lib/pro/admin/post.php:289
+#: lib/pro/admin/post.php:327 lib/submenu/plm-general.php:286
 msgctxt "option label"
 msgid "Order Action URL(s)"
 msgstr "URL(s) d'action de commande"
@@ -421,15 +421,15 @@ msgctxt "option label"
 msgid "or Business Location Image URL"
 msgstr "ou URL d'image d'emplacement de l'entreprise"
 
-#: wpsso-plm.php:79
+#: wpsso-plm.php:89
 msgid "%1$s is an extension for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."
 msgstr "%1$s est une extension pour %2$s &mdash; s'il vous plaît installer et activer %3$s avant d'activer l'extension %4$s."
 
-#: wpsso-plm.php:80
+#: wpsso-plm.php:91
 msgid "The %1$s extension requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href=\"%4$s\">deactivate the %5$s extension</a>."
 msgstr "L'extension %1$s requiert %2$s &mdash; installer et activer %3$s ou <a href=\"%4$s\">désactiver l'extension %5$s</a>."
 
-#: wpsso-plm.php:166
+#: wpsso-plm.php:187
 msgid "The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently installed)."
 msgstr "L'extension %1$s v%2$s requiert l'utilisation de %3$s v%4$s ou plus récente (v%5$s est actuellement installée)."
 
