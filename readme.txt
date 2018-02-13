@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.12-dev.4 (2018/02/13)**
+**Version 2.3.12-b.1 (2018/02/13)**
 
 * *New Features*
 	* None
@@ -180,7 +180,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.12-dev.4 =
+= 2.3.12-b.1 =
 
 (2018/02/13) Renamed the post 'text' tab index key to 'edit' for WPSSO v3.53.0.
 
