@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(			// Plugin acronym.
-					'version' => '2.3.12-dev.3',		// Plugin version.
+					'version' => '2.3.12-dev.4',		// Plugin version.
 					'opt_version' => '16',		// Increment when changing default option values.
 					'short' => 'WPSSO PLM',		// Short plugin name.
 					'name' => 'WPSSO Place / Location and Local Business Meta',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WPSSO Core',
-						'min_version' => '3.53.0-dev.3',
+						'min_version' => '3.53.0-dev.4',
 					),
 					'img' => array(
 						'icons' => array(
