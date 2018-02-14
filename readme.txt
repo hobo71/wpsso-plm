@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.12-b.1 (2018/02/13)**
+**Version 2.3.12-rc.1 (2018/02/14)**
 
 * *New Features*
 	* None
@@ -165,7 +165,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed the post 'text' tab index key to 'edit' for WPSSO v3.53.0.
+	* Moved the "Place / Location" tab after the "Select Media" tab.
 
 **Version 2.3.11 (2018/02/04)**
 
@@ -180,9 +180,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.12-b.1 =
+= 2.3.12-rc.1 =
 
-(2018/02/13) Renamed the post 'text' tab index key to 'edit' for WPSSO v3.53.0.
+(2018/02/14) Moved the "Place / Location" tab after the "Select Media" tab.
 
 = 2.3.11 =
 
