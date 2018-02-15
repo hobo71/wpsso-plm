@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.12-rc.2 (2018/02/15)**
+**Version 2.3.12-rc.3 (2018/02/15)**
 
 * *New Features*
 	* None
@@ -180,7 +180,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.12-rc.2 =
+= 2.3.12-rc.3 =
 
 (2018/02/15) Moved the "Place / Location" tab after the "Select Media" tab.
 
