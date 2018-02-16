@@ -274,9 +274,16 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							'<td colspan="3">'.$this->form->get_input( 'plm_addr_'.$opt_name.'_'.$id ).'</td>';
 						}
 		
+						$table_rows['subsection_food_establishment_'.$id] = $tr_html.'<th></th>'.
+						'<td class="subsection" colspan="3"><h5>'._x( 'Food Establishment', 'metabox title', 'wpsso-plm' ).'</h5></td>';
+
 						$table_rows['plm_addr_accept_res_'.$id] = $tr_html.
 						$this->form->get_th_html( _x( 'Accepts Reservations', 'option label', 'wpsso-plm' ), '', 'plm_addr_accept_res' ). 
 						'<td colspan="3">'.$this->form->get_checkbox( 'plm_addr_accept_res_'.$id ).'</td>';
+
+						$table_rows['plm_addr_cuisine_'.$id] = $tr_html.
+						$this->form->get_th_html( _x( 'Serves Cuisine', 'option label', 'wpsso-plm' ), '', 'plm_addr_cuisine' ). 
+						'<td colspan="3">'.$this->form->get_input( 'plm_addr_cuisine_'.$id ).'</td>';
 
 						$table_rows['plm_addr_menu_url_'.$id] = $tr_html.
 						$this->form->get_th_html( _x( 'Food Menu URL', 'option label', 'wpsso-plm' ), '', 'plm_addr_menu_url' ). 
@@ -287,6 +294,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_order_urls_'.$id, 'wide' ).'</td>';
 
 					}
+
 					break;
 			}
 

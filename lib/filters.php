@@ -323,12 +323,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 						'plm_addr_payment_accepted' => 'paymentAccepted',
 						'plm_addr_price_range' => 'priceRange',
 						'plm_addr_accept_res' => 'acceptsreservations',
-						'plm_addr_menu_url' => 'menu',
-					) as $key => $mt_name ) {
-						if ( $key === 'plm_addr_accept_res' ) {
-							$mt_schema[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
+						'plm_addr_menu_url' => 'hasMenu',
+						'plm_addr_cuisine' => 'servesCuisine',
+					) as $opt_key => $mt_name ) {
+						if ( $opt_key === 'plm_addr_accept_res' ) {
+							$mt_schema[$mt_name] = empty( $addr_opts[$opt_key] ) ? 'false' : 'true';
 						} else {
-							$mt_schema[$mt_name] = isset( $addr_opts[$key] ) ? $addr_opts[$key] : '';
+							$mt_schema[$mt_name] = isset( $addr_opts[$opt_key] ) ? $addr_opts[$opt_key] : '';
 						}
 					}
 				} elseif ( $this->p->debug->enabled ) {
@@ -460,7 +461,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					return 'not_blank';
 					break;
 				case ( preg_match( '/^plm_addr_(name|name_alt|desc|phone|streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
-				case ( preg_match( '/^plm_addr_(phone|price_range)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(phone|price_range|cuisine)$/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
 				case ( preg_match( '/^plm_addr_(currencies_accepted|payment_accepted)$/', $key ) ? true : false ):
@@ -589,7 +590,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'This food establishment accepts reservations.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_menu_url':
-					$text = __( 'The menu URL for this food establishment (fast food restaurant, ice cream shop, restaurant, etc.)', 'wpsso-plm' );
+					$text = __( 'The menu URL for this food establishment.', 'wpsso-plm' );
+					break;
+				case 'tooltip-plm_addr_cuisine':
+					$text = __( 'The cuisine served by this food establishment.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_order_urls':
 					$text = __( 'Comma-delimited website and mobile app URLs to order products. The WPSSO JSON extension is required to add Order Action URL(s) to the Schema potentialAction property.', 'wpsso-plm' );
