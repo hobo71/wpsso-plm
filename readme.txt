@@ -156,12 +156,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.12-rc.3 (2018/02/15)**
+**Version 2.4.0-rc.4 (2018/02/16)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* None
+	* Added a "Serves Cuisine" option for Schema FoodEstablishment markup.
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -180,9 +180,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.12-rc.3 =
+= 2.4.0-rc.4 =
 
-(2018/02/15) Moved the "Place / Location" tab after the "Select Media" tab.
+(2018/02/16) Moved the "Place / Location" tab after the "Select Media" tab.
 
 = 2.3.11 =
 
