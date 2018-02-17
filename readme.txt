@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.4.0-rc.4 (2018/02/16)**
+**Version 2.4.0 (2018/02/17)**
 
 * *New Features*
 	* None
@@ -167,24 +167,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* Moved the "Place / Location" tab after the "Select Media" tab.
 
-**Version 2.3.11 (2018/02/04)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Maintenance release.
-
 == Upgrade Notice ==
 
-= 2.4.0-rc.4 =
+= 2.4.0 =
 
-(2018/02/16) Moved the "Place / Location" tab after the "Select Media" tab.
-
-= 2.3.11 =
-
-(2018/02/04) Maintenance release.
+(2018/02/17) Moved the "Place / Location" tab after the "Select Media" tab.
 
