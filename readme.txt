@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.5.0-b.1 (2018/02/21)**
+**Version 2.5.0-rc.1 (2018/02/22)**
 
 * *New Features*
 	* None
@@ -180,9 +180,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.5.0-b.1 =
+= 2.5.0-rc.1 =
 
-(2018/02/21) Refactored the WpssoPlm min_version_notice() method to use PHP's trigger_error() and include a notice to refresh plugin update information.
+(2018/02/22) Refactored the WpssoPlm min_version_notice() method to use PHP's trigger_error() and include a notice to refresh plugin update information.
 
 = 2.4.0 =
 
