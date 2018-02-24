@@ -514,7 +514,7 @@ msgid ""
 "%5$s is currently installed)."
 msgstr ""
 
-#: wpsso-plm.php:195
+#: wpsso-plm.php:197
 msgid "%s warning:"
 msgstr ""
 
