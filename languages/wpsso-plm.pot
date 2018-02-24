@@ -513,7 +513,8 @@ msgid ""
 "%5$s is currently installed)."
 msgstr ""
 
-#: wpsso-plm.php:197
+#. translators: %s is the short plugin name
+#: wpsso-plm.php:198
 msgid "%s warning:"
 msgstr ""
 
