@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.4
-Stable Tag: 2.4.0
+Stable Tag: 2.5.0
 
 WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
 
@@ -183,8 +183,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 2.5.0 =
 
 (2018/02/24) Refactored the WpssoPlm min_version_notice() method to use PHP's trigger_error() and include a notice to refresh plugin update information.
-
-= 2.4.0 =
-
-(2018/02/17) Moved the "Place / Location" tab after the "Select Media" tab.
 
