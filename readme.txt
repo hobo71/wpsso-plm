@@ -1,4 +1,4 @@
-=== WPSSO Place / Location and Local Business Meta for Pinterest Rich Pins, Facebook Open Graph, Google Rich Cards / Knowledge Graph ===
+=== WPSSO Place / Location and Local Business Meta ===
 Plugin Name: WPSSO Place / Location and Local Business Meta
 Plugin Slug: wpsso-plm
 Text Domain: wpsso-plm
@@ -19,37 +19,27 @@ WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location,
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png">
 
-**Provides location / local business information for your website, business, and/or content.**
+**WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.**
 
-**Let Pinterest, Facebook and Google know about your locations:**
+Provides location / local business information for your website, business, and/or content.
 
-Include Pinterest Rich Pin - Schema Place, Facebook - Open Graph Location, and Google - Schema Local Business meta tags in your webpages.
+Let Pinterest, Facebook and Google know about your locations &mdash; Include Pinterest Rich Pin Place, Facebook / Open Graph Location, and Google Local Business meta tags in your webpages. Select a Job Location for the Schema Job Posting markup ([WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required).
 
-Select a Job Location for the Schema Job Posting markup ([WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required).
-
-**WPSSO Place / Location and Local Business Meta can be used in two different ways:**
+WPSSO Place / Location and Local Business Meta can be used in two different ways:
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for the content of the current webpage.
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).
 
-**To assign location information to an Organization, you will need to use the [WPSSO Organization Markup extension](https://wordpress.org/plugins/wpsso-organization/) along with the WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) extension.**
+Note that to assign location information to an Organization, you will also need the [WPSSO Organization Markup extension](https://wordpress.org/plugins/wpsso-organization/).
 
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
-**WPSSO Place / Location and Local Business Meta is *incredibly fast* and coded for performance:**
-
-WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light.
-
-WPSSO Core and its extensions are fully tested and compatible with PHP v7.x (PHP v5.4 or better required).
+WPSSO Place / Location and Local Business Meta is *incredibly fast* and coded for performance &mdash; WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light. WPSSO Core and its extensions are also fully tested and compatible with PHP v7.x (PHP v5.4 or better required).
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
-
-The WPSSO PLM Free extension works with either the Free or Pro version of WPSSO Core (Main Plugin).
-
-The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq) uses many WPSSO Core Pro features, which requires an active and licensed [WPSSO Core Pro plugin](https://wpsso.com/?utm_source=wpssoplm-readme-prereq).
+WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc. The WPSSO PLM Free extension works with either the Free or Pro version of WPSSO Core (Main Plugin). The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq) uses many WPSSO Core Pro features, which requires an active and licensed [WPSSO Core Pro plugin](https://wpsso.com/?utm_source=wpssoplm-readme-prereq).
 
 <h3>Quick List of Features</h3>
 
