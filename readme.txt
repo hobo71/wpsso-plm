@@ -29,7 +29,7 @@ WPSSO Place / Location and Local Business Meta can be used in two different ways
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).
 
-Note that to assign location information to an Organization, you will also need the [WPSSO Organization Markup extension](https://wordpress.org/plugins/wpsso-organization/). ;-)
+Note that to assign location information to an Organization, you will also need the [WPSSO Organization Markup extension](https://wordpress.org/plugins/wpsso-organization/) as well. ;-)
 
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a static front page, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
