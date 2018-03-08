@@ -21,9 +21,7 @@ WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location,
 
 **WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.**
 
-Provides location / local business information for your website, business, and/or content.
-
-Let Pinterest, Facebook and Google know about your locations &mdash; Include Pinterest Rich Pin Place, Facebook / Open Graph Location, and Google Local Business meta tags in your webpages. Select a Job Location for the Schema Job Posting markup ([WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required).
+Let Pinterest, Facebook and Google know about your locations &mdash; include Pinterest Rich Pin Place, Facebook / Open Graph Location, and Google Local Business meta tags in your webpages. Select a Job Location for the Schema Job Posting markup ([WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required).
 
 WPSSO Place / Location and Local Business Meta can be used in two different ways:
 
@@ -31,9 +29,9 @@ WPSSO Place / Location and Local Business Meta can be used in two different ways
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).
 
-Note that to assign location information to an Organization, you will also need the [WPSSO Organization Markup extension](https://wordpress.org/plugins/wpsso-organization/).
+Note that to assign location information to an Organization, you will also need the [WPSSO Organization Markup extension](https://wordpress.org/plugins/wpsso-organization/). ;-)
 
-The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
+The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a static front page, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
 WPSSO Place / Location and Local Business Meta is *incredibly fast* and coded for performance &mdash; WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light. WPSSO Core and its extensions are also fully tested and compatible with PHP v7.x (PHP v5.4 or better required).
 
