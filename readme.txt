@@ -1,4 +1,4 @@
-=== WPSSO Place / Location and Local Business Meta ===
+=== WPSSO Place / Location and Local Business Meta (aka Local SEO) ===
 Plugin Name: WPSSO Place / Location and Local Business Meta
 Plugin Slug: wpsso-plm
 Text Domain: wpsso-plm
