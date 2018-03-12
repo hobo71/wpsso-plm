@@ -256,6 +256,8 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 		public static function has_md_place( array $mod, $idx_exists = '' ) {
 
+			$wpsso =& Wpsso::get_instance();
+
 			if ( ! is_object( $mod['obj'] ) ) {	// just in case
 				return false;
 			}
