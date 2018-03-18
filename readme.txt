@@ -107,7 +107,7 @@ The Free extension works with either the Free or Pro version of WPSSO Core. The 
 
 <h3>Install and Uninstall</h3>
 
-* [Install the WPSSO PLM Extension (Free and Pro version)](https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/)
+* [Install the WPSSO PLM Extension](https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/)
 * [Uninstall the WPSSO PLM Extension](https://wpsso.com/docs/plugins/wpsso-plm/installation/uninstall-the-plugin/)
 
 == Frequently Asked Questions ==
