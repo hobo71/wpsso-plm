@@ -240,7 +240,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							$this->form->defaults['plm_addr_day_'.$day.'_close_'.$id] = '17:00';	// set default value
 		
 							$table_rows['plm_addr_day_'.$day.'_'.$id] = $th_cell.
-								'<td class="short">'.$this->form->get_checkbox( 'plm_addr_day_'.$day.'_'.$id ).' '.
+								'<td class="weekday">'.$this->form->get_checkbox( 'plm_addr_day_'.$day.'_'.$id ).' '.
 									$day_label_transl.'</td>'.
 								'<td>'.__( 'Opens at', 'wpsso-plm' ).' '.
 									$this->form->get_select( 'plm_addr_day_'.$day.'_open_'.$id,

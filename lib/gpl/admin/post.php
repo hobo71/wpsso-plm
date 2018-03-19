@@ -119,7 +119,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				}
 
 				$table_rows['plm_addr_day_'.$day] = $th_cell.
-					'<td class="blank short">'.$form->get_no_checkbox( 'plm_addr_day_'.$day ).' '.
+					'<td class="blank weekday">'.$form->get_no_checkbox( 'plm_addr_day_'.$day ).' '.
 						$day_label_transl.'</td>'.
 					'<td class="blank">'.__( 'Opens at', 'wpsso-plm' ).' '.
 						$form->get_no_select( 'plm_addr_day_'.$day.'_open',
