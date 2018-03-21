@@ -13,15 +13,15 @@ Requires At Least: 3.8
 Tested Up To: 4.9.4
 Stable Tag: 2.5.0
 
-WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
+WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
 
 == Description ==
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png">
 
-**WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.**
+**WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.**
 
-Let Pinterest, Facebook and Google know about your locations &mdash; include Pinterest Rich Pin Place, Facebook / Open Graph Location, and Google Local Business meta tags in your webpages. Select a Job Location for the Schema Job Posting markup ([WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required).
+Let Pinterest, Facebook and Google know about your locations &mdash; include Pinterest Rich Pin Place, Facebook / Open Graph Location, and Google Local Business meta tags in your webpages. Select a Job Location for the Schema Job Posting markup ([WPSSO JSON Pro add-on](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required).
 
 WPSSO Place / Location and Local Business Meta can be used in two different ways:
 
@@ -29,17 +29,17 @@ WPSSO Place / Location and Local Business Meta can be used in two different ways
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).
 
-Note that to assign location information to an Organization, you will also need the [WPSSO Organization Markup extension](https://wordpress.org/plugins/wpsso-organization/) as well. ;-)
+Note that to assign location information to an Organization, you will also need the [WPSSO Organization Markup add-on](https://wordpress.org/plugins/wpsso-organization/) as well. ;-)
 
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a static front page, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
-WPSSO Place / Location and Local Business Meta is *incredibly fast* and coded for performance &mdash; WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light. WPSSO Core and its extensions are also fully tested and compatible with PHP v7.x (PHP v5.4 or better required).
+WPSSO Place / Location and Local Business Meta is *incredibly fast* and coded for performance &mdash; WPSSO Core and its add-ons make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light. WPSSO Core and its add-ons are also fully tested and compatible with PHP v7.x (PHP v5.4 or better required).
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
+WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an add-on for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
 
-The Free extension works with either the Free or Pro version of WPSSO Core. The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq) uses many WPSSO Core Pro features and requires an active and licensed [WPSSO Core Pro plugin](https://wpsso.com/?utm_source=wpssoplm-readme-prereq).
+The Free add-on plugin works with either the Free or Pro version of WPSSO Core. The [WPSSO PLM Pro add-on](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq) uses many WPSSO Core Pro features and requires an active and licensed [WPSSO Core Pro plugin](https://wpsso.com/?utm_source=wpssoplm-readme-prereq).
 
 <h3>Quick List of Features</h3>
 
@@ -77,7 +77,7 @@ The Free extension works with either the Free or Pro version of WPSSO Core. The 
 	* Food Menu URL
 	* Order Action URL(s)
 
-<span style="color:#33cc33">&#x0229b;</span> &nbsp; Combine WPSSO Place / Location and Local Business Meta with [WPSSO Schema JSON-LD Markup Pro extension](https://wpsso.com/extend/plugins/wpsso-json/) to include complete Place and Local Business using Schema JSON-LD markup.
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Combine WPSSO Place / Location and Local Business Meta with [WPSSO Schema JSON-LD Markup Pro add-on](https://wpsso.com/extend/plugins/wpsso-json/) to include complete Place and Local Business using Schema JSON-LD markup.
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; Download the Free version from [GitHub](https://surniaulula.github.io/wpsso-plm/) or [WordPress.org](https://wordpress.org/plugins/wpsso-plm/).
 
@@ -93,22 +93,22 @@ The Free extension works with either the Free or Pro version of WPSSO Core. The 
 
 <h3>Markup Examples</h3>
 
-<span style="color:#33cc33">&#x0229b;</span> &nbsp; [Markup Example for a Restaurant](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/) using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; [Markup Example for a Restaurant](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/) using the WPSSO PLM add-on to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).
 
 <h3>Extends the WPSSO Core Plugin</h3>
 
-<span style="color:#33cc33">&#x0229b;</span> &nbsp; The WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) Free extension works with either the Free or Pro version of WPSSO Core.
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; The WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) Free add-on plugin works with either the Free or Pro version of WPSSO Core.
 
-<span style="color:#33cc33">&#x0229b;</span> &nbsp; The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro extension</a> uses many WPSSO Core Pro features, which requires an active and licensed <a href="https://wpsso.com/?utm_source=wpssoplm-readme-extends">WPSSO Core Pro plugin</a>.
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro add-on</a> uses many WPSSO Core Pro features, which requires an active and licensed <a href="https://wpsso.com/?utm_source=wpssoplm-readme-extends">WPSSO Core Pro plugin</a>.
 
-<span style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta Pro extension here</a> (all plugin purchases include a <em>No Risk 30 Day Refund Policy</em>).
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta Pro add-on here</a> (all plugin purchases include a <em>No Risk 30 Day Refund Policy</em>).
 
 == Installation ==
 
 <h3>Install and Uninstall</h3>
 
-* [Install the WPSSO PLM Extension](https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/)
-* [Uninstall the WPSSO PLM Extension](https://wpsso.com/docs/plugins/wpsso-plm/installation/uninstall-the-plugin/)
+* [Install the WPSSO PLM Add-on](https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/)
+* [Uninstall the WPSSO PLM Add-on](https://wpsso.com/docs/plugins/wpsso-plm/installation/uninstall-the-plugin/)
 
 == Frequently Asked Questions ==
 
@@ -146,6 +146,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.5.1-dev.2 (2018/03/21)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 2.5.0 (2018/02/24)**
 
 * *New Features*
@@ -157,18 +168,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* Refactored the WpssoPlm `min_version_notice()` method to use PHP's `trigger_error()` and include a notice to refresh plugin update information.
 
-**Version 2.4.0 (2018/02/17)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added a "Serves Cuisine" option for Schema FoodEstablishment markup.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Moved the "Place / Location" tab after the "Select Media" tab.
-
 == Upgrade Notice ==
+
+= 2.5.1-dev.2 =
+
+(2018/03/21) Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
 
 = 2.5.0 =
 
