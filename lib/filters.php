@@ -189,7 +189,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			/**
-			 * Non-standard meta tags for internal use (input to JSON-LD extension)
+			 * Non-standard meta tags for internal use.
 			 */
 			$addr_defs = WpssoPlmConfig::$cf['form']['plm_addr_opts'];
 
@@ -596,7 +596,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'The cuisine served by this food establishment.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_order_urls':
-					$text = __( 'Comma-delimited website and mobile app URLs to order products. The WPSSO JSON extension is required to add Order Action URL(s) to the Schema potentialAction property.', 'wpsso-plm' );
+					$text = __( 'Comma-delimited website and mobile app URLs to order products. The WPSSO JSON add-on is required to add Order Action URL(s) to the Schema potentialAction property.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_add_to':
 					// use WPSSO's translation for the metabox title

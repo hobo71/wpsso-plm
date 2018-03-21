@@ -23,7 +23,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			$this->menu_id = $id;
 			$this->menu_name = $name;
 			$this->menu_lib = $lib;
-			$this->menu_ext = $ext;	// lowercase acronyn for plugin or extension
+			$this->menu_ext = $ext;
 		}
 
 		// called by the extended WpssoAdmin class
@@ -40,36 +40,43 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			// validate image sizes
 			foreach ( SucomUtil::keys_start_with( 'plm_addr_img_id_', $this->p->options ) as $key => $pid ) {
 				if ( ! empty( $pid ) ) {
-					$this->p->media->get_attachment_image_src( $pid, $this->p->cf['lca'].'-schema', false );
+					$this->p->media->get_attachment_image_src( $pid, $this->p->lca.'-schema', false );
 				}
 			}
 		}
 
 		public function show_metabox_contact() {
-			$lca = $this->p->cf['lca'];
+
 			$metabox_id = 'contact';
 
-			$tabs = apply_filters( $lca.'_'.$metabox_id.'_tabs', array( 
+			$tabs = apply_filters( $this->p->lca.'_'.$metabox_id.'_tabs', array( 
 				'address' => _x( 'Addresses / Local Business', 'metabox tab', 'wpsso-plm' ),
 			) );
 
 			$table_rows = array();
+
 			foreach ( $tabs as $key => $title ) {
-				$table_rows[$key] = apply_filters( $lca.'_'.$metabox_id.'_'.$key.'_rows', 
+				$table_rows[$key] = apply_filters( $this->p->lca.'_'.$metabox_id.'_'.$key.'_rows', 
 					$this->get_table_rows( $metabox_id, $key ), $this->form );
 			}
+
 			$this->p->util->do_metabox_tabs( $metabox_id, $tabs, $table_rows );
 		}
 
 		public function show_metabox_general() {
+
 			$metabox_id = 'plm';
-			$this->p->util->do_table_rows( apply_filters( $this->p->cf['lca'].'_'.$metabox_id.'_general_rows', 
+
+			$this->p->util->do_table_rows( apply_filters( $this->p->lca.'_'.$metabox_id.'_general_rows', 
 				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-'.$metabox_id.'-general' );
 		}
 
 		protected function get_table_rows( $metabox_id, $key ) {
+
 			$table_rows = array();
+
 			switch ( $metabox_id.'-'.$key ) {
+
 				case 'plm-general':
 
 					$addr_names_none = WpssoPlmAddress::get_addr_names( '', true );	// $add_none = true
@@ -302,4 +309,3 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 		}
 	}
 }
-

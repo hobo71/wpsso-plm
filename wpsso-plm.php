@@ -10,11 +10,11 @@
  * Author URI: https://wpsso.com/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
- * Description: WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
+ * Description: WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
  * Requires PHP: 5.4
  * Requires At Least: 3.8
  * Tested Up To: 4.9.4
- * Version: 2.5.0
+ * Version: 2.5.1-dev.2
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -86,9 +86,9 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 			$info = WpssoPlmConfig::$cf['plugin']['wpssoplm'];
 
-			$die_msg = __( '%1$s is an extension for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s.', 'wpsso-plm' );
+			$die_msg = __( '%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s.', 'wpsso-plm' );
 
-			$error_msg = __( 'The %1$s extension requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href="%4$s">deactivate the %5$s extension</a>.', 'wpsso-plm' );
+			$error_msg = __( 'The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href="%4$s">deactivate the %5$s add-on</a>.', 'wpsso-plm' );
 
 			if ( true === $deactivate ) {
 
@@ -181,7 +181,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 			$info = WpssoPlmConfig::$cf['plugin']['wpssoplm'];
 			$have_version = $this->p->cf['plugin']['wpsso']['version'];
-			$error_msg = sprintf( __( 'The %1$s version %2$s extension requires %3$s version %4$s or newer (version %5$s is currently installed).',
+			$error_msg = sprintf( __( 'The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed).',
 				'wpsso-plm' ), $info['name'], $info['version'], $info['req']['short'], $info['req']['min_version'], $have_version );
 
 			if ( is_admin() ) {
@@ -202,4 +202,3 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
         global $wpssoplm;
 	$wpssoplm =& WpssoPlm::get_instance();
 }
-
