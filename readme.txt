@@ -146,7 +146,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.5.1-b.1 (2018/03/22)**
+**Version 2.5.1-rc.1 (2018/03/23)**
 
 * *New Features*
 	* None
@@ -170,9 +170,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.5.1-b.1 =
+= 2.5.1-rc.1 =
 
-(2018/03/22) Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
+(2018/03/23) Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
 
 = 2.5.0 =
 
