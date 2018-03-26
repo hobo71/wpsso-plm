@@ -19,7 +19,7 @@ WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Sc
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png">
 
-**WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.**
+**A WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.**
 
 Let Pinterest, Facebook and Google know about your locations &mdash; include Pinterest Rich Pin Place, Facebook / Open Graph Location, and Google Local Business meta tags in your webpages. Select a Job Location for the Schema Job Posting markup ([WPSSO JSON Pro add-on](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required).
 
