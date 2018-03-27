@@ -446,34 +446,36 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $opts;
 		}
 
-		public function filter_option_type( $type, $key ) {
+		public function filter_option_type( $type, $base_key ) {
+
 			if ( ! empty( $type ) ) {
 				return $type;
-			} elseif ( strpos( $key, 'plm_' ) !== 0 ) {
+			} elseif ( strpos( $base_key, 'plm_' ) !== 0 ) {
 				return $type;
 			}
-			switch ( $key ) {
+
+			switch ( $base_key ) {
 				case 'plm_addr_for_home':
 				case 'plm_addr_def_country':	// alpha2 country code
 				case 'plm_addr_id':		// 'none', 'custom', or numeric (including 0)
 				case 'plm_addr_business_type':
-				case ( preg_match( '/^plm_addr_(country|type)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(country|type)$/', $base_key ) ? true : false ):
 					return 'not_blank';
 					break;
-				case ( preg_match( '/^plm_addr_(name|name_alt|desc|phone|streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
-				case ( preg_match( '/^plm_addr_(phone|price_range|cuisine)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(name|name_alt|desc|phone|streetaddr|city|state|zipcode)$/', $base_key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(phone|price_range|cuisine)$/', $base_key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
-				case ( preg_match( '/^plm_addr_(currencies_accepted|payment_accepted)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(currencies_accepted|payment_accepted)$/', $base_key ) ? true : false ):
 					return 'csv_blank';	// comma-delimited strings that can be blank
 					break;
-				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|service_radius|po_box_number)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|service_radius|po_box_number)$/', $base_key ) ? true : false ):
 					return 'blank_num';	// must be numeric (blank or zero is ok)
 					break;
-				case ( preg_match( '/^plm_addr_day_[a-z]+_(open|close)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_day_[a-z]+_(open|close)$/', $base_key ) ? true : false ):
 					return 'time';
 					break;
-				case ( preg_match( '/^plm_addr_season_(from|to)_date$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_season_(from|to)_date$/', $base_key ) ? true : false ):
 					return 'date';
 					break;
 				case 'plm_addr_menu_url':
@@ -483,10 +485,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					return 'csv_urls';
 					break;
 				case 'plm_addr_accept_res':
-				case ( preg_match( '/^plm_addr_day_[a-z]+$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_day_[a-z]+$/', $base_key ) ? true : false ):
 					return 'checkbox';
 					break;
 			}
+
 			return $type;
 		}
 

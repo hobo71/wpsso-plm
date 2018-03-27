@@ -44,200 +44,200 @@ msgctxt "option value"
 msgid "Address #%d"
 msgstr ""
 
-#: lib/filters.php:496 lib/filters.php:603
+#: lib/filters.php:499 lib/filters.php:606
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr ""
 
-#: lib/filters.php:508
+#: lib/filters.php:511
 msgid "Select an address or enter a customized address bellow."
 msgstr ""
 
-#: lib/filters.php:521
+#: lib/filters.php:524
 msgid ""
 "Select an address to include as a Schema <em>Place</em> or <em>Local "
 "Business</em> in your blog (non-static) front page."
 msgstr ""
 
-#: lib/filters.php:521
+#: lib/filters.php:524
 msgid ""
 "An address for a static front page can be selected in the %1$s metabox when "
 "editing the static page."
 msgstr ""
 
-#: lib/filters.php:524
+#: lib/filters.php:527
 msgid "A default country to use when creating a new address."
 msgstr ""
 
-#: lib/filters.php:527
+#: lib/filters.php:530
 msgid ""
 "Select an address to edit. The address and business information is used for "
 "Open Graph meta tags and Schema markup."
 msgstr ""
 
-#: lib/filters.php:530
+#: lib/filters.php:533
 msgid ""
 "Enter a descriptive name for this address. The address name may appear in "
 "forms and the Schema Place name property."
 msgstr ""
 
-#: lib/filters.php:533
+#: lib/filters.php:536
 msgid ""
 "An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</"
 "em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:536
+#: lib/filters.php:539
 msgid ""
 "An optional Post Office Box Number for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:539
+#: lib/filters.php:542
 msgid ""
 "An optional City name for the Pinterest Rich Pin / Schema <em>Place</em> "
 "meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:542
+#: lib/filters.php:545
 msgid ""
 "An optional State or Province name for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:545
+#: lib/filters.php:548
 msgid ""
 "An optional Zip or Postal Code for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:548
+#: lib/filters.php:551
 msgid ""
 "An optional Country for the Pinterest Rich Pin / Schema <em>Place</em> meta "
 "tags and related markup."
 msgstr ""
 
-#: lib/filters.php:551
+#: lib/filters.php:554
 msgid ""
 "The numeric <em>decimal degrees</em> latitude for the main content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:551 lib/filters.php:554
+#: lib/filters.php:554 lib/filters.php:557
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:554
+#: lib/filters.php:557
 msgid ""
 "The numeric <em>decimal degrees</em> longitude for the main content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:557
+#: lib/filters.php:560
 msgid ""
 "An optional numeric altitude (in meters above sea level) for the main "
 "content of this webpage."
 msgstr ""
 
-#: lib/filters.php:560
+#: lib/filters.php:563
 msgid ""
 "A more descriptive Schema type for this local business. You must select a "
 "food establishment (fast food restaurant, ice cream shop, restaurant, etc.) "
 "to include Schema markup for a food menu URL and/or reservation information."
 msgstr ""
 
-#: lib/filters.php:563
+#: lib/filters.php:566
 msgid ""
 "An image ID and media library selection for your business location image."
 msgstr ""
 
-#: lib/filters.php:563
+#: lib/filters.php:566
 msgid ""
 "The business location image is used in the Schema LocalBusiness markup for "
 "the 'location' Schema property."
 msgstr ""
 
-#: lib/filters.php:563
+#: lib/filters.php:566
 msgid ""
 "The business location image is not used when an address is added to a post, "
 "page, or custom post type."
 msgstr ""
 
-#: lib/filters.php:566
+#: lib/filters.php:569
 msgid ""
 "You can enter a business location image URL (including the http:// prefix) "
 "instead of choosing an image ID &mdash; if a business location image ID is "
 "specified, the image URL option is disabled."
 msgstr ""
 
-#: lib/filters.php:566
+#: lib/filters.php:569
 msgid ""
 "The image URL option allows you to use an image outside of a managed "
 "collection (WordPress Media Library or NextGEN Gallery), and/or a smaller "
 "logo style image."
 msgstr ""
 
-#: lib/filters.php:569
+#: lib/filters.php:572
 msgid "An optional Telephone number for this local business."
 msgstr ""
 
-#: lib/filters.php:572
+#: lib/filters.php:575
 msgid "Select the days and hours this business is open."
 msgstr ""
 
-#: lib/filters.php:575
+#: lib/filters.php:578
 msgid ""
 "This business is only open for part of the year, between these two dates."
 msgstr ""
 
-#: lib/filters.php:578
+#: lib/filters.php:581
 msgid ""
 "The geographic area where a service is provided, in meters around the "
 "location."
 msgstr ""
 
-#: lib/filters.php:581
+#: lib/filters.php:584
 msgid ""
 "A comma-delimited list of <a href=\"https://en.wikipedia.org/wiki/"
 "ISO_4217\">ISO 4217 currency codes</a> accepted by the local business "
 "(example: USD, CAD)."
 msgstr ""
 
-#: lib/filters.php:584
+#: lib/filters.php:587
 msgid ""
 "A comma-delimited list of payment options accepted by the local business "
 "(example: Cash, Credit Card)."
 msgstr ""
 
-#: lib/filters.php:587
+#: lib/filters.php:590
 msgid ""
 "The price range of goods or services provided by the local business "
 "(example: $10-100)."
 msgstr ""
 
-#: lib/filters.php:590
+#: lib/filters.php:593
 msgid "This food establishment accepts reservations."
 msgstr ""
 
-#: lib/filters.php:593
+#: lib/filters.php:596
 msgid "The menu URL for this food establishment."
 msgstr ""
 
-#: lib/filters.php:596
+#: lib/filters.php:599
 msgid "The cuisine served by this food establishment."
 msgstr ""
 
-#: lib/filters.php:599
+#: lib/filters.php:602
 msgid ""
 "Comma-delimited website and mobile app URLs to order products. The WPSSO "
 "JSON add-on is required to add Order Action URL(s) to the Schema "
 "potentialAction property."
 msgstr ""
 
-#: lib/filters.php:603
+#: lib/filters.php:606
 msgid ""
 "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
 "custom post types, allowing you to enter specific address information for "
@@ -495,26 +495,26 @@ msgctxt "option label"
 msgid "or Business Location Image URL"
 msgstr ""
 
-#: wpsso-plm.php:89
+#: wpsso-plm.php:95
 msgid ""
 "%1$s is an add-on for the %2$s plugin &mdash; please install and activate "
 "the %3$s plugin before activating %4$s."
 msgstr ""
 
-#: wpsso-plm.php:91
+#: wpsso-plm.php:97
 msgid ""
 "The %1$s add-on requires the %2$s plugin &mdash; install and activate the "
 "%3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr ""
 
-#: wpsso-plm.php:184
+#: wpsso-plm.php:196
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
 msgstr ""
 
 #. translators: %s is the short plugin name
-#: wpsso-plm.php:196
+#: wpsso-plm.php:208
 msgid "%s warning:"
 msgstr ""
 
