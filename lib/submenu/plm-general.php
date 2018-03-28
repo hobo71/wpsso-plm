@@ -37,8 +37,10 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 				_x( 'Place / Location Settings', 'metabox title', 'wpsso-plm' ), 
 					array( &$this, 'show_metabox_general' ), $this->pagehook, 'normal' );
 
-			// validate image sizes
-			foreach ( SucomUtil::keys_start_with( 'plm_addr_img_id_', $this->p->options ) as $key => $pid ) {
+			/**
+			 * Validate image sizes.
+			 */
+			foreach ( SucomUtil::keys_start_with( 'plm_addr_img_id_', $this->p->options ) as $opt_key => $pid ) {
 				if ( ! empty( $pid ) ) {
 					$this->p->media->get_attachment_image_src( $pid, $this->p->lca.'-schema', false );
 				}
@@ -55,9 +57,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 			$table_rows = array();
 
-			foreach ( $tabs as $key => $title ) {
-				$table_rows[$key] = apply_filters( $this->p->lca.'_'.$metabox_id.'_'.$key.'_rows', 
-					$this->get_table_rows( $metabox_id, $key ), $this->form );
+			foreach ( $tabs as $tab_key => $title ) {
+				$table_rows[$tab_key] = apply_filters( $this->p->lca.'_'.$metabox_id.'_'.$tab_key.'_rows', 
+					$this->get_table_rows( $metabox_id, $tab_key ), $this->form );
 			}
 
 			$this->p->util->do_metabox_tabs( $metabox_id, $tabs, $table_rows );
@@ -71,11 +73,11 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-'.$metabox_id.'-general' );
 		}
 
-		protected function get_table_rows( $metabox_id, $key ) {
+		protected function get_table_rows( $metabox_id, $tab_key ) {
 
 			$table_rows = array();
 
-			switch ( $metabox_id.'-'.$key ) {
+			switch ( $metabox_id.'-'.$tab_key ) {
 
 				case 'plm-general':
 
