@@ -39,7 +39,7 @@ WPSSO Place / Location and Local Business Meta is *incredibly fast* and coded fo
 
 WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an add-on for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
 
-The Free add-on works with either the Free or Pro version of WPSSO Core. The [WPSSO PLM Pro add-on](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq) uses many WPSSO Core Pro features and requires an active and licensed [WPSSO Core Pro plugin](https://wpsso.com/?utm_source=wpssoplm-readme-prereq).
+The Free add-on works with either the Free or Pro version of WPSSO Core. The [WPSSO PLM Pro add-on](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme) uses many WPSSO Core Pro features and requires an active and licensed [WPSSO Core Pro plugin](https://wpsso.com/?utm_source=wpssoplm-readme).
 
 <h3>Quick List of Features</h3>
 
@@ -99,9 +99,9 @@ The Free add-on works with either the Free or Pro version of WPSSO Core. The [WP
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; The WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) Free add-on works with either the Free or Pro version of WPSSO Core.
 
-<span style="color:#33cc33">&#x0229b;</span> &nbsp; The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro add-on</a> uses many WPSSO Core Pro features, which requires an active and licensed <a href="https://wpsso.com/?utm_source=wpssoplm-readme-extends">WPSSO Core Pro plugin</a>.
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme">WPSSO PLM Pro add-on</a> uses many WPSSO Core Pro features, which requires an active and licensed <a href="https://wpsso.com/?utm_source=wpssoplm-readme">WPSSO Core Pro plugin</a>.
 
-<span style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta Pro add-on here</a> (all plugin purchases include a <em>No Risk 30 Day Refund Policy</em>).
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme">Purchase the WPSSO Place / Location and Local Business Meta Pro add-on here</a> (all plugin purchases include a <em>No Risk 30 Day Refund Policy</em>).
 
 == Installation ==
 
