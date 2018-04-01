@@ -69,7 +69,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 			$metabox_id = 'plm';
 
-			$this->p->util->do_table_rows( apply_filters( $this->p->lca.'_'.$metabox_id.'_general_rows', 
+			$this->p->util->do_metabox_table( apply_filters( $this->p->lca.'_'.$metabox_id.'_general_rows', 
 				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-'.$metabox_id.'-general' );
 		}
 
