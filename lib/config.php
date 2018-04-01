@@ -113,9 +113,11 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		}
 
 		public static function set_constants( $plugin_filepath ) { 
+
 			if ( defined( 'WPSSOPLM_VERSION' ) ) {			// execute and define constants only once
 				return;
 			}
+
 			define( 'WPSSOPLM_VERSION', self::$cf['plugin']['wpssoplm']['version'] );						
 			define( 'WPSSOPLM_FILEPATH', $plugin_filepath );						
 			define( 'WPSSOPLM_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
