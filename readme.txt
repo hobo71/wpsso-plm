@@ -146,7 +146,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.5.2-b.1 (2018/04/04)**
+**Version 2.5.2 (2018/04/05)**
 
 * *New Features*
 	* None
@@ -181,9 +181,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.5.2-b.1 =
+= 2.5.2 =
 
-(2018/04/04) Renamed some WpssoUtil methods for Gutenberg changes in WPSSO v3.57.0.
+(2018/04/05) Renamed some WpssoUtil methods for Gutenberg changes in WPSSO v3.57.0.
 
 = 2.5.1 =
 
