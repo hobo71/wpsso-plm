@@ -146,6 +146,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.5.3-b.2 (2018/04/12)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Refactored the WpssoPlmAddress has_md_place() method to improve logic.
+
 **Version 2.5.2 (2018/04/05)**
 
 * *New Features*
@@ -180,6 +191,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Refactored the WpssoPlm `min_version_notice()` method to use PHP's `trigger_error()` and include a notice to refresh plugin update information.
 
 == Upgrade Notice ==
+
+= 2.5.3-b.1 =
+
+(2018/04/12) Refactored the WpssoPlmAddress has_md_place() method to improve logic.
 
 = 2.5.2 =
 
