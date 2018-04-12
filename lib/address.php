@@ -234,7 +234,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 					}
 				}
 			} elseif ( is_object( $mod['obj'] ) ) {
-				if ( ( $addr_opts = self::has_md_place( $mod ) ) === false ) {
+				if ( ( $addr_opts = self::has_md_place( $mod, 'plm_addr_name' ) ) === false ) {
 					if ( $wpsso->debug->enabled ) {
 						$wpsso->debug->log( 'no place options from module object' );
 					}
@@ -264,17 +264,26 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 			$md_opts = self::get_md_options( $mod );
 
-			// check for a specific index key
-			if ( ! empty( $idx_exists ) && isset( $md_opts[$idx_exists] ) ) {
-				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'returning place options - index key '.$idx_exists.' exists' );
+			/**
+			 * Check for a specific index key.
+			 */
+			if ( ! empty( $idx_exists ) ) {
+				if ( isset( $md_opts[$idx_exists] ) ) {
+					if ( ! isset( $md_opts['plm_addr_id'] ) ) {
+						$md_opts['plm_addr_id'] = 'custom';
+					}
+					if ( $wpsso->debug->enabled ) {
+						$wpsso->debug->log( 'returning place options - index key '.$idx_exists.' exists' );
+						$wpsso->debug->log_arr( 'md_opts', $md_opts );
+					}
+					return $md_opts;
 				}
-				return $md_opts;
 			} elseif ( is_array( $md_opts  ) ) {
 				foreach ( self::$place_mt as $key => $mt_name ) {
 					if ( ! empty( $md_opts[$key] ) ) {
 						if ( $wpsso->debug->enabled ) {
 							$wpsso->debug->log( 'returning place options - one or more option keys found' );
+							$wpsso->debug->log_arr( 'md_opts', $md_opts );
 						}
 						return $md_opts;
 					}

@@ -49,7 +49,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			$table_rows['plm_addr_name'] = $form->get_th_html( _x( 'Address Name',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_name' ). 
-			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'long_name' ).'</td>';
+			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'long_name required' ).'</td>';
 
 			$table_rows['plm_addr_streetaddr'] = $form->get_th_html( _x( 'Street Address',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_streetaddr' ). 
