@@ -146,7 +146,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.5.3-b.2 (2018/04/12)**
+**Version 2.5.3-rc.1 (2018/04/13)**
 
 * *New Features*
 	* None
@@ -192,9 +192,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.5.3-b.1 =
+= 2.5.3-rc.1 =
 
-(2018/04/12) Refactored the WpssoPlmAddress has_md_place() method to improve logic.
+(2018/04/13) Refactored the WpssoPlmAddress has_md_place() method to improve logic.
 
 = 2.5.2 =
 
