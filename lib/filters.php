@@ -402,12 +402,21 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_get_event_place_id( $place_id, array $mod, $event_id ) {
-			if ( ( $addr_opts = WpssoPlmAddress::has_md_place( $mod, 'plm_addr_id' ) ) !== false ) {
-				$place_id = $addr_opts['plm_addr_id'];
-				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'returning place id '.$place_id.' '.( $event_id !== false ? 'for event id '.$event_id : '(event id is false)' ) );
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( ( $addr_opts = WpssoPlmAddress::has_md_place( $mod, 'plm_addr_name' ) ) !== false ) {
+				if ( isset( $addr_opts['plm_addr_id'] ) ) {
+					$place_id = $addr_opts['plm_addr_id'];
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'returning place id '.$place_id.' '.
+							( $event_id !== false ? 'for event id '.$event_id : '(event id is false)' ) );
+					}
 				}
 			}
+
 			return $place_id; 
 		}
 
@@ -514,8 +523,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_messages_tooltip( $text, $idx ) {
-			if ( strpos( $idx, 'tooltip-plm_' ) !== 0 )
+
+			if ( strpos( $idx, 'tooltip-plm_' ) !== 0 ) {
 				return $text;
+			}
 
 			switch ( $idx ) {
 				case 'tooltip-plm_addr_for_home':
