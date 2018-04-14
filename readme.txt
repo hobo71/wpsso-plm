@@ -146,7 +146,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.5.3-rc.1 (2018/04/13)**
+**Version 2.5.3 (2018/04/14)**
 
 * *New Features*
 	* None
@@ -157,46 +157,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* Refactored the WpssoPlmAddress has_md_place() method to improve logic.
 
-**Version 2.5.2 (2018/04/05)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Renamed some WpssoUtil methods for Gutenberg changes in WPSSO v3.57.0.
-
-**Version 2.5.1 (2018/03/24)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
-**Version 2.5.0 (2018/02/24)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Refactored the WpssoPlm `min_version_notice()` method to use PHP's `trigger_error()` and include a notice to refresh plugin update information.
-
 == Upgrade Notice ==
 
-= 2.5.3-rc.1 =
+= 2.5.3 =
 
-(2018/04/13) Refactored the WpssoPlmAddress has_md_place() method to improve logic.
-
-= 2.5.2 =
-
-(2018/04/05) Renamed some WpssoUtil methods for Gutenberg changes in WPSSO v3.57.0.
+(2018/04/14) Refactored the WpssoPlmAddress has_md_place() method to improve logic.
 
