@@ -21,9 +21,9 @@
 
 <p>WPSSO Place / Location and Local Business Meta can be used in two different ways:</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for the content of the current webpage.</p>
+<p>&#x0229b; &nbsp; To provide location information for the content of the current webpage.</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).</p>
+<p>&#x0229b; &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).</p>
 
 <p>Note that to assign location information to an Organization, you will also need the <a href="https://wordpress.org/plugins/wpsso-organization/">WPSSO Organization Markup add-on</a> as well. ;-)</p>
 
@@ -37,15 +37,13 @@
 
 <p>The Free add-on works with either the Free or Pro version of WPSSO Core. The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme">WPSSO PLM Pro add-on</a> uses many WPSSO Core Pro features and requires an active and licensed <a href="https://wpsso.com/?utm_source=wpssoplm-readme">WPSSO Core Pro plugin</a>.</p>
 
-<h3>Quick List of Features</h3>
+<h3>WPSSO PLM Free / Standard Features</h3>
 
-<h4>WPSSO PLM Free / Standard Features</h4>
+<p>&#x0229b; &nbsp; Extends the features of the WPSSO Core Free or Pro plugin.</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Extends the features of the WPSSO Core Free or Pro plugin.</p>
+<p>&#x0229b; &nbsp; Select a Address for a Blog Front Page.</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Select a Address for a Blog Front Page.</p>
-
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Manage Multiple Addresses / Contact Information:</p>
+<p>&#x0229b; &nbsp; Manage Multiple Addresses / Contact Information:</p>
 
 <ul>
 <li>Pinterest Rich Pin / Schema Place
@@ -84,31 +82,33 @@
 </ul></li>
 </ul>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Combine WPSSO Place / Location and Local Business Meta with <a href="https://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup Pro add-on</a> to include complete Place and Local Business using Schema JSON-LD markup.</p>
+<p>&#x0229b; &nbsp; Combine WPSSO Place / Location and Local Business Meta with <a href="https://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup Pro add-on</a> to include complete Place and Local Business using Schema JSON-LD markup.</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Download the Free version from <a href="https://surniaulula.github.io/wpsso-plm/">GitHub</a> or <a href="https://wordpress.org/plugins/wpsso-plm/">WordPress.org</a>.</p>
+<p>&#x0229b; &nbsp; Download the Free version from <a href="https://surniaulula.github.io/wpsso-plm/">GitHub</a> or <a href="https://wordpress.org/plugins/wpsso-plm/">WordPress.org</a>.</p>
 
-<h3>Quick List of Features (Continued)</h3>
+<h3>WPSSO PLM Pro / Additional Features</h3>
 
-<h4>WPSSO PLM Pro / Additional Features</h4>
+<p>&#x0229b; &nbsp; Extends the features of WPSSO Core Pro (requires an active and licensed <a href="https://wpsso.com/">WPSSO Core Pro plugin</a>).</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Extends the features of WPSSO Core Pro (requires an active and licensed <a href="https://wpsso.com/">WPSSO Core Pro plugin</a>).</p>
+<p>&#x0229b; &nbsp; Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types.</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types.</p>
-
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Allows the selection of a pre-defined Address, or custom Address information, to include location information for the webpage content.</p>
+<p>&#x0229b; &nbsp; Allows the selection of a pre-defined Address, or custom Address information, to include location information for the webpage content.</p>
 
 <h3>Markup Examples</h3>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/">Markup Example for a Restaurant</a> using the WPSSO PLM add-on to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).</p>
+<p>&#x0229b; &nbsp; <a href="http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/">Markup Example for a Restaurant</a> using the WPSSO PLM add-on to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).</p>
 
 <h3>Extends the WPSSO Core Plugin</h3>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; The WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) Free add-on works with either the Free or Pro version of WPSSO Core.</p>
+<p>&#x0229b; &nbsp; The WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) Free add-on works with either the Free or Pro version of WPSSO Core.</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme">WPSSO PLM Pro add-on</a> uses many WPSSO Core Pro features, which requires an active and licensed <a href="https://wpsso.com/?utm_source=wpssoplm-readme">WPSSO Core Pro plugin</a>.</p>
+<p>&#x0229b; &nbsp; The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme">WPSSO PLM Pro add-on</a> uses many WPSSO Core Pro features, which requires an active and licensed <a href="https://wpsso.com/?utm_source=wpssoplm-readme">WPSSO Core Pro plugin</a>.</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme">Purchase the WPSSO Place / Location and Local Business Meta Pro add-on here</a> (all plugin purchases include a <em>No Risk 30 Day Refund Policy</em>).</p>
+<!--smp-ignore-->
+
+<p>&#x0229b; &nbsp; <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme">Purchase the WPSSO Place / Location and Local Business Meta Pro add-on here</a> (all purchases include a <em>No Risk 30 Day Refund Policy</em>).</p>
+
+<!--/smp-ignore-->
 
 
 <h2>Installation</h2>
