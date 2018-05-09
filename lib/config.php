@@ -43,12 +43,12 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						),
 						'gpl' => array(
 							'admin' => array(
-								'post' => 'Post Settings',
+								'post' => 'Extend Post Settings',
 							),
 						),
 						'pro' => array(
 							'admin' => array(
-								'post' => 'Post Settings',
+								'post' => 'Extend Post Settings',
 							),
 						),
 					),
