@@ -26,9 +26,12 @@ Include Pinterest Rich Pin Place, Facebook / Open Graph Location, and Google Loc
 **The WPSSO Place / Location and Local Business Meta add-on can be used in two different ways:**
 
 * To provide location information for the content of the current webpage.
+
 * To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).
 
-The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a static front page, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
+The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*.
+
+If you're using a static front page, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
 <div style="clear:both"></div>
 
@@ -76,9 +79,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 * Extends the features of WPSSO Core Pro (requires an active and licensed <a href="https://wpsso.com/">WPSSO Core Pro plugin</a>).
 
-* Add a custom Place / Location settings tab to Posts, Pages, and Custom Post Types.
-
-* Allows the selection of pre-defined addresses or custom address information for the webpage content.
+* Add a Place / Location settings tab to Posts, Pages, and custom post types and optionally select an existing address, or enter custom address information, for the content.
 
 <h3>Markup Examples</h3>
 
