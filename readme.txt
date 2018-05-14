@@ -33,8 +33,6 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 If you're using a static front page, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
-<div style="clear:both"></div>
-
 <h3>WPSSO PLM Free / Standard Features</h3>
 
 * Extends the features of the WPSSO Core Free or Pro plugin.
