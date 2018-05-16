@@ -15,15 +15,15 @@
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png"></p>
 
-<p><strong>Let Pinterest, Facebook and Google know about your locations:</strong></p>
+<p><strong>Let Pinterest, Facebook and Google know about your location(s):</strong></p>
 
-<p>Include Pinterest Rich Pin Place, Facebook / Open Graph Location, and Google Local Business / Local SEO meta tags in your webpages.</p>
+<p>Include Pinterest Rich Pin <em>Place</em>, Facebook / Open Graph <em>Location</em>, and Google <em>Local Business / Local SEO</em> meta tags in your webpages.</p>
 
 <p><strong>The WPSSO Place / Location and Local Business Meta add-on can be used in two different ways:</strong></p>
 
 <ul>
-<li><p>To provide location information for the content of the current webpage.</p></li>
-<li><p>To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).</p></li>
+<li><p>To provide location information for the webpage content.</p></li>
+<li><p>To provide location information for an Organization, which in turn may be related to the content (ie. the content Publisher, event Organizer, etc.).</p></li>
 </ul>
 
 <p>The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a <em>blog front page</em>.</p>

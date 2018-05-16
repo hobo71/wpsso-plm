@@ -19,15 +19,15 @@ WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Sc
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png">
 
-**Let Pinterest, Facebook and Google know about your locations:**
+**Let Pinterest, Facebook and Google know about your location(s):**
 
-Include Pinterest Rich Pin Place, Facebook / Open Graph Location, and Google Local Business / Local SEO meta tags in your webpages.
+Include Pinterest Rich Pin *Place*, Facebook / Open Graph *Location*, and Google *Local Business / Local SEO* meta tags in your webpages.
 
 **The WPSSO Place / Location and Local Business Meta add-on can be used in two different ways:**
 
-* To provide location information for the content of the current webpage.
+* To provide location information for the webpage content.
 
-* To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).
+* To provide location information for an Organization, which in turn may be related to the content (ie. the content Publisher, event Organizer, etc.).
 
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*.
 
@@ -108,9 +108,9 @@ WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an add-on for 
 
 == Screenshots ==
 
-01. WPSSO PLM settings page includes options to manage addresses, geo location, business hours, service radius, price range, menu URL, and many more.
-02. WPSSO PLM tab in the Social and Search Optimization metabox provides options to manage custom addresses, geo location, business hours, service radius, price range, menu URL, and many more (Pro version).
-03. WPSSO PLM meta tag example for the Schema type https://schema.org/Restaurant in Google's Structured Data Testing Tool.
+01. WPSSO PLM settings page includes options to manage location addresses, geo location, business hours, service radius, price and currency information, restaurant menu URL, and more.
+02. WPSSO PLM tab in the Social and Search Optimization metabox provides options to manage custom location addresses, geo location, business hours, service radius, price and currency information, restaurant menu URL, and more (Pro version).
+03. WPSSO PLM meta tag example for the Schema https://schema.org/Restaurant type shown in Google's Structured Data Testing Tool (only a section of the complete Schema markup is shown).
 
 == Changelog ==
 
