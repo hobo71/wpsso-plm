@@ -130,6 +130,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.5.4-dev.2 (2018/05/18)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Added an image dimension check for the "Business Location Image ID" option value.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 2.5.3 (2018/04/14)**
 
 * *New Features*
@@ -142,6 +153,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Refactored the WpssoPlmAddress has_md_place() method to improve logic.
 
 == Upgrade Notice ==
+
+= 2.5.4-dev.2 =
+
+(2018/05/18) Added an image dimension check for the "Business Location Image ID" option value.
 
 = 2.5.3 =
 
