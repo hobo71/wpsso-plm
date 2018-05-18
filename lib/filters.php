@@ -422,17 +422,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_save_options( $opts, $options_name, $network ) {
 
+			$size_name  = $this->p->lca . '-schema';
 			$addr_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $opts, false );	// $add_none = false
-			$last_num = SucomUtil::get_last_num( $addr_names );
+			$last_num   = SucomUtil::get_last_num( $addr_names );
 
 			foreach ( $addr_names as $num => $name ) {
 
 				$name = trim( $name );
-
-				// remove the image url if we have an image id
-				if ( ! empty( $opts['plm_addr_img_id_'.$num] ) ) {
-					unset( $opts['plm_addr_img_url_'.$num] );
-				}
 
 				if ( ! empty( $opts['plm_addr_delete_'.$num] ) || ( $name === '' && $num === $last_num ) ) {	// remove empty "New Address"
 
@@ -440,14 +436,35 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 						unset( $opts['plm_addr_id'] );
 					}
 
-					// remove address id, including all localized keys
+					/**
+					 * Remove the address, including all localized keys.
+					 */
 					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$num.'(#.*)?$/', $opts, true );	// $invert = true
 
-				} elseif ( $name === '' ) {	// just in case
-					$opts['plm_addr_name_'.$num] = sprintf( _x( 'Address #%d',
-						'option value', 'wpsso-plm' ), $num );
-				} else {
-					$opts['plm_addr_name_'.$num] = $name;
+					continue;	// Check the next address.
+				}
+
+				if ( $name === '' ) {	// Just in case.
+					$name = sprintf( _x( 'Address #%d', 'option value', 'wpsso-plm' ), $num );
+				}
+
+				$opts['plm_addr_name_'.$num] = $name;
+
+				if ( ! empty( $opts['plm_addr_img_id_'.$num] ) ) {
+
+					/**
+					 * Remove the image url options if we have an image id.
+					 */
+					unset(
+						$opts['plm_addr_img_url_'.$num],
+						$opts['plm_addr_img_url:width_'.$num],
+						$opts['plm_addr_img_url:height_'.$num]
+					);
+
+					/**
+					 * Get the location image and maybe issue an error if the original image is too small.
+					 */
+					$mt_image = $this->p->media->get_opts_image( $opts, $size_name, true, false, 'plm_addr', 'og', $num );
 				}
 			}
 
