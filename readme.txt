@@ -130,7 +130,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.5.4-dev.2 (2018/05/18)**
+**Version 2.5.4-dev.3 (2018/05/19)**
 
 * *New Features*
 	* None
@@ -154,9 +154,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.5.4-dev.2 =
+= 2.5.4-dev.3 =
 
-(2018/05/18) Added an image dimension check for the "Business Location Image ID" option value.
+(2018/05/19) Added an image dimension check for the "Business Location Image ID" option value.
 
 = 2.5.3 =
 
