@@ -53,7 +53,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			if ( is_admin() ) {
 				$this->p->util->add_plugin_filters( $this, array( 
-					'save_options' => 3,
+					'save_options' => 4,
 					'option_type' => 2,
 					'post_custom_meta_tabs' => 3,
 					'messages_tooltip' => 2,
@@ -76,13 +76,16 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_get_defaults( $def_opts ) {
+
 			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
+
 			/**
 			 * Add options using a key prefix array and post type names.
 			 */
 			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array(
 				'plm_add_to' => 1,
 			) );
+
 			return $def_opts;
 		}
 
@@ -420,9 +423,12 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $place_id; 
 		}
 
-		public function filter_save_options( $opts, $options_name, $network ) {
+		public function filter_save_options( $opts, $options_name, $network, $doing_upgrade ) {
 
-			$size_name  = $this->p->lca . '-schema';
+			if ( $network ) {
+				return $opts;	// Nothing to do.
+			}
+
 			$addr_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $opts, false );	// $add_none = false
 			$last_num   = SucomUtil::get_last_num( $addr_names );
 
@@ -450,7 +456,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				$opts['plm_addr_name_'.$num] = $name;
 
-				if ( ! empty( $opts['plm_addr_img_id_'.$num] ) ) {
+				if ( ! empty( $opts['plm_addr_img_id_'.$num] ) ) {	// Image id 0 is not valid.
 
 					/**
 					 * Remove the image url options if we have an image id.
@@ -462,13 +468,33 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					);
 
 					/**
-					 * Get the location image and maybe issue an error if the original image is too small.
+					 * Get the location image and issue an error if the original image is too small. Only check
+					 * on a manual save, not an options upgrade action (ie. when a new add-on is activated).
 					 */
-					$mt_image = $this->p->media->get_opts_image( $opts, $size_name, true, false, 'plm_addr', 'og', $num );
+					if ( ! $doing_upgrade ) {
+						$this->check_location_image_size( $opts, 'plm_addr_img', $num );
+					}
 				}
 			}
 
 			return $opts;
+		}
+
+		/**
+		 * Get the location image and issue an error if the original image is too small.
+		 */
+		private function check_location_image_size( $opts, $opt_pre, $opt_num = null ) {
+
+			$size_name = $this->p->lca . '-schema';
+			$name_transl = SucomUtil::get_key_value( $opt_pre . '_name_' . $opt_num, $opts, 'current' );
+			$context_transl = sprintf( __( 'saving location "%1$s"', 'wpsso-plm' ), $name_transl );
+			$settings_page_link = $this->p->util->get_admin_url( 'plm-general' );
+
+			$this->p->notice->set_ref( $settings_page_link, null, $context_transl );
+
+			$og_single_image = $this->p->media->get_opts_single_image( $opts, $size_name, $opt_pre, $opt_num );
+
+			$this->p->notice->unset_ref( $settings_page_link );
 		}
 
 		public function filter_option_type( $type, $base_key ) {

@@ -26,7 +26,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			$this->menu_ext = $ext;
 		}
 
-		// called by the extended WpssoAdmin class
+		/**
+		 * Called by the extended WpssoAdmin class.
+		 */
 		protected function add_meta_boxes() {
 
 			add_meta_box( $this->pagehook.'_contact', 
@@ -36,15 +38,6 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			add_meta_box( $this->pagehook.'_general',
 				_x( 'Place / Location Settings', 'metabox title', 'wpsso-plm' ), 
 					array( &$this, 'show_metabox_general' ), $this->pagehook, 'normal' );
-
-			/**
-			 * Validate image sizes.
-			 */
-			foreach ( SucomUtil::keys_start_with( 'plm_addr_img_id_', $this->p->options ) as $opt_key => $pid ) {
-				if ( ! empty( $pid ) ) {
-					$this->p->media->get_attachment_image_src( $pid, $this->p->lca.'-schema', false );
-				}
-			}
 		}
 
 		public function show_metabox_contact() {
