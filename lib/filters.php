@@ -493,7 +493,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			$size_name = $this->p->lca . '-schema';
 			$opt_img_pre = $opt_pre . '_img';
-			$context_transl = sprintf( __( 'saving location "%1$s"', 'wpsso-plm' ), $name_transl );
+			$context_transl = sprintf( __( 'saving address "%1$s"', 'wpsso-plm' ), $name_transl );
 			$settings_page_link = $this->p->util->get_admin_url( 'plm-general' );
 
 			$this->p->notice->set_ref( $settings_page_link, null, $context_transl );
