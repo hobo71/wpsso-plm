@@ -472,7 +472,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					 * on a manual save, not an options upgrade action (ie. when a new add-on is activated).
 					 */
 					if ( ! $doing_upgrade ) {
-						$this->check_location_image_size( $opts, 'plm_addr_img', $num );
+						$this->check_location_image_size( $opts, 'plm', $num );
 					}
 				}
 			}
@@ -485,14 +485,31 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		 */
 		private function check_location_image_size( $opts, $opt_pre, $opt_num = null ) {
 
+			if ( $opt_pre === 'plm' ) {
+				$name_transl = SucomUtil::get_key_value( $opt_pre . '_name_' . $opt_num, $opts, 'current' );
+			} else {
+				return;
+			}
+
 			$size_name = $this->p->lca . '-schema';
-			$name_transl = SucomUtil::get_key_value( $opt_pre . '_name_' . $opt_num, $opts, 'current' );
+			$opt_img_pre = $opt_pre . '_img';
 			$context_transl = sprintf( __( 'saving location "%1$s"', 'wpsso-plm' ), $name_transl );
 			$settings_page_link = $this->p->util->get_admin_url( 'plm-general' );
 
 			$this->p->notice->set_ref( $settings_page_link, null, $context_transl );
 
-			$og_single_image = $this->p->media->get_opts_single_image( $opts, $size_name, $opt_pre, $opt_num );
+			/**
+			 * Returns an image array:
+			 *
+			 * array(
+			 *	'og:image' => null,
+			 *	'og:image:width' => null,
+			 *	'og:image:height' => null,
+			 *	'og:image:cropped' => null,
+			 *	'og:image:id' => null,
+			 * );
+			 */
+			$og_single_image = $this->p->media->get_opts_single_image( $opts, $size_name, $opt_img_pre, $opt_num );
 
 			$this->p->notice->unset_ref( $settings_page_link );
 		}
