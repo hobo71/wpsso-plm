@@ -589,94 +589,186 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			switch ( $idx ) {
+
 				case 'tooltip-plm_addr_for_home':
-					// use WPSSO's translation for the metabox title
-					$text = __( 'Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your blog (non-static) front page.', 'wpsso-plm' ).' '.sprintf( __( 'An address for a static front page can be selected in the %1$s metabox when editing the static page.', 'wpsso-plm' ), _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' ) );
+
+					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );
+
+					$text = __( 'Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your blog (non-static) front page.', 'wpsso-plm' ).' ';
+					
+					$text .= sprintf( __( 'An address for a static front page can be selected in the %1$s metabox when editing the static page.', 'wpsso-plm' ), $metabox_title );
+
 					break;
+
 				case 'tooltip-plm_addr_def_country':
+
 					$text = __( 'A default country to use when creating a new address.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_id':
+
 					$text = __( 'Select an address to edit. The address and business information is used for Open Graph meta tags and Schema markup.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_name':
+
 					$text = __( 'Enter a descriptive name for this address. The address name may appear in forms and the Schema Place name property.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_streetaddr':
+
 					$text = __( 'An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_po_box_number':
+
 					$text = __( 'An optional Post Office Box Number for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_city':
+
 					$text = __( 'An optional City name for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_state':
+
 					$text = __( 'An optional State or Province name for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_zipcode':
+
 					$text = __( 'An optional Zip or Postal Code for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_country':
+
 					$text = __( 'An optional Country for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_latitude':
+
 					$text = __( 'The numeric <em>decimal degrees</em> latitude for the main content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_longitude':
+
 					$text = __( 'The numeric <em>decimal degrees</em> longitude for the main content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_altitude':
+
 					$text = __( 'An optional numeric altitude (in meters above sea level) for the main content of this webpage.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_business_type':
+
 					$text = __( 'A more descriptive Schema type for this local business. You must select a food establishment (fast food restaurant, ice cream shop, restaurant, etc.) to include Schema markup for a food menu URL and/or reservation information.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_img_id':
+
 					$text = __( 'An image ID and media library selection for your business location image.', 'wpsso-plm' ).' '.__( 'The business location image is used in the Schema LocalBusiness markup for the \'location\' Schema property.', 'wpsso-plm' ).' '.__( 'The business location image is not used when an address is added to a post, page, or custom post type.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_img_url':
+
 					$text = __( 'You can enter a business location image URL (including the http:// prefix) instead of choosing an image ID &mdash; if a business location image ID is specified, the image URL option is disabled.', 'wpsso-plm' ).' <strong>'.__( 'The image URL option allows you to use an image outside of a managed collection (WordPress Media Library or NextGEN Gallery), and/or a smaller logo style image.', 'wpsso-plm' ).'</strong>';
+
 					break;
+
 				case 'tooltip-plm_addr_phone':
+
 					$text = __( 'An optional Telephone number for this local business.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_days':
+
 					$text = __( 'Select the days and hours this business is open.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_season_dates':
+
 					$text = __( 'This business is only open for part of the year, between these two dates.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_service_radius':
+
 					$text = __( 'The geographic area where a service is provided, in meters around the location.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_currencies_accepted':
+
 					$text = __( 'A comma-delimited list of <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency codes</a> accepted by the local business (example: USD, CAD).', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_payment_accepted':
+
 					$text = __( 'A comma-delimited list of payment options accepted by the local business (example: Cash, Credit Card).', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_price_range':
+
 					$text = __( 'The price range of goods or services provided by the local business (example: $10-100).', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_accept_res':
+
 					$text = __( 'This food establishment accepts reservations.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_menu_url':
+
 					$text = __( 'The menu URL for this food establishment.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_cuisine':
+
 					$text = __( 'The cuisine served by this food establishment.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_addr_order_urls':
+
 					$text = __( 'Comma-delimited website and mobile app URLs to order products. The WPSSO JSON add-on is required to add Order Action URL(s) to the Schema potentialAction property.', 'wpsso-plm' );
+
 					break;
+
 				case 'tooltip-plm_add_to':
-					// use WPSSO's translation for the metabox title
-					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' ) );
+
+					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );
+					$metabox_tab = _x( 'Place / Location', 'metabox tab', 'wpsso-plm' );
+
+					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), $metabox_tab, $metabox_title );
+
 					break;
+
 			}
+
 			return $text;
+
 		}
 
 		public function filter_status_gpl_features( $features, $ext, $info, $pkg ) {
