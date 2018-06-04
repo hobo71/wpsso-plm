@@ -592,7 +592,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				case 'tooltip-plm_addr_for_home':
 
-					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );
+					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );	// Use wpsso's text domain.
 
 					$text = __( 'Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your blog (non-static) front page.', 'wpsso-plm' ).' ';
 					
@@ -758,7 +758,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				case 'tooltip-plm_add_to':
 
-					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );
+					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );	// Use wpsso's text domain.
 					$metabox_tab = _x( 'Place / Location', 'metabox tab', 'wpsso-plm' );
 
 					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), $metabox_tab, $metabox_title );
