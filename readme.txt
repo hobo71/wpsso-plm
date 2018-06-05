@@ -109,7 +109,7 @@ WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an add-on for 
 == Screenshots ==
 
 01. WPSSO PLM settings page includes options to manage location addresses, geo location, business hours, service radius, price and currency information, restaurant menu URL, and more.
-02. WPSSO PLM tab in the Social and Search Optimization metabox provides options to manage custom location addresses, geo location, business hours, service radius, price and currency information, restaurant menu URL, and more (Pro version).
+02. WPSSO PLM tab in the Document SSO metabox provides options to manage custom location addresses, geo location, business hours, service radius, price and currency information, restaurant menu URL, and more (Pro version).
 03. WPSSO PLM meta tag example for the Schema https://schema.org/Restaurant type shown in Google's Structured Data Testing Tool (only a section of the complete Schema markup is shown).
 
 == Changelog ==
