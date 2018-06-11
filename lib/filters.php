@@ -316,15 +316,32 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				$mt_schema['address'] = WpssoPlmAddress::get_addr_line( $addr_opts );
 
-				if ( $this->p->schema->is_schema_type_child( $page_type_id, 'local.business' ) ) {	// just in case
+				if ( $this->p->schema->is_schema_type_child( $page_type_id, 'local.business' ) ) {
+
 					if ( $this->p->debug->enabled ) {
 						$this->p->debug->log( 'schema type is child of local.business' );
 					}
+
 					foreach ( array(
 						'plm_addr_phone' => 'telephone',
 						'plm_addr_currencies_accepted' => 'currenciesAccepted',
 						'plm_addr_payment_accepted' => 'paymentAccepted',
 						'plm_addr_price_range' => 'priceRange',
+					) as $opt_key => $mt_name ) {
+						$mt_schema[$mt_name] = isset( $addr_opts[$opt_key] ) ? $addr_opts[$opt_key] : '';
+					}
+
+				} elseif ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'schema type is not a child of local.business' );
+				}
+
+				if ( $this->p->schema->is_schema_type_child( $page_type_id, 'food.establishment' ) ) {
+
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'schema type is child of food.establishment' );
+					}
+
+					foreach ( array(
 						'plm_addr_accept_res' => 'acceptsreservations',
 						'plm_addr_menu_url' => 'hasMenu',
 						'plm_addr_cuisine' => 'servesCuisine',
@@ -335,8 +352,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 							$mt_schema[$mt_name] = isset( $addr_opts[$opt_key] ) ? $addr_opts[$opt_key] : '';
 						}
 					}
-				} elseif ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'schema type is not a child of local.business' );
 				}
 			}
 
