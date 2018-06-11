@@ -130,6 +130,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.5.5-dev.2 (2018/06/11)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags for the FoodEstablishment type instead of LocalBusiness.
+* *Developer Notes*
+	* None
+
 **Version 2.5.4 (2018/05/21)**
 
 * *New Features*
@@ -141,18 +152,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* None
 
-**Version 2.5.3 (2018/04/14)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Refactored the WpssoPlmAddress has_md_place() method to improve logic.
-
 == Upgrade Notice ==
+
+= 2.5.5-dev.2 =
+
+(2018/06/11) Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags for the FoodEstablishment type instead of LocalBusiness.
 
 = 2.5.4 =
 
