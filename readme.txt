@@ -17,7 +17,7 @@ WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Sc
 
 == Description ==
 
-<img class="readme-icon" src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png">
+<p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png"></p>
 
 **Let Pinterest, Facebook and Google know about your location(s):**
 
