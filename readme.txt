@@ -130,7 +130,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.5.5-dev.2 (2018/06/11)**
+**Version 2.5.5-dev.3 (2018/06/12)**
 
 * *New Features*
 	* None
@@ -154,9 +154,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.5.5-dev.2 =
+= 2.5.5-dev.3 =
 
-(2018/06/11) Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags for the FoodEstablishment type instead of LocalBusiness.
+(2018/06/12) Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags for the FoodEstablishment type instead of LocalBusiness.
 
 = 2.5.4 =
 
