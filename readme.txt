@@ -137,7 +137,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Improvements*
 	* None
 * *Bugfixes*
-	* Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags for the FoodEstablishment type instead of LocalBusiness.
+	* Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags only for FoodEstablishment instead of any LocalBusiness.
 * *Developer Notes*
 	* None
 
@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.5.5-b.1 =
 
-(2018/06/13) Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags for the FoodEstablishment type instead of LocalBusiness.
+(2018/06/13) Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags only for FoodEstablishment instead of any LocalBusiness.
 
 = 2.5.4 =
 
