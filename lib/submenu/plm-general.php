@@ -33,11 +33,11 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 			add_meta_box( $this->pagehook.'_contact', 
 				_x( 'Addresses and Contact Information', 'metabox title', 'wpsso-plm' ), 
-					array( &$this, 'show_metabox_contact' ), $this->pagehook, 'normal' );
+					array( $this, 'show_metabox_contact' ), $this->pagehook, 'normal' );
 
 			add_meta_box( $this->pagehook.'_general',
 				_x( 'Place / Location Settings', 'metabox title', 'wpsso-plm' ), 
-					array( &$this, 'show_metabox_general' ), $this->pagehook, 'normal' );
+					array( $this, 'show_metabox_general' ), $this->pagehook, 'normal' );
 		}
 
 		public function show_metabox_contact() {
