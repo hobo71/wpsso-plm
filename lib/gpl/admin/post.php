@@ -35,9 +35,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			unset( $form->options['plm_addr_id'] );
 
-			$table_rows[] = '<td colspan="4" align="center">'.
-				$this->p->msgs->get( 'pro-feature-msg', 
-					array( 'lca' => 'wpssoplm' ) ).'</td>';
+			$table_rows[] = '<td colspan="4">' . $this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssoplm' ) ) . '</td>';
 
 			$table_rows['plm_addr_id'] = $form->get_th_html( _x( 'Select an Address',
 				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_id' ).
