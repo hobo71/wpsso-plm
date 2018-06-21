@@ -89,20 +89,20 @@ WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an add-on for 
 
 == Installation ==
 
-<h3>Install and Uninstall</h3>
+<h3 class="top">Install and Uninstall</h3>
 
 * [Install the WPSSO PLM Add-on](https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/)
 * [Uninstall the WPSSO PLM Add-on](https://wpsso.com/docs/plugins/wpsso-plm/installation/uninstall-the-plugin/)
 
 == Frequently Asked Questions ==
 
-<h3>Frequently Asked Questions</h3>
+<h3 class="top">Frequently Asked Questions</h3>
 
 * None
 
 == Other Notes ==
 
-<h3>Additional Documentation</h3>
+<h3 class="top">Additional Documentation</h3>
 
 * None
 
@@ -114,7 +114,7 @@ WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an add-on for 
 
 == Changelog ==
 
-<h3>Version Numbering</h3>
+<h3 class="top">Version Numbering</h3>
 
 Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
