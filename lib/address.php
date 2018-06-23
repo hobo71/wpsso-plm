@@ -26,6 +26,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			'plm_addr_state' => 'place:region',
 			'plm_addr_zipcode' => 'place:postal_code',
 			'plm_addr_country' => 'place:country_name',
+			'plm_addr_phone' => 'place:telephone',
 		);
 
 		public function __construct( &$plugin ) {
@@ -96,8 +97,9 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			return $addr_names;
 		}
 
-		// get a specific address id
-		// if $id is 'custom' then $mixed must be the $mod array
+		/**
+		 * Get a specific address id. If $id is 'custom' then $mixed must be the $mod array.
+		 */
 		public static function get_addr_id( $id, $mixed = 'current' ) {
 
 			$wpsso =& Wpsso::get_instance();
@@ -112,17 +114,25 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			$addr_opts = array();
 
 			if ( $id === 'custom' ) {
+
 				if ( isset( $mixed['obj'] ) && is_object( $mixed['obj'] ) ) {
+
 					$md_opts = self::get_md_options( $mixed );				// returns all plm options from the post
+
 					foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)(#.*)?$/', 	// filter for all address options
 						$md_opts, false, '$1' ) as $opt_idx => $value ) {
+
 						$addr_opts[$opt_idx] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
 					}
 				}
+
 			} elseif ( is_numeric( $id ) ) {
+
 				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*_)'.$id.'(#.*)?$/',
 					$wpsso->options, false, '$1' ) as $opt_prefix => $value ) {	// allow '[:_]' as separator
+
 					$opt_idx = rtrim( $opt_prefix, '_' );
+
 					$addr_opts[$opt_idx] = SucomUtil::get_key_value( $opt_prefix.$id, $wpsso->options, $mixed );
 				}
 			}
@@ -138,9 +148,13 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			}
 		}
 
-		// text value for http://schema.org/address
+		/**
+		 * Text value for the https://schema.org/address property.
+		 */
 		public static function get_addr_line( array $addr_opts ) {
+
 			$address = '';
+
 			foreach ( array( 
 				'plm_addr_streetaddr',
 				'plm_addr_po_box_number',
@@ -161,6 +175,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 					$address .= $addr_opts[$key].', ';
 				}
 			}
+
 			return rtrim( $address, ', ' );
 		}
 
@@ -415,4 +430,3 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		}
 	}
 }
-

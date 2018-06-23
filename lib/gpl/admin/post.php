@@ -73,6 +73,10 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_country' ). 
 			'<td class="blank"colspan="3">'.$form->get_no_select_country( 'plm_addr_country' ).'</td>';
 
+			$table_rows['plm_addr_phone'] = $form->get_th_html( _x( 'Place Telephone',
+				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_phone' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value( '' ).'</td>';
+
 			$table_rows['subsection_og_location'] = '<td></td><td class="subsection" colspan="3"><h4>'.
 				_x( 'Facebook / Open Graph Location', 'metabox title', 'wpsso-plm' ).'</h4></td>';
 
@@ -99,8 +103,8 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type',
 				$form->get_cache( 'business_types_select' ), 'schema_type', '', true ).'</td>';
 
-			$table_rows['plm_addr_phone'] = $form->get_th_html( _x( 'Business Telephone',
-				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_phone' ). 
+			$table_rows['plm_addr_business_phone'] = $form->get_th_html( _x( 'Business Telephone',
+				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_phone' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_input_value( '' ).'</td>';
 
 			$row_number = 1;

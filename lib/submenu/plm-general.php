@@ -170,9 +170,15 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_zipcode_'.$id ).'</td>';
 		
 						$this->form->defaults['plm_addr_country_'.$id] = $this->p->options['plm_addr_def_country'];	// set default value
+
 						$table_rows['plm_addr_country_'.$id] = $tr_html.
 						$this->form->get_th_html( _x( 'Country', 'option label', 'wpsso-plm' ), '', 'plm_addr_country' ). 
 						'<td colspan="3">'.$this->form->get_select_country( 'plm_addr_country_'.$id ).'</td>';
+
+						$table_rows['plm_addr_phone_'.$id] = $tr_html.
+						$this->form->get_th_html( _x( 'Place Telephone', 'option label', 'wpsso-plm' ), '', 'plm_addr_phone' ). 
+						'<td colspan="3">'.$this->form->get_input( 'plm_addr_phone_'.$id ).'</td>';
+
 					}
 
 					$table_rows['subsection_og_location'] = '<th></th><td class="subsection" colspan="3"><h4>'.
@@ -222,12 +228,14 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$this->form->get_th_html( _x( 'or Business Location Image URL', 'option label', 'wpsso-plm' ), '', 'plm_addr_img_url' ).
 						'<td colspan="3">'.$this->form->get_input_image_url( 'plm_addr_img_'.$id ).'</td>';
 
-						$table_rows['plm_addr_phone_'.$id] = $tr_html.
-						$this->form->get_th_html( _x( 'Business Telephone', 'option label', 'wpsso-plm' ), '', 'plm_addr_phone' ). 
-						'<td colspan="3">'.$this->form->get_input( 'plm_addr_phone_'.$id ).'</td>';
+						$table_rows['plm_addr_business_phone_'.$id] = $tr_html.
+						$this->form->get_th_html( _x( 'Business Telephone', 'option label', 'wpsso-plm' ), '', 'plm_addr_business_phone' ). 
+						'<td colspan="3">'.$this->form->get_input( 'plm_addr_business_phone_'.$id ).'</td>';
 
 						$row_number = 1;
+
 						foreach ( $this->p->cf['form']['weekdays'] as $day => $day_label ) {
+
 							$day_label_transl = _x( $day_label, 'option value', 'wpsso' );
 
 							if ( $row_number === 1 ) {

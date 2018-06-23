@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 			'plugin' => array(
 				'wpssoplm' => array(			// Plugin acronym.
 					'version' => '2.5.5',		// Plugin version.
-					'opt_version' => '16',		// Increment when changing default option values.
+					'opt_version' => '17',		// Increment when changing default option values.
 					'short' => 'WPSSO PLM',		// Short plugin name.
 					'name' => 'WPSSO Place / Location and Local Business Meta',
 					'desc' => 'WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.',
@@ -65,11 +65,12 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_addr_state' => '',				// State / Province
 					'plm_addr_zipcode' => '',			// Zip / Postal Code
 					'plm_addr_country' => '',			// Country
+					'plm_addr_phone' => '',				// Place Telephone
 					'plm_addr_latitude' => '',			// Latitude
 					'plm_addr_longitude' => '',			// Longitude
 					'plm_addr_altitude' => '',			// Altitude
-					'plm_addr_business_type' => 'local.business',
-					'plm_addr_phone' => '',
+					'plm_addr_business_type' => 'local.business',	// Local Business Type
+					'plm_addr_business_phone' => '',		// Business Telephone
 					'plm_addr_day_sunday' => 0,
 					'plm_addr_day_sunday_open' => '09:00',
 					'plm_addr_day_sunday_close' => '17:00',
