@@ -130,6 +130,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.5.6 (2018/06/23)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Added a new "Place Telephone" option, which may be different than the main "Business Telephone" option value.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 2.5.5 (2018/06/16)**
 
 * *New Features*
@@ -154,11 +165,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.5.5 =
+= 2.5.6 =
 
-(2018/06/16) Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags only for FoodEstablishment instead of any LocalBusiness.
-
-= 2.5.4 =
-
-(2018/05/21) Added an image dimension check for the "Business Location Image ID" option value.
+(2018/06/23) Added a new "Place Telephone" option, which may be different than the main "Business Telephone" option value.
 
