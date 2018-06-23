@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(			// Plugin acronym.
-					'version' => '2.5.5',		// Plugin version.
-					'opt_version' => '17',		// Increment when changing default option values.
+					'version' => '2.5.6',		// Plugin version.
+					'opt_version' => '18',		// Increment when changing default option values.
 					'short' => 'WPSSO PLM',		// Short plugin name.
 					'name' => 'WPSSO Place / Location and Local Business Meta',
 					'desc' => 'WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.',
