@@ -115,7 +115,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 
 		public static function set_constants( $plugin_filepath ) { 
 
-			if ( defined( 'WPSSOPLM_VERSION' ) ) {			// execute and define constants only once
+			if ( defined( 'WPSSOPLM_VERSION' ) ) {	// Define constants only once.
 				return;
 			}
 

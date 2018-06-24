@@ -76,7 +76,9 @@ if ( ! class_exists( 'WpssoPlmRegister' ) ) {
 		}
 
 		private function activate_plugin() {
+
 			$version = WpssoPlmConfig::$cf['plugin']['wpssoplm']['version'];	// only our config
+
 			if ( class_exists( 'WpssoUtil' ) ) {
 				WpssoUtil::save_all_times( 'wpssoplm', $version );
 			} else {
