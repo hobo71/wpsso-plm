@@ -627,7 +627,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			switch ( $idx ) {
 				case 'tooltip-post-plm_addr_id':
-					$text = __( 'Select an address or enter a customized address bellow.', 'wpsso-plm' );
+					$text = __( 'Select an address or enter a customized address below.', 'wpsso-plm' );
 					break;
 			}
 			return $text;

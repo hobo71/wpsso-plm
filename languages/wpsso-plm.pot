@@ -54,7 +54,7 @@ msgid "Place / Location"
 msgstr ""
 
 #: lib/filters.php:630
-msgid "Select an address or enter a customized address bellow."
+msgid "Select an address or enter a customized address below."
 msgstr ""
 
 #: lib/filters.php:648
