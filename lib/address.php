@@ -17,16 +17,16 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		private static $mod_md_opts = array();	// get_md_options() meta data cache
 
 		public static $place_mt = array(
-			'plm_addr_name' => 'place:name',
-			'plm_addr_name_alt' => 'place:name_alt',
-			'plm_addr_desc' => 'place:description',
-			'plm_addr_streetaddr' => 'place:street_address',
+			'plm_addr_name'          => 'place:name',
+			'plm_addr_name_alt'      => 'place:name_alt',
+			'plm_addr_desc'          => 'place:description',
+			'plm_addr_streetaddr'    => 'place:street_address',
 			'plm_addr_po_box_number' => 'place:po_box_number',
-			'plm_addr_city' => 'place:locality',
-			'plm_addr_state' => 'place:region',
-			'plm_addr_zipcode' => 'place:postal_code',
-			'plm_addr_country' => 'place:country_name',
-			'plm_addr_phone' => 'place:telephone',
+			'plm_addr_city'          => 'place:locality',
+			'plm_addr_state'         => 'place:region',
+			'plm_addr_zipcode'       => 'place:postal_code',
+			'plm_addr_country'       => 'place:country_name',
+			'plm_addr_phone'         => 'place:telephone',
 		);
 
 		public function __construct( &$plugin ) {
@@ -106,7 +106,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log_args( array( 
-					'id' => $id,
+					'id'    => $id,
 					'mixed' => $mixed,
 				) );
 			}
