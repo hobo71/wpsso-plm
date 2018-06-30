@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.5.4\n"
+"Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.5.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2018-06-23 17:12-0600\n"
-"PO-Revision-Date: 2018-06-23 17:23-0600\n"
+"POT-Creation-Date: 2018-06-27 20:53-0600\n"
+"PO-Revision-Date: 2018-06-27 20:54-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -55,7 +55,7 @@ msgid "Place / Location"
 msgstr "Place / position"
 
 #: lib/filters.php:630
-msgid "Select an address or enter a customized address bellow."
+msgid "Select an address or enter a customized address below."
 msgstr "Sélectionnez une adresse ou complétez une adresse personnalisée ci-dessous."
 
 #: lib/filters.php:648
