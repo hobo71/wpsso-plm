@@ -85,7 +85,7 @@ If you're using a static front page, or would like to include location informati
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an add-on for the WPSSO Core plugin. The WPSSO PLM Free add-on works with either the Free or Pro versions of WPSSO Core. The [WPSSO PLM Pro add-on](https://wpsso.com/extend/plugins/wpsso-plm/) uses WPSSO Core Pro features and requires an active and licensed [WPSSO Core Pro plugin](https://wpsso.com/).
+WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an add-on for the [WPSSO Core Plugin](https://wordpress.org/plugins/wpsso/) (Free or Pro version). The [WPSSO PLM Pro add-on](https://wpsso.com/extend/plugins/wpsso-plm/) uses WPSSO Core Pro features and requires an active and licensed [WPSSO Core Pro plugin](https://wpsso.com/).
 
 == Installation ==
 
