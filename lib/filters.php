@@ -36,19 +36,19 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'get_defaults' => 1,
-				'get_md_defaults' => 1,
-				'rename_options_keys' => 1,
-				'rename_md_options_keys' => 1,
-				'og_type' => 2,
-				'og_seed' => 2,
+				'get_defaults'                               => 1,
+				'get_md_defaults'                            => 1,
+				'rename_options_keys'                        => 1,
+				'rename_md_options_keys'                     => 1,
+				'og_type'                                    => 2,
+				'og_seed'                                    => 2,
 				'json_prop_https_schema_org_potentialaction' => 5,
-				'json_array_schema_type_ids' => 2,
-				'schema_meta_itemprop' => 4,
-				'schema_noscript_array' => 4,
-				'schema_type_id' => 3,
-				'get_place_options' => 3,
-				'get_event_place_id' => 3,
+				'json_array_schema_type_ids'                 => 2,
+				'schema_meta_itemprop'                       => 4,
+				'schema_noscript_array'                      => 4,
+				'schema_type_id'                             => 3,
+				'get_place_options'                          => 3,
+				'get_event_place_id'                         => 3,
 			) );
 
 			if ( is_admin() ) {
