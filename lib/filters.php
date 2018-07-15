@@ -252,6 +252,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_json_prop_https_schema_org_potentialaction( $action_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $is_main && ! empty( $mt_og['place:business:order_url'] ) ) {
+
 				$action_data[] = array(
 					'@context' => 'https://schema.org',
 					'@type' => 'OrderAction',
