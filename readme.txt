@@ -123,52 +123,52 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 **Version 2.6.0-dev.1 (2018/07/17)**
 
 * *New Features*
-	* None
+	* None.
 * *Improvements*
-	* None
+	* Maintenance release.
 * *Bugfixes*
-	* None
+	* None.
 * *Developer Notes*
-	* None
+	* None.
 
 **Version 2.5.6 (2018/06/23)**
 
 * *New Features*
-	* None
+	* None.
 * *Improvements*
 	* Added a new "Place Telephone" option, which may be different than the main "Business Telephone" option value.
 * *Bugfixes*
-	* None
+	* None.
 * *Developer Notes*
-	* None
+	* None.
 
 **Version 2.5.5 (2018/06/16)**
 
 * *New Features*
-	* None
+	* None.
 * *Improvements*
-	* None
+	* None.
 * *Bugfixes*
 	* Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags only for FoodEstablishment instead of any LocalBusiness.
 * *Developer Notes*
-	* None
+	* None.
 
 **Version 2.5.4 (2018/05/21)**
 
 * *New Features*
-	* None
+	* None.
 * *Improvements*
 	* Added an image dimension check for the "Business Location Image ID" option value.
 * *Bugfixes*
-	* None
+	* None.
 * *Developer Notes*
-	* None
+	* None.
 
 == Upgrade Notice ==
 
 = 2.6.0-dev.1 =
 
-(2018/07/17) None.
+(2018/07/17) Maintenance release.
 
 = 2.5.6 =
 
