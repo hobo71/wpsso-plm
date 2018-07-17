@@ -120,6 +120,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.6.0-dev.1 (2018/07/17)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 2.5.6 (2018/06/23)**
 
 * *New Features*
@@ -154,6 +165,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None
 
 == Upgrade Notice ==
+
+= 2.6.0-dev.1 =
+
+(2018/07/17) None.
 
 = 2.5.6 =
 
