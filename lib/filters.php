@@ -579,6 +579,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 *	'og:image:height'  => null,
 			 *	'og:image:cropped' => null,
 			 *	'og:image:id'      => null,
+			 *	'og:image:alt'     => null,
 			 * );
 			 */
 			$og_single_image = $this->p->media->get_opts_single_image( $opts, $size_name, $opt_img_pre, $opt_num );
