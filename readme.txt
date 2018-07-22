@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.7
-Stable Tag: 2.5.6
+Stable Tag: 2.6.0
 
 WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
 
@@ -169,8 +169,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 2.6.0 =
 
 (2018/07/22) Maintenance release.
-
-= 2.5.6 =
-
-(2018/06/23) Added a new "Place Telephone" option, which may be different than the main "Business Telephone" option value.
 
