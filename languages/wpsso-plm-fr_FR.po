@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2018-07-21 08:48-0400\n"
-"PO-Revision-Date: 2018-07-21 08:48-0400\n"
+"PO-Revision-Date: 2018-07-22 08:51-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -72,7 +72,7 @@ msgstr "Un pays par défaut à utiliser lors de la création d'une nouvelle adre
 
 #: lib/filters.php:711
 msgid "Select an address to edit. The address and business information is used for Open Graph meta tags and Schema markup."
-msgstr "Sélectionnez une adresse à modifier. Les informations d'adresse et d'entreprise sont utilisées pour les balises méta Open Graph et balisage de Schéma."
+msgstr "Sélectionnez une adresse à modifier. Les informations d'adresse et d'entreprise sont utilisées pour les balises méta Open Graph et balisage Schéma."
 
 #: lib/filters.php:717
 msgid "Enter a descriptive name for this address. The address name may appear in forms and the Schema Place name property."
@@ -132,7 +132,7 @@ msgstr "La bibliothèque de média et un ID d'image pour l'image d'emplacement d
 
 #: lib/filters.php:788
 msgid "The business location image is used in the Schema LocalBusiness markup for the 'location' Schema property."
-msgstr "L'image d'emplacement de l'entreprises est utilisé dans le balisage de Schéma LocalBusiness pour la propriété de Schéma 'location'."
+msgstr "L'image d'emplacement de l'entreprises est utilisé dans le balisage Schéma LocalBusiness pour la propriété de Schéma 'location'."
 
 #: lib/filters.php:788
 msgid "The business location image is not used when an address is added to a post, page, or custom post type."
