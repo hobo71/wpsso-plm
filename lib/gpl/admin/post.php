@@ -101,7 +101,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			$table_rows['plm_addr_business_type'] = $form->get_th_html( _x( 'Local Business Type',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_type' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type',
-				$form->get_cache( 'business_types_select' ), 'schema_type', '', true ).'</td>';
+				$this->p->util->get_form_cache( 'business_types_select' ), 'schema_type', '', true ).'</td>';
 
 			$table_rows['plm_addr_business_phone'] = $form->get_th_html( _x( 'Business Telephone',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_phone' ). 
@@ -125,10 +125,10 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 						$day_label_transl.'</td>'.
 					'<td class="blank">'.__( 'Opens at', 'wpsso-plm' ).' '.
 						$form->get_no_select( 'plm_addr_day_'.$day.'_open',
-							$form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>'.
+							$this->p->util->get_form_cache( 'half_hours' ), 'medium', '', true ).'</td>'.
 					'<td class="blank">'.__( 'Closes at', 'wpsso-plm' ).' '.
 						$form->get_no_select( 'plm_addr_day_'.$day.'_close',
-							$form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>';
+							$this->p->util->get_form_cache( 'half_hours' ), 'medium', '', true ).'</td>';
 
 				$row_number++;
 			}
