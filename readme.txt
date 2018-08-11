@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.8
-Stable Tag: 2.6.0
+Stable Tag: 2.6.1
 
 WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
 
@@ -120,6 +120,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.6.1 (2018/08/11)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* Fix to replace the deprecated SucomForm::get_cache() method call with WpssoUtil::get_form_cache().
+* *Developer Notes*
+	* None.
+
 **Version 2.6.0 (2018/07/22)**
 
 * *New Features*
@@ -166,7 +177,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.6.0 =
+= 2.6.1 =
 
-(2018/07/22) Maintenance release.
+(2018/08/11) Fix to replace the deprecated SucomForm::get_cache() method call with WpssoUtil::get_form_cache().
 
