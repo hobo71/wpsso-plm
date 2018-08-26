@@ -22,7 +22,7 @@
 <p><strong>The WPSSO Place / Location and Local Business Meta add-on can be used in two different ways:</strong></p>
 
 <ul>
-<li><p>To provide location information for the webpage content.</p></li>
+<li><p>To provide location information for the webpage content (ie. the content is about a specific physical place / location).</p></li>
 <li><p>To provide location information for an Organization, which in turn may be related to the content (ie. the content Publisher, event Organizer, etc.).</p></li>
 </ul>
 
