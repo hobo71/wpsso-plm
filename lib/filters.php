@@ -891,9 +891,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {
 
 			$features['(tool) Custom Place / Location and Local Business Meta'] = array( 
-				'td_class' => $pkg['aop'] ? '' : 'blank',
+				'td_class' => $pkg['pp'] ? '' : 'blank',
 				'purchase' => $pkg['purchase'],
-				'status'   => $pkg['aop'] ? 'on' : 'off',
+				'status'   => $pkg['pp'] ? 'on' : 'off',
 			);
 
 			return $features;
