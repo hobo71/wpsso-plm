@@ -37,33 +37,34 @@ If you're using a static front page, or would like to include location informati
 
 * Extends the features of the WPSSO Core Free or Pro plugin.
 
-* Select an address / location for a Blog Front Page.
+* Select a place / location for a Blog Front Page.
 
-* Manage multiple addresses / contact information:
+* Manage multiple place / location information:
 
-	* Pinterest Rich Pin / Schema Place
-		* Address Name
+	* Place Name
+	* Address:
 		* Street Address
 		* P.O. Box Number
 		* City
 		* State / Province
 		* Zip / Postal Code
 		* Country
-	* Facebook / Open Graph Location
+	* Telephone
+	* Geo Coordinates:
 		* Latitude
 		* Longitude
 		* Altitude
-	* Schema Local Business
-		* Local Business Type
-		* Business Location Image ID
-		* or Business Location Image URL
-		* Business Telephone
-		* Business Days + Hours
-		* Business Dates (Season)
+	* Schema Type
+	* Place Image ID
+	* or Place Image URL
+	* Open Days / Hours
+	* Open Dates (Season)
+	* Local Business:
 		* Service Radius
 		* Currencies Accepted
 		* Payment Accepted
 		* Price Range
+	* Food Establishment:
 		* Accepts Reservations
 		* Serves Cuisine
 		* Food Menu URL
@@ -120,7 +121,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.6.2-dev.2 (2018/08/27)**
+**Version 3.0.0-dev.3 (2018/08/30)**
 
 * *New Features*
 	* None.
@@ -180,7 +181,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *New Features*
 	* None.
 * *Improvements*
-	* Added an image dimension check for the "Business Location Image ID" option value.
+	* Added an image dimension check for the "Place Image ID" option value.
 * *Bugfixes*
 	* None.
 * *Developer Notes*
@@ -188,9 +189,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.6.2-dev.2 =
+= 3.0.0-dev.3 =
 
-(2018/08/27) Minor update for code style and changes in WPSSO v4.11.2.
+(2018/08/30) Minor update for code style and changes in WPSSO v4.11.2.
 
 = 2.6.1 =
 
