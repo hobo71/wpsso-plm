@@ -121,16 +121,16 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-dev.3 (2018/08/30)**
+**Version 3.0.0-dev.4 (2018/08/31)**
 
 * *New Features*
-	* None.
+	* Extended the Schema type selection for places / locations from LocalBusiness to Place (which includes LocalBusiness).
 * *Improvements*
-	* None.
+	* Refactored the Place / Location settings page and tab in the Document SSO metabox.
 * *Bugfixes*
 	* None.
 * *Developer Notes*
-	* Minor update for code style and changes in WPSSO v4.11.2.
+	* None.
 
 **Version 2.6.1 (2018/08/11)**
 
@@ -189,9 +189,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-dev.3 =
+= 3.0.0-dev.4 =
 
-(2018/08/30) Minor update for code style and changes in WPSSO v4.11.2.
+(2018/08/31) Extended the Schema type selection for places / locations from LocalBusiness to Place (which includes LocalBusiness). Refactored the Place / Location settings page and tab in the Document SSO metabox.
 
 = 2.6.1 =
 
