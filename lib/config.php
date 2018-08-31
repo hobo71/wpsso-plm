@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(			// Plugin acronym.
-					'version'     => '2.6.2-dev.2',	// Plugin version.
-					'opt_version' => '18',		// Increment when changing default option values.
+					'version'     => '3.0.0-dev.4',	// Plugin version.
+					'opt_version' => '22',		// Increment when changing default option values.
 					'short'       => 'WPSSO PLM',	// Short plugin name.
 					'name'        => 'WPSSO Place / Location and Local Business Meta',
 					'desc'        => 'WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.11.2-dev.2',
+						'min_version' => '4.11.2-dev.4',
 					),
 					'img' => array(
 						'icons' => array(
@@ -54,55 +54,69 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					),
 				),
 			),
+			'opt' => array(
+				'defaults' => array(
+					'plm_place_id'          => 0,
+					'plm_place_for_home'    => 'none',
+					'plm_place_def_country' => 'none',
+					'plm_add_to_post'       => 0,
+					'plm_add_to_page'       => 1,
+					'plm_add_to_attachment' => 0,
+				),
+			),
 			'form' => array(
-				'plm_addr_opts' => array(
-					'plm_addr_name'                     => '',			// Name
-					'plm_addr_name_alt'                 => '',			// Altername Name
-					'plm_addr_desc'                     => '',			// Description
-					'plm_addr_streetaddr'               => '',			// Street Address
-					'plm_addr_po_box_number'            => '',			// P.O. Box Number
-					'plm_addr_city'                     => '',			// City
-					'plm_addr_state'                    => '',			// State / Province
-					'plm_addr_zipcode'                  => '',			// Zip / Postal Code
-					'plm_addr_country'                  => '',			// Country
-					'plm_addr_phone'                    => '',			// Place Telephone
-					'plm_addr_latitude'                 => '',			// Latitude
-					'plm_addr_longitude'                => '',			// Longitude
-					'plm_addr_altitude'                 => '',			// Altitude
-					'plm_addr_business_type'            => 'local.business',	// Local Business Type
-					'plm_addr_business_phone'           => '',			// Business Telephone
-					'plm_addr_day_sunday'               => 0,
-					'plm_addr_day_sunday_open'          => '09:00',
-					'plm_addr_day_sunday_close'         => '17:00',
-					'plm_addr_day_monday'               => 0,
-					'plm_addr_day_monday_open'          => '09:00',
-					'plm_addr_day_monday_close'         => '17:00',
-					'plm_addr_day_tuesday'              => 0,
-					'plm_addr_day_tuesday_open'         => '09:00',
-					'plm_addr_day_tuesday_close'        => '17:00',
-					'plm_addr_day_wednesday'            => 0,
-					'plm_addr_day_wednesday_open'       => '09:00',
-					'plm_addr_day_wednesday_close'      => '17:00',
-					'plm_addr_day_thursday'             => 0,
-					'plm_addr_day_thursday_open'        => '09:00',
-					'plm_addr_day_thursday_close'       => '17:00',
-					'plm_addr_day_friday'               => 0,
-					'plm_addr_day_friday_open'          => '09:00',
-					'plm_addr_day_friday_close'         => '17:00',
-					'plm_addr_day_saturday'             => 0,
-					'plm_addr_day_saturday_open'        => '09:00',
-					'plm_addr_day_saturday_close'       => '17:00',
-					'plm_addr_day_publicholidays'       => 0,
-					'plm_addr_day_publicholidays_open'  => '09:00',
-					'plm_addr_day_publicholidays_close' => '17:00',
-					'plm_addr_service_radius'           => '',
-					'plm_addr_currencies_accepted'      => '',
-					'plm_addr_payment_accepted'         => '',
-					'plm_addr_price_range'              => '',
-					'plm_addr_accept_res'               => 0,
-					'plm_addr_menu_url'                 => '',
-					'plm_addr_cuisine'                  => '',
-					'plm_addr_order_urls'               => '',
+				'plm_place_opts' => array(
+					'plm_place_schema_type'              => 'local.business',	// Place Schema Type
+					'plm_place_name'                     => '',			// Place Name
+					'plm_place_name_alt'                 => '',			// Place Altername Name
+					'plm_place_desc'                     => '',			// Place Description
+					'plm_place_street_address'           => '',			// Street Address
+					'plm_place_po_box_number'            => '',			// P.O. Box Number
+					'plm_place_city'                     => '',			// City
+					'plm_place_state'                    => '',			// State / Province
+					'plm_place_zipcode'                  => '',			// Zip / Postal Code
+					'plm_place_country'                  => '',			// Country
+					'plm_place_phone'                    => '',			// Telephone
+					'plm_place_latitude'                 => '',			// Latitude
+					'plm_place_longitude'                => '',			// Longitude
+					'plm_place_altitude'                 => '',			// Altitude
+					'plm_place_img_id'                   => '',			// Place Image ID
+					'plm_place_img_id_pre'               => 'wp',
+					'plm_place_img_url'                  => '',			// or Place Image URL
+					'plm_place_day_sunday'               => 0,
+					'plm_place_day_sunday_open'          => '09:00',
+					'plm_place_day_sunday_close'         => '17:00',
+					'plm_place_day_monday'               => 0,
+					'plm_place_day_monday_open'          => '09:00',
+					'plm_place_day_monday_close'         => '17:00',
+					'plm_place_day_tuesday'              => 0,
+					'plm_place_day_tuesday_open'         => '09:00',
+					'plm_place_day_tuesday_close'        => '17:00',
+					'plm_place_day_wednesday'            => 0,
+					'plm_place_day_wednesday_open'       => '09:00',
+					'plm_place_day_wednesday_close'      => '17:00',
+					'plm_place_day_thursday'             => 0,
+					'plm_place_day_thursday_open'        => '09:00',
+					'plm_place_day_thursday_close'       => '17:00',
+					'plm_place_day_friday'               => 0,
+					'plm_place_day_friday_open'          => '09:00',
+					'plm_place_day_friday_close'         => '17:00',
+					'plm_place_day_saturday'             => 0,
+					'plm_place_day_saturday_open'        => '09:00',
+					'plm_place_day_saturday_close'       => '17:00',
+					'plm_place_day_publicholidays'       => 0,
+					'plm_place_day_publicholidays_open'  => '09:00',
+					'plm_place_day_publicholidays_close' => '17:00',
+					'plm_place_season_from_date'         => '',
+					'plm_place_season_to_date'           => '',
+					'plm_place_service_radius'           => '',
+					'plm_place_currencies_accepted'      => '',
+					'plm_place_payment_accepted'         => '',
+					'plm_place_price_range'              => '',
+					'plm_place_accept_res'               => 0,
+					'plm_place_menu_url'                 => '',
+					'plm_place_cuisine'                  => '',
+					'plm_place_order_urls'               => '',
 				),
 			),
 		);
@@ -110,7 +124,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static function get_version( $add_slug = false ) {
 			$ext = 'wpssoplm';
 			$info =& self::$cf['plugin'][$ext];
-			return $add_slug ? $info['slug'].'-'.$info['version'] : $info['version'];
+			return $add_slug ? $info['slug'] . '-' . $info['version'] : $info['version'];
 		}
 
 		public static function set_constants( $plugin_filepath ) { 
@@ -129,20 +143,20 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 
 		public static function require_libs( $plugin_filepath ) {
 
-			require_once WPSSOPLM_PLUGINDIR.'lib/register.php';
-			require_once WPSSOPLM_PLUGINDIR.'lib/filters.php';
-			require_once WPSSOPLM_PLUGINDIR.'lib/address.php';
+			require_once WPSSOPLM_PLUGINDIR . 'lib/register.php';
+			require_once WPSSOPLM_PLUGINDIR . 'lib/filters.php';
+			require_once WPSSOPLM_PLUGINDIR . 'lib/place.php';
 
 			add_filter( 'wpssoplm_load_lib', array( 'WpssoPlmConfig', 'load_lib' ), 10, 3 );
 		}
 
 		public static function load_lib( $ret = false, $filespec = '', $classname = '' ) {
 			if ( false === $ret && ! empty( $filespec ) ) {
-				$filepath = WPSSOPLM_PLUGINDIR.'lib/'.$filespec.'.php';
+				$filepath = WPSSOPLM_PLUGINDIR . 'lib/' . $filespec . '.php';
 				if ( file_exists( $filepath ) ) {
 					require_once $filepath;
 					if ( empty( $classname ) ) {
-						return SucomUtil::sanitize_classname( 'wpssoplm'.$filespec, false );	// $underscore = false
+						return SucomUtil::sanitize_classname( 'wpssoplm' . $filespec, false );	// $underscore = false
 					} else {
 						return $classname;
 					}

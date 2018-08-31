@@ -14,7 +14,7 @@
  * Requires PHP: 5.4
  * Requires At Least: 3.8
  * Tested Up To: 4.9.8
- * Version: 2.6.2-dev.2
+ * Version: 3.0.0-dev.4
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -37,10 +37,9 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		/**
 		 * Class Object Variables
 		 */
-		public $p;			// Wpsso
-		public $reg;			// WpssoPlmRegister
-		public $address;		// WpssoPlmAddress
-		public $filters;		// WpssoPlmFilters
+		public $p;		// Wpsso
+		public $reg;		// WpssoPlmRegister
+		public $filters;	// WpssoPlmFilters
 
 		/**
 		 * Reference Variables (config, options, modules, etc.).
@@ -208,5 +207,6 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 	}
 
         global $wpssoplm;
+
 	$wpssoplm =& WpssoPlm::get_instance();
 }
