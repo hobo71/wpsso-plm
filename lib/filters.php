@@ -97,7 +97,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				),
 				21 => array(
 					'plm_addr_delete'                   => '',
-					'plm_addr_for_home'                 => 'plm_place_for_home',
+					'plm_addr_for_home'                 => '',
 					'plm_addr_def_country'              => 'plm_place_def_country',
 					'plm_addr_id'                       => 'plm_place_id',
 					'plm_addr_name'                     => 'plm_place_name',
@@ -707,10 +707,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			switch ( $base_key ) {
 
-				case 'plm_place_for_home':
-				case 'plm_place_def_country':
 				case 'plm_place_id':
 				case 'plm_place_schema_type':
+				case 'plm_place_def_country':
 				case ( preg_match( '/^plm_place_(country|type)$/', $base_key ) ? true : false ):
 
 					return 'not_blank';
@@ -978,16 +977,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					break;
 
-				case 'tooltip-plm_place_for_home':
-
-					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );	// Use wpsso's text domain.
-
-					$text = __( 'Select a place / location to include as a Schema Place in your blog (non-static) front page.', 'wpsso-plm' ).' ';
-					
-					$text .= sprintf( __( 'A place for a static front page can be selected in the %1$s metabox when editing the static post / page.', 'wpsso-plm' ), $metabox_title );
-
-					break;
-
 				case 'tooltip-plm_place_def_country':
 
 					$text = __( 'A default country to use when creating a new place / location.', 'wpsso-plm' );
@@ -1007,18 +996,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			return $text;
 
-		}
-
-		public function filter_status_gpl_features( $features, $ext, $info, $pkg ) {
-
-			$has_place_for_home = $this->p->options['plm_place_for_home'] === '' ||
-				$this->p->options['plm_place_for_home'] === 'none' ? false : true;	// can be 0
-
-			$features['(code) Place / Location for Blog Front Page'] = array(
-				'status' => $has_place_for_home ? 'on' : 'off',
-			);
-
-			return $features;
 		}
 
 		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {

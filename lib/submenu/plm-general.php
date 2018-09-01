@@ -173,17 +173,17 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$table_rows['plm_place_latitude_' . $id] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Latitude', 'option label', 'wpsso-plm' ), '', 'plm_place_latitude' ) .  
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_latitude_' . $id, 'required' ) . ' ' . 
-							_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
+						_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
 		
 						$table_rows['plm_place_longitude_' . $id] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Longitude', 'option label', 'wpsso-plm' ), '', 'plm_place_longitude' ) .  
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_longitude_' . $id, 'required' ) . ' ' . 
-							_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
+						_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
 		
 						$table_rows['plm_place_altitude_' . $id] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Altitude', 'option label', 'wpsso-plm' ), '', 'plm_place_altitude' ) .  
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_altitude_' . $id ) . ' ' . 
-							_x( 'meters above sea level', 'option comment', 'wpsso-plm' ) . '</td>';
+						_x( 'meters above sea level', 'option comment', 'wpsso-plm' ) . '</td>';
 
 						$table_rows['plm_place_img_id_' . $id] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Image ID', 'option label', 'wpsso-plm' ), '', 'plm_place_img_id',
@@ -233,7 +233,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$table_rows['plm_place_service_radius_' . $id] = $tr_hide_local_business_html .
 						$this->form->get_th_html( _x( 'Service Radius', 'option label', 'wpsso-plm' ), '', 'plm_place_service_radius' ) .  
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_service_radius_' . $id, 'medium' ) . ' ' . 
-							_x( 'meters from location', 'option comment', 'wpsso-plm' ) . '</td>';
+						_x( 'meters from location', 'option comment', 'wpsso-plm' ) . '</td>';
 		
 						foreach ( array(
 							'currencies_accepted' => _x( 'Currencies Accepted', 'option label', 'wpsso-plm' ),
@@ -271,36 +271,23 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'plm-settings':
 
-					$place_names_select = WpssoPlmPlace::get_names( '', true, false, false );	// $add_none is true.
-
-					$has_pp = $this->p->check->pp( 'wpssoplm', true, $this->p->avail['*']['p_dir'] );
-
-					$table_rows['plm_place_for_home'] = '' . 
-					$this->form->get_th_html( _x( 'Place for a Blog Front Page', 'option label', 'wpsso-plm' ), '', 'plm_place_for_home' ) . 
-					'<td>' . $this->form->get_select( 'plm_place_for_home', $place_names_select,
-						'long_name', '', true, false, true ) . '</td>';
-		
 					$table_rows['plm_place_def_country'] = '' . 
 					$this->form->get_th_html( _x( 'Place Default Country', 'option label', 'wpsso-plm' ), '', 'plm_place_def_country' ) . 
-					'<td>' . $this->form->get_select_country( 'plm_place_def_country',
-						'', '', false, $this->p->options['plm_place_def_country'] ) . '</td>';
-
-					if ( ! $has_pp ) {
-						$table_rows[] = '<td colspan="2">' . $this->p->msgs->get( 'pro-feature-msg',
-							array( 'lca' => 'wpssoplm' ) ) . '</td>';
-					}
+					'<td>' . $this->form->get_select_country( 'plm_place_def_country' ) . '</td>';
 
 					$add_to_checkboxes = '';
 
 					foreach ( $this->p->util->get_post_types( 'objects' ) as $pt ) {
-						$add_to_checkboxes .= '<p>' . ( $has_pp ? $this->form->get_checkbox( 'plm_add_to_' . $pt->name ) :
-							$this->form->get_no_checkbox( 'plm_add_to_' . $pt->name ) ) . ' ' . $pt->label . 
-								( empty( $pt->description ) ? '' : ' (' . $pt->description . ')' ) . '</p>';
+						$add_to_checkboxes .= '<p>' .
+							$this->form->get_checkbox( 'plm_add_to_' . $pt->name ) . ' ' .
+							( empty( $pt->label ) ? '' : $pt->label ) . 	// Just in case.
+							( empty( $pt->description ) ? '' : ' (' . $pt->description . ')' ) .
+							'</p>';
 					}
 
 					$table_rows['plm_add_to'] = '' . 
 					$this->form->get_th_html( _x( 'Show Tab on Post Types', 'option label', 'wpsso-plm' ), '', 'plm_add_to' ) . 
-					( $has_pp ? '<td>' : '<td class="blank">' ) . $add_to_checkboxes . '</td>';
+					'<td>' . $add_to_checkboxes . '</td>';
 
 					break;
 

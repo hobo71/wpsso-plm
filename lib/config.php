@@ -57,7 +57,6 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 			'opt' => array(
 				'defaults' => array(
 					'plm_place_id'          => 0,
-					'plm_place_for_home'    => 'none',
 					'plm_place_def_country' => 'none',
 					'plm_add_to_post'       => 0,
 					'plm_add_to_page'       => 1,

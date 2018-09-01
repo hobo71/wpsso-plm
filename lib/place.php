@@ -229,10 +229,10 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 					}
 				}
 
-				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// only return plm options
+				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// Only return plm options.
 
 				if ( ! empty( $md_opts ) ) { 
-					if ( empty( $md_opts['plm_place_country'] ) ) {	// alpha2 country code
+					if ( empty( $md_opts['plm_place_country'] ) ) {
 						$md_opts['plm_place_country'] = isset( $wpsso->options['plm_place_def_country'] ) ?
 							$wpsso->options['plm_place_def_country'] : 'none';
 					}
@@ -252,19 +252,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			$place_opts = false;
 
-			if ( $mod['is_home_index'] ) {
-
-				if ( isset( $wpsso->options['plm_place_for_home'] ) && is_numeric( $wpsso->options['plm_place_for_home'] ) ) {
-
-					if ( ( $place_opts = self::get_id( $wpsso->options['plm_place_for_home'] ) ) === false ) {
-
-						if ( $wpsso->debug->enabled ) {
-							$wpsso->debug->log( 'no options for place id ' . $wpsso->options['plm_place_for_home'] );
-						}
-					}
-				}
-
-			} elseif ( is_object( $mod['obj'] ) ) {
+			if ( is_object( $mod['obj'] ) ) {	// Just in case.
 
 				if ( ( $place_opts = self::has_md_place( $mod, 'plm_place_name' ) ) === false ) {
 
@@ -337,22 +325,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			$place_opts = false;
 
-			if ( $mod['is_home_index'] ) {
-				if ( isset( $wpsso->options['plm_place_for_home'] ) && is_numeric( $wpsso->options['plm_place_for_home'] ) ) {
-					if ( ( $place_opts = self::get_id( $wpsso->options['plm_place_for_home'] ) ) === false ) {
-						if ( $wpsso->debug->enabled ) {
-							$wpsso->debug->log( 'no days for place id ' . $wpsso->options['plm_place_for_home'] );
-						}
-					} else {
-						foreach ( $wpsso->cf['form']['weekdays'] as $day => $label ) {
-							if ( ! empty( $place_opts['plm_place_day_' . $day] ) ) {
-								return $place_opts;
-							}
-						}
-						return false;
-					}
-				}
-			} elseif ( is_object( $mod['obj'] ) ) {
+			if ( is_object( $mod['obj'] ) ) {	// Just in case.
 				if ( ( $place_opts = self::has_md_days( $mod ) ) === false ) {
 					if ( $wpsso->debug->enabled ) {
 						$wpsso->debug->log( 'no business days from module object' );
@@ -399,36 +372,9 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			$place_opts = false;
 
-			if ( $mod['is_home_index'] ) {
+			if ( is_object( $mod['obj'] ) ) {	// Just in case.
 
-				if ( isset( $wpsso->options['plm_place_for_home'] ) && is_numeric( $wpsso->options['plm_place_for_home'] ) ) {
-
-					if ( ( $place_opts = self::get_id( $wpsso->options['plm_place_for_home'] ) ) === false ) {
-
-						if ( $wpsso->debug->enabled ) {
-							$wpsso->debug->log( 'no geo coords for place id ' . $wpsso->options['plm_place_for_home'] );
-						}
-
-					} else {
-
-						/**
-						 * Allow for latitude and/or longitude of 0.
-						 */
-						if ( isset( $place_opts['plm_place_latitude'] ) && $place_opts['plm_place_latitude'] !== '' && 
-							isset( $place_opts['plm_place_longitude'] ) && $place_opts['plm_place_longitude'] !== '' ) {
-
-							return $place_opts;
-
-						} else {
-							return false;
-						}
-					}
-
-				}
-
-			} elseif ( is_object( $mod['obj'] ) ) {
-
-				if ( ( $place_opts = self::has_md_days( $mod ) ) === false ) {
+				if ( ( $place_opts = self::has_md_geo( $mod ) ) === false ) {
 					if ( $wpsso->debug->enabled ) {
 						$wpsso->debug->log( 'no geo coordinates from module object' );
 					}
@@ -450,9 +396,13 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			$md_opts = self::get_md_options( $mod );
 
 			if ( is_array( $md_opts  ) ) {
-				// allow for latitude and/or longitude of 0
+
+				/**
+				 * Allow for latitude and/or longitude of 0.
+				 */
 				if ( isset( $md_opts['plm_place_latitude'] ) && $md_opts['plm_place_latitude']!== '' && 
 					isset( $md_opts['plm_place_longitude'] ) && $md_opts['plm_place_longitude'] !== '' ) {
+
 					return $md_opts;
 				}
 			}

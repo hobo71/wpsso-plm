@@ -54,210 +54,198 @@ msgstr ""
 msgid "saving place \"%1$s\""
 msgstr ""
 
-#: lib/filters.php:778 lib/filters.php:1000
+#: lib/filters.php:777 lib/filters.php:989
 msgctxt "metabox tab"
 msgid "Place for Content"
 msgstr ""
 
-#: lib/filters.php:793
+#: lib/filters.php:792
 msgid "Select a place or enter custom place information below."
 msgstr ""
 
-#: lib/filters.php:810
+#: lib/filters.php:809
 msgid ""
 "Select a place to edit. The place information is used for Open Graph meta "
 "tags and Schema markup."
 msgstr ""
 
-#: lib/filters.php:816
+#: lib/filters.php:815
 msgid ""
 "You may optionally choose a different Schema type for this place / location "
 "(default is LocalBusiness)."
 msgstr ""
 
-#: lib/filters.php:822
+#: lib/filters.php:821
 msgid ""
 "A name for this place / location (required). The place name may appear in "
 "forms and in the Schema Place \"name\" property."
 msgstr ""
 
-#: lib/filters.php:828
+#: lib/filters.php:827
 msgid ""
 "An alternate name for this place. The place alternate name may appear in the "
 "Schema Place \"alternateName\" property."
 msgstr ""
 
-#: lib/filters.php:834
+#: lib/filters.php:833
 msgid "A description for this place."
 msgstr ""
 
-#: lib/filters.php:840
+#: lib/filters.php:839
 msgid ""
 "An optional street address used for Pinterest Rich Pin / Schema Place meta "
 "tags and related markup."
 msgstr ""
 
-#: lib/filters.php:846
+#: lib/filters.php:845
 msgid ""
 "An optional post office box number for the Pinterest Rich Pin / Schema Place "
 "meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:852
+#: lib/filters.php:851
 msgid ""
 "An optional city name for the Pinterest Rich Pin / Schema Place meta tags "
 "and related markup."
 msgstr ""
 
-#: lib/filters.php:858
+#: lib/filters.php:857
 msgid ""
 "An optional state or Province name for the Pinterest Rich Pin / Schema Place "
 "meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:864
+#: lib/filters.php:863
 msgid ""
 "An optional zip or postal code for the Pinterest Rich Pin / Schema Place "
 "meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:870
+#: lib/filters.php:869
 msgid ""
 "An optional country for the Pinterest Rich Pin / Schema Place meta tags and "
 "related markup."
 msgstr ""
 
-#: lib/filters.php:876
+#: lib/filters.php:875
 msgid "An optional telephone number for this place / location."
 msgstr ""
 
-#: lib/filters.php:881
+#: lib/filters.php:880
 msgid "The numeric decimal degrees latitude for this place (required)."
 msgstr ""
 
-#: lib/filters.php:883 lib/filters.php:891
+#: lib/filters.php:882 lib/filters.php:890
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:889
+#: lib/filters.php:888
 msgid "The numeric decimal degrees longitude for this place (required)."
 msgstr ""
 
-#: lib/filters.php:897
+#: lib/filters.php:896
 msgid ""
 "An optional numeric altitude (in meters above sea level) for this place."
 msgstr ""
 
-#: lib/filters.php:903
+#: lib/filters.php:902
 msgid ""
 "An image ID and media library selection for this place (ie. an image of the "
 "business location)."
 msgstr ""
 
-#: lib/filters.php:905
+#: lib/filters.php:904
 msgid ""
 "The place image is used in the Schema LocalBusiness markup for the "
 "'location' Schema property."
 msgstr ""
 
-#: lib/filters.php:907
+#: lib/filters.php:906
 msgid ""
 "The business location image is not used when a place is added to a post, "
 "page, or custom post type."
 msgstr ""
 
-#: lib/filters.php:913
+#: lib/filters.php:912
 msgid ""
 "You can enter a place image URL (including the http:// prefix) instead of "
 "choosing an image ID &mdash; if a place image ID is specified, it has "
 "precedence and the image URL option is disabled."
 msgstr ""
 
-#: lib/filters.php:915
+#: lib/filters.php:914
 msgid ""
 "The image URL option allows you to use an image outside of a managed "
 "collection (WordPress Media Library or NextGEN Gallery), and/or a smaller "
 "logo style image."
 msgstr ""
 
-#: lib/filters.php:921
+#: lib/filters.php:920
 msgid "Select the days and hours this place / location is open."
 msgstr ""
 
-#: lib/filters.php:927
+#: lib/filters.php:926
 msgid ""
 "If this place is open seasonally, select the open and close dates of the "
 "season."
 msgstr ""
 
-#: lib/filters.php:933
+#: lib/filters.php:932
 msgid ""
 "The geographic area where a service is provided, in meters around the "
 "location."
 msgstr ""
 
-#: lib/filters.php:939
+#: lib/filters.php:938
 msgid ""
 "A comma-delimited list of <a href=\"https://en.wikipedia.org/wiki/"
 "ISO_4217\">ISO 4217 currency codes</a> accepted by the local business "
 "(example: USD, CAD)."
 msgstr ""
 
-#: lib/filters.php:945
+#: lib/filters.php:944
 msgid ""
 "A comma-delimited list of payment options accepted by the local business "
 "(example: Cash, Credit Card)."
 msgstr ""
 
-#: lib/filters.php:951
+#: lib/filters.php:950
 msgid ""
 "The price range of goods or services provided by the local business "
 "(example: $10-100)."
 msgstr ""
 
-#: lib/filters.php:957
+#: lib/filters.php:956
 msgid "This food establishment accepts reservations."
 msgstr ""
 
-#: lib/filters.php:963
+#: lib/filters.php:962
 msgid "The menu URL for this food establishment."
 msgstr ""
 
-#: lib/filters.php:969
+#: lib/filters.php:968
 msgid "The cuisine served by this food establishment."
 msgstr ""
 
-#: lib/filters.php:975
+#: lib/filters.php:974
 msgid ""
 "A comma-delimited list of website and mobile app URLs to order products."
 msgstr ""
 
-#: lib/filters.php:977
+#: lib/filters.php:976
 msgid ""
 "The WPSSO JSON add-on is required to add these Order Action URL(s) to the "
 "Schema potentialAction property."
 msgstr ""
 
-#: lib/filters.php:985
-msgid ""
-"Select a place / location to include as a Schema Place in your blog (non-"
-"static) front page."
-msgstr ""
-
-#: lib/filters.php:987
-msgid ""
-"A place for a static front page can be selected in the %1$s metabox when "
-"editing the static post / page."
-msgstr ""
-
-#: lib/filters.php:993
+#: lib/filters.php:982
 msgid "A default country to use when creating a new place / location."
 msgstr ""
 
-#: lib/filters.php:1002
+#: lib/filters.php:991
 msgid ""
 "A \"%1$s\" tab can be added to the %2$s metabox on Posts, Pages, and custom "
 "post types, allowing you to enter specific place information for that "
@@ -505,17 +493,12 @@ msgctxt "option label"
 msgid "or Place Image URL"
 msgstr ""
 
-#: lib/submenu/plm-general.php:279
-msgctxt "option label"
-msgid "Place for a Blog Front Page"
-msgstr ""
-
-#: lib/submenu/plm-general.php:284
+#: lib/submenu/plm-general.php:275
 msgctxt "option label"
 msgid "Place Default Country"
 msgstr ""
 
-#: lib/submenu/plm-general.php:302
+#: lib/submenu/plm-general.php:289
 msgctxt "option label"
 msgid "Show Tab on Post Types"
 msgstr ""
