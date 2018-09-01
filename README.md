@@ -34,7 +34,6 @@
 
 <ul>
 <li><p>Extends the features of the WPSSO Core Free or Pro plugin.</p></li>
-<li><p>Select a place / location for a Blog Front Page.</p></li>
 <li><p>Manage multiple place / location information:</p>
 
 <ul>

@@ -37,8 +37,6 @@ If you're using a static front page, or would like to include location informati
 
 * Extends the features of the WPSSO Core Free or Pro plugin.
 
-* Select a place / location for a Blog Front Page.
-
 * Manage multiple place / location information:
 
 	* Place Schema Type
