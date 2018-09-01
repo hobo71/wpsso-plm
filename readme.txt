@@ -41,24 +41,24 @@ If you're using a static front page, or would like to include location informati
 
 * Manage multiple place / location information:
 
+	* Place Schema Type
 	* Place Name
-	* Address:
-		* Street Address
-		* P.O. Box Number
-		* City
-		* State / Province
-		* Zip / Postal Code
-		* Country
+	* Place Alternate Name
+	* Place Description
+	* Street Address
+	* P.O. Box Number
+	* City
+	* State / Province
+	* Zip / Postal Code
+	* Country
 	* Telephone
-	* Geo Coordinates:
-		* Latitude
-		* Longitude
-		* Altitude
-	* Schema Type
+	* Place Latitude
+	* Place Longitude
+	* Place Altitude
 	* Place Image ID
 	* or Place Image URL
 	* Open Days / Hours
-	* Open Dates (Season)
+	* Open Dates (Seasonal)
 	* Local Business:
 		* Service Radius
 		* Currencies Accepted

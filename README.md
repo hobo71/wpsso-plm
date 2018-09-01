@@ -38,30 +38,24 @@
 <li><p>Manage multiple place / location information:</p>
 
 <ul>
+<li>Place Schema Type</li>
 <li>Place Name</li>
-<li>Address:
-
-<ul>
+<li>Place Alternate Name</li>
+<li>Place Description</li>
 <li>Street Address</li>
 <li>P.O. Box Number</li>
 <li>City</li>
 <li>State / Province</li>
 <li>Zip / Postal Code</li>
 <li>Country</li>
-</ul></li>
 <li>Telephone</li>
-<li>Geo Coordinates:
-
-<ul>
-<li>Latitude</li>
-<li>Longitude</li>
-<li>Altitude</li>
-</ul></li>
-<li>Schema Type</li>
+<li>Place Latitude</li>
+<li>Place Longitude</li>
+<li>Place Altitude</li>
 <li>Place Image ID</li>
 <li>or Place Image URL</li>
 <li>Open Days / Hours</li>
-<li>Open Dates (Season)</li>
+<li>Open Dates (Seasonal)</li>
 <li>Local Business:
 
 <ul>
