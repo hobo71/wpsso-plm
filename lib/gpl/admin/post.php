@@ -31,7 +31,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$place_names_custom = array( 'custom' => $this->p->cf['form']['place_select']['custom'] );
+			$place_names_select = array( 'none' => $this->p->cf['form']['place_select']['none'] );
 			$place_types_select = $this->p->util->get_form_cache( 'place_types_select' );
 			$half_hours         = $this->p->util->get_form_cache( 'half_hours' );
 
@@ -41,12 +41,24 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			$table_rows['plm_place_id'] = '' . 
 			$form->get_th_html( _x( 'Select a Place', 'option label', 'wpsso-plm' ), 'medium', 'post-plm_place_id' ) . 
-			'<td class="blank" colspan="3">' . $form->get_no_select( 'plm_place_id', $place_names_custom,
-				'long_name', '', true ) . '</td>';
+			'<td class="blank" colspan="3">' . $form->get_no_select( 'plm_place_id', $place_names_select, 'long_name', '', true ) . '</td>';
+
+			$table_rows['plm_place_schema_type'] = '' . 
+			$form->get_th_html( _x( 'Schema Type', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_schema_type' ) .  
+			'<td class="blank" colspan="3">' . $form->get_no_select( 'plm_place_schema_type', $place_types_select,
+				'schema_type', '', true ) . '</td>';
 
 			$table_rows['plm_place_name'] = '' . 
 			$form->get_th_html( _x( 'Place Name', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_name' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_input_value( '', 'long_name required' ) . '</td>';
+
+			$table_rows['plm_place_name_alt'] = '' . 
+			$form->get_th_html( _x( 'Place Alternate Name', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_name_alt' ) .  
+			'<td class="blank" colspan="3">' . $form->get_no_input_value( '', 'long_name' ) . '</td>';
+
+			$table_rows['plm_place_desc'] = '' . 
+			$form->get_th_html( _x( 'Place Description', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_desc' ) .  
+			'<td class="blank" colspan="3">' . $form->get_no_textarea_value() . '</td>';
 
 			$table_rows['plm_place_street_address'] = '' . 
 			$form->get_th_html( _x( 'Street Address', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_street_address' ) .  
@@ -77,24 +89,19 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			'<td class="blank" colspan="3">' . $form->get_no_input_value( '' ) . '</td>';
 
 			$table_rows['plm_place_latitude'] = '' . 
-			$form->get_th_html( _x( 'Latitude', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_latitude' ) .  
+			$form->get_th_html( _x( 'Place Latitude', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_latitude' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_input( '', 'required' ) . ' ' . 
 				_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
 
 			$table_rows['plm_place_longitude'] = '' . 
-			$form->get_th_html( _x( 'Longitude', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_longitude' ) .  
+			$form->get_th_html( _x( 'Place Longitude', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_longitude' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_input( '', 'required' ) . ' ' . 
 				_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
 
 			$table_rows['plm_place_altitude'] = '' . 
-			$form->get_th_html( _x( 'Altitude', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_altitude' ) .  
+			$form->get_th_html( _x( 'Place Altitude', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_altitude' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_input() . ' ' . 
 				_x( 'meters above sea level', 'option comment', 'wpsso-plm' ) . '</td>';
-
-			$table_rows['plm_place_schema_type'] = '' . 
-			$form->get_th_html( _x( 'Schema Type', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_schema_type' ) .  
-			'<td class="blank" colspan="3">' . $form->get_no_select( 'plm_place_schema_type', $place_types_select,
-				'schema_type', '', true ) . '</td>';
 
 			$row_number = 1;
 
@@ -110,23 +117,17 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				}
 
 				$table_rows['plm_place_day_' . $day] = $th_cell_html . 
-					'<td class="blank weekday">' .
-						$form->get_no_checkbox( 'plm_place_day_' . $day ) . ' ' . $day_label_transl .
-					'</td>' . 
-					'<td class="blank">' . 
-						__( 'Opens at', 'wpsso-plm' ) . ' ' .
-						$form->get_no_select( 'plm_place_day_' . $day . '_open', $half_hours, 'medium', '', true ) .
-					'</td>' . 
-					'<td class="blank">' . 
-						__( 'Closes at', 'wpsso-plm' ) . ' ' . 
-						$form->get_no_select( 'plm_place_day_' . $day . '_close', $half_hours, 'medium', '', true ) .
-					'</td>';
+					'<td class="blank weekday">' . $form->get_no_checkbox( 'plm_place_day_' . $day ) . ' ' . $day_label_transl . '</td>' . 
+					'<td class="blank">' . __( 'Opens at', 'wpsso-plm' ) . ' ' . $form->get_no_select( 'plm_place_day_' . $day . '_open',
+						$half_hours, 'medium', '', true ) . '</td>' . 
+					'<td class="blank">' . __( 'Closes at', 'wpsso-plm' ) . ' ' . $form->get_no_select( 'plm_place_day_' . $day . '_close',
+						$half_hours, 'medium', '', true ) . '</td>';
 
 				$row_number++;
 			}
 
 			$table_rows['plm_place_season_dates'] = '' . 
-			$form->get_th_html( _x( 'Open Dates (Season)', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_season_dates' ) .  
+			$form->get_th_html( _x( 'Open Dates (Seasonal)', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_season_dates' ) .  
 			'<td class="blank" colspan="3">' .
 				__( 'Open from', 'wpsso-plm' ).' ' . $form->get_no_input_date() . ' ' . 
 				__( 'through', 'wpsso-plm' ) . ' ' . $form->get_no_input_date() .

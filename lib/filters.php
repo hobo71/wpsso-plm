@@ -81,7 +81,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			$md_defs = array_merge( $md_defs, WpssoPlmConfig::$cf['form']['plm_place_opts'],
 				array(
-					'plm_place_id'      => 'custom',
+					'plm_place_id'      => 'none',
 					'plm_place_country' => $this->p->options['plm_place_def_country'],
 				)
 			);
@@ -708,8 +708,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			switch ( $base_key ) {
 
 				case 'plm_place_for_home':
-				case 'plm_place_def_country':	// alpha2 country code
-				case 'plm_place_id':		// 'none', 'custom', or numeric (including 0)
+				case 'plm_place_def_country':
+				case 'plm_place_id':
 				case 'plm_place_schema_type':
 				case ( preg_match( '/^plm_place_(country|type)$/', $base_key ) ? true : false ):
 
@@ -720,19 +720,19 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case ( preg_match( '/^plm_place_(name|name_alt|desc|phone|street_address|city|state|zipcode)$/', $base_key ) ? true : false ):
 				case ( preg_match( '/^plm_place_(phone|price_range|cuisine)$/', $base_key ) ? true : false ):
 
-					return 'ok_blank';	// text strings that can be blank
+					return 'ok_blank';
 
 					break;
 
 				case ( preg_match( '/^plm_place_(currencies_accepted|payment_accepted)$/', $base_key ) ? true : false ):
 
-					return 'csv_blank';	// comma-delimited strings that can be blank
+					return 'csv_blank';
 
 					break;
 
 				case ( preg_match( '/^plm_place_(latitude|longitude|altitude|service_radius|po_box_number)$/', $base_key ) ? true : false ):
 
-					return 'blank_num';	// must be numeric (blank or zero is ok)
+					return 'blank_num';
 
 					break;
 
@@ -775,7 +775,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			if ( $metabox_id === $this->p->cf['meta']['id'] ) {
 				if ( ! empty( $this->p->options['plm_add_to_'.$mod['post_type']] ) ) {
-					SucomUtil::add_after_key( $tabs, 'media', 'plm', _x( 'Edit Place', 'metabox tab', 'wpsso-plm' ) );
+					SucomUtil::add_after_key( $tabs, 'media', 'plm', _x( 'Place for Content', 'metabox tab', 'wpsso-plm' ) );
 				}
 			}
 
@@ -997,7 +997,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'tooltip-plm_add_to':
 
 					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );	// Use wpsso's text domain.
-					$metabox_tab   = _x( 'Edit Place', 'metabox tab', 'wpsso-plm' );
+					$metabox_tab   = _x( 'Place for Content', 'metabox tab', 'wpsso-plm' );
 
 					$text = sprintf( __( 'A "%1$s" tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific place information for that webpage content (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), $metabox_tab, $metabox_title );
 

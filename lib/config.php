@@ -77,9 +77,9 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_place_zipcode'                  => '',			// Zip / Postal Code
 					'plm_place_country'                  => '',			// Country
 					'plm_place_phone'                    => '',			// Telephone
-					'plm_place_latitude'                 => '',			// Latitude
-					'plm_place_longitude'                => '',			// Longitude
-					'plm_place_altitude'                 => '',			// Altitude
+					'plm_place_latitude'                 => '',			// Place Latitude
+					'plm_place_longitude'                => '',			// Place Longitude
+					'plm_place_altitude'                 => '',			// Place Altitude
 					'plm_place_img_id'                   => '',			// Place Image ID
 					'plm_place_img_id_pre'               => 'wp',
 					'plm_place_img_url'                  => '',			// or Place Image URL

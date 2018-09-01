@@ -63,8 +63,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'plm-place':
 
-					$place_names_new    = WpssoPlmPlace::get_names( '', false, true );	// $add_none is false, $add_new is true.
-					$place_first_num    = SucomUtil::get_first_num( $place_names_new );
+					$place_names_select = WpssoPlmPlace::get_names( '', false, true, false );	// $add_none is false, $add_new is true.
+					$place_first_num    = SucomUtil::get_first_num( $place_names_select );
 					$place_types_select = $this->p->util->get_form_cache( 'place_types_select' );
 					$half_hours         = $this->p->util->get_form_cache( 'half_hours' );
 
@@ -89,10 +89,10 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 					$table_rows['plm_place_id'] = '' . 
 					$this->form->get_th_html( _x( 'Edit a Place', 'option label', 'wpsso-plm' ), '', 'plm_place_id' ) . 
-					'<td colspan="3">' . $this->form->get_select( 'plm_place_id', $place_names_new,
+					'<td colspan="3">' . $this->form->get_select( 'plm_place_id', $place_names_select,
 						'long_name', '', true, false, true, 'unhide_rows' ) . '</td>';
 
-					foreach ( $place_names_new as $id => $name ) {
+					foreach ( $place_names_select as $id => $name ) {
 
 						$def_schema_type = WpssoPlmConfig::$cf['form']['plm_place_opts']['plm_place_schema_type'];
 
@@ -171,17 +171,17 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_phone_' . $id ) . '</td>';
 
 						$table_rows['plm_place_latitude_' . $id] = $tr_hide_place_html . 
-						$this->form->get_th_html( _x( 'Latitude', 'option label', 'wpsso-plm' ), '', 'plm_place_latitude' ) .  
+						$this->form->get_th_html( _x( 'Place Latitude', 'option label', 'wpsso-plm' ), '', 'plm_place_latitude' ) .  
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_latitude_' . $id, 'required' ) . ' ' . 
 							_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
 		
 						$table_rows['plm_place_longitude_' . $id] = $tr_hide_place_html . 
-						$this->form->get_th_html( _x( 'Longitude', 'option label', 'wpsso-plm' ), '', 'plm_place_longitude' ) .  
+						$this->form->get_th_html( _x( 'Place Longitude', 'option label', 'wpsso-plm' ), '', 'plm_place_longitude' ) .  
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_longitude_' . $id, 'required' ) . ' ' . 
 							_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
 		
 						$table_rows['plm_place_altitude_' . $id] = $tr_hide_place_html . 
-						$this->form->get_th_html( _x( 'Altitude', 'option label', 'wpsso-plm' ), '', 'plm_place_altitude' ) .  
+						$this->form->get_th_html( _x( 'Place Altitude', 'option label', 'wpsso-plm' ), '', 'plm_place_altitude' ) .  
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_altitude_' . $id ) . ' ' . 
 							_x( 'meters above sea level', 'option comment', 'wpsso-plm' ) . '</td>';
 
@@ -210,17 +210,12 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							}
 		
 							$table_rows['plm_place_day_' . $day . '_' . $id] = $th_cell_html . 
-							'<td class="weekday">' . 
-								$this->form->get_checkbox( 'plm_place_day_' . $day . '_' . $id ) . ' ' . $day_label_transl .
-							'</td>' . 
-							'<td>' . 
-								__( 'Opens at', 'wpsso-plm' ) . ' ' . 
-								$this->form->get_select( 'plm_place_day_' . $day . '_open_' . $id, $half_hours, 'medium', '', true ) .
-							'</td>' . 
-							'<td>' . 
-								__( 'Closes at', 'wpsso-plm' ) . ' ' . 
-								$this->form->get_select( 'plm_place_day_' . $day . '_close_' . $id, $half_hours, 'medium', '', true ) .
-							'</td>';
+							'<td class="weekday">' . $this->form->get_checkbox( 'plm_place_day_' . $day . '_' . $id ) . ' ' .
+								$day_label_transl . '</td>' . 
+							'<td>' . __( 'Opens at', 'wpsso-plm' ) . ' ' . $this->form->get_select( 'plm_place_day_' . $day . '_open_' . $id,
+								$half_hours, 'medium', '', true ) . '</td>' . 
+							'<td>' . __( 'Closes at', 'wpsso-plm' ) . ' ' . $this->form->get_select( 'plm_place_day_' . $day . '_close_' . $id,
+								$half_hours, 'medium', '', true ) . '</td>';
 
 							$row_number++;
 						}
@@ -228,10 +223,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$table_rows['plm_place_season_dates_' . $id] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Open Dates (Seasonal)', 'option label', 'wpsso-plm' ), '', 'plm_place_season_dates' ) .  
 						'<td colspan="3">' . 
-							__( 'Open from', 'wpsso-plm' ) . ' ' . 
-							$this->form->get_input_date( 'plm_place_season_from_date_' . $id ) . ' ' . 
-							__( 'through', 'wpsso-plm' ) . ' ' . 
-							$this->form->get_input_date( 'plm_place_season_to_date_' . $id ) .
+							__( 'Open from', 'wpsso-plm' ) . ' ' . $this->form->get_input_date( 'plm_place_season_from_date_' . $id ) . ' ' . 
+							__( 'through', 'wpsso-plm' ) . ' ' . $this->form->get_input_date( 'plm_place_season_to_date_' . $id ) .
 						'</td>';
 		
 						$table_rows['subsection_local_business_' . $id] = $tr_hide_local_business_html . '<th></th>' . 
@@ -278,13 +271,13 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'plm-settings':
 
-					$has_pp = $this->p->check->pp( 'wpssoplm', true, $this->p->avail['*']['p_dir'] );
+					$place_names_select = WpssoPlmPlace::get_names( '', true, false, false );	// $add_none is true.
 
-					$place_names_none = WpssoPlmPlace::get_names( '', true );	// $add_none is true.
+					$has_pp = $this->p->check->pp( 'wpssoplm', true, $this->p->avail['*']['p_dir'] );
 
 					$table_rows['plm_place_for_home'] = '' . 
 					$this->form->get_th_html( _x( 'Place for a Blog Front Page', 'option label', 'wpsso-plm' ), '', 'plm_place_for_home' ) . 
-					'<td>' . $this->form->get_select( 'plm_place_for_home', $place_names_none,
+					'<td>' . $this->form->get_select( 'plm_place_for_home', $place_names_select,
 						'long_name', '', true, false, true ) . '</td>';
 		
 					$table_rows['plm_place_def_country'] = '' . 
