@@ -203,9 +203,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							$day_label_transl = _x( $day_label, 'option value', 'wpsso' );
 
 							if ( $row_number === 1 ) {
-								$th_cell_html = $tr_hide_place_html .
-									$this->form->get_th_html( _x( 'Open Days / Hours',
-										'option label', 'wpsso-plm' ), '', 'plm_place_days' );
+								$th_cell_html = $tr_hide_place_html . $this->form->get_th_html( _x( 'Open Days / Hours',
+									'option label', 'wpsso-plm' ), '', 'plm_place_days' );
 							} else {
 								$th_cell_html = $tr_hide_place_html . '<th></th>';
 							}

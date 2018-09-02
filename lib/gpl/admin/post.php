@@ -45,7 +45,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			'<td class="blank" colspan="3">' . $form->get_no_select( 'plm_place_id', $place_names_select, 'long_name', '', true ) . '</td>';
 
 			$table_rows['plm_place_schema_type'] = '' . 
-			$form->get_th_html( _x( 'Schema Type', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_schema_type' ) .  
+			$form->get_th_html( _x( 'Place Schema Type', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_schema_type' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_select( 'plm_place_schema_type', $place_types_select,
 				'schema_type', '', true ) . '</td>';
 
