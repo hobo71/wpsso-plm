@@ -14,7 +14,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 	class WpssoPlmPlace {
 
 		private $p;
-		private static $mod_md_opts = array();	// get_md_options() meta data cache
+		private static $mod_md_opts = array();	// get_md_options() meta data cache.
 
 		public static $place_mt = array(
 			'plm_place_name'           => 'place:name',
@@ -61,7 +61,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->log( 'getting multi keys for plm_place_name' );
 			}
 
-			$place_names = SucomUtil::get_multi_key_locale( 'plm_place_name', $wpsso->options, false );	// $add_none = false
+			$place_names = SucomUtil::get_multi_key_locale( 'plm_place_name', $wpsso->options, false );	// $add_none is false.
 
 			if ( ! empty( $schema_type ) && is_string( $schema_type) ) {
 
@@ -71,11 +71,15 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 				$children = $wpsso->schema->get_schema_type_children( $schema_type );
 
-				if ( ! empty( $children ) ) {	// just in case
+				if ( ! empty( $children ) ) {	// Just in case.
+
 					foreach ( $place_names as $num => $name ) {
+
 						if ( ! empty( $wpsso->options['plm_place_schema_type_' . $num] ) && 
 							in_array( $wpsso->options['plm_place_schema_type_' . $num], $children ) ) {
+
 							continue;
+
 						} else {
 							unset( $place_names[$num] );
 						}
@@ -86,20 +90,25 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->log( 'business type not provided - keeping all places' );
 			}
 
+			/**
+			 * Add 'new' as the last place ID.
+			 */
 			if ( $add_new ) {
+
 				$next_num = SucomUtil::get_next_num( $place_names );
+
 				$place_names[$next_num] = $wpsso->cf['form']['place_select']['new'];
 			}
 
 			if ( ! empty( $first_names ) ) {
-				$place_names = $first_names + $place_names;	// combine arrays, preserving numeric key associations
+				$place_names = $first_names + $place_names;	// Combine arrays, preserving numeric key associations.
 			}
 
 			return $place_names;
 		}
 
 		/**
-		 * Get a specific place id. If $id is 'custom' then $mixed must be the $mod array.
+		 * Get a specific place id. If $id is 'custom' then $mixed must be a $mod array.
 		 */
 		public static function get_id( $id, $mixed = 'current' ) {
 
@@ -114,23 +123,31 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			$place_opts = array();
 
-			if ( $id === 'custom' ) {
+			if ( $id === 'none' ) {	// Just in case.
 
-				if ( isset( $mixed['obj'] ) && is_object( $mixed['obj'] ) ) {
+				return false;
 
-					$md_opts = self::get_md_options( $mixed );				// returns all plm options from the post
+			} elseif ( $id === 'custom' ) {
 
-					foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*)(#.*)?$/', 	// filter for all place options
-						$md_opts, false, '$1' ) as $opt_idx => $value ) {
-
-						$place_opts[$opt_idx] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
+				if ( ! isset( $mixed['obj'] ) || ! is_object( $mixed['obj'] ) ) {
+					if ( $wpsso->debug->enabled ) {
+						$wpsso->debug->log( 'exiting early: no module object defined' );
 					}
+					return false; 
+				}
+				
+				$md_opts = self::get_md_options( $mixed );				// Always returns and array.
+
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*)(#.*)?$/', $md_opts, false, '$1' ) as $opt_idx => $value ) {
+					$place_opts[$opt_idx] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
 				}
 
 			} elseif ( is_numeric( $id ) ) {
 
-				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*_)' . $id . '(#.*)?$/',
-					$wpsso->options, false, '$1' ) as $opt_prefix => $value ) {	// allow '[:_]' as separator
+				/**
+				 * Get the list of non-localized option names.
+				 */
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*_)' . $id . '(#.*)?$/', $wpsso->options, false, '$1' ) as $opt_prefix => $value ) {
 
 					$opt_idx = rtrim( $opt_prefix, '_' );
 
@@ -139,20 +156,26 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			}
 
 			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( $place_opts );
+				$wpsso->debug->log_arr( 'place_opts', $place_opts );
 			}
 
 			if ( empty( $place_opts ) ) {
 				return false; 
 			} else {
-				return array_merge( WpssoPlmConfig::$cf['form']['plm_place_opts'], $place_opts );	// complete the array
+				return array_merge( WpssoPlmConfig::$cf['form']['plm_place_opts'], $place_opts );	// Complete the array.
 			}
 		}
 
 		/**
-		 * Text value for the https://schema.org/address property.
+		 * Return a text a value for the https://schema.org/address property.
 		 */
 		public static function get_address( array $place_opts ) {
+
+			$wpsso =& Wpsso::get_instance();
+
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
 
 			$address = '';
 
@@ -189,11 +212,10 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			return rtrim( $address, ', ' );
 		}
 
+		/**
+		 * Always returns an array.
+		 */
 		public static function get_md_options( array $mod ) {
-
-			if ( ! is_object( $mod['obj'] ) ) {	// just in case
-				return array();
-			}
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -201,24 +223,37 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			if ( ! isset( self::$mod_md_opts[$mod['name']][$mod['id']] ) ) {	// make sure a cache entry exists
+			if ( ! isset( $mod['obj'] ) || ! is_object( $mod['obj'] ) ) {	// Just in case.
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'getting new options for static array cache' );
+					$wpsso->debug->log( 'exiting early: no module object defined' );
 				}
-				self::$mod_md_opts[$mod['name']][$mod['id']] = array();
-			} else {
-				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'returning options from static array cache' );
-				}
-				return self::$mod_md_opts[$mod['name']][$mod['id']];		// return the cache entry
+				return array();
 			}
 
-			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];		// shortcut variable
-			$md_opts = $mod['obj']->get_options( $mod['id'] );			// returns empty string if no meta found
+			if ( ! isset( self::$mod_md_opts[$mod['name']][$mod['id']] ) ) {	// Make sure a cache entry exists.
+
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'getting new options for static cache array' );
+				}
+
+				self::$mod_md_opts[$mod['name']][$mod['id']] = array();
+
+			} else {
+
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'returning options from static cache array' );
+				}
+
+				return self::$mod_md_opts[$mod['name']][$mod['id']];		// Return the cache entry.
+			}
+
+			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];		// Shortcut variable.
+
+			$md_opts = $mod['obj']->get_options( $mod['id'] );			// Returns empty string if no meta found.
 
 			if ( is_array( $md_opts  ) ) {
 
-				if ( isset( $md_opts['plm_place_id'] ) && is_numeric( $md_opts['plm_place_id'] ) ) {	// allow for 0
+				if ( isset( $md_opts['plm_place_id'] ) && is_numeric( $md_opts['plm_place_id'] ) ) {	// Allow for 0.
 
 					if ( ( $place_opts = self::get_id( $md_opts['plm_place_id'] ) ) !== false ) {
 
@@ -233,11 +268,28 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// Only return plm options.
 
 				if ( ! empty( $md_opts ) ) { 
+
+					if ( $wpsso->debug->enabled ) {
+						$wpsso->debug->log( count( $md_opts ) . 'plm option keys found' );
+					}
+
+					if ( ! isset( $md_opts['plm_place_id'] ) ) {	// Just in case.
+						$md_opts['plm_place_id'] = 'custom';
+					}
+
 					if ( empty( $md_opts['plm_place_country'] ) ) {
 						$md_opts['plm_place_country'] = isset( $wpsso->options['plm_place_def_country'] ) ?
 							$wpsso->options['plm_place_def_country'] : 'none';
 					}
+
+				} elseif ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'no plm option keys found' );
 				}
+
+			}
+
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->log( 'result saved to static cache array' );
 			}
 
 			return $md_opts;
@@ -251,66 +303,28 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$place_opts = false;
-
-			if ( is_object( $mod['obj'] ) ) {	// Just in case.
-
-				if ( ( $place_opts = self::has_md_place( $mod, 'plm_place_name' ) ) === false ) {
-
-					if ( $wpsso->debug->enabled ) {
-						$wpsso->debug->log( 'no place options from module object' );
-					}
-				}
-
-			} elseif ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( 'not home index and no module object' );
-			}
-
-			if ( $wpsso->debug->enabled ) {
-				if ( false === $place_opts ) {
-					$wpsso->debug->log( 'no place options found' );
-				} else {
-					$wpsso->debug->log( count( $place_opts ) . ' place options found' );
-				}
-			}
-
-			return $place_opts;
+			return self::has_md_place( $mod );	// Returns a place array.
 		}
 
-		public static function has_md_place( array $mod, $idx_exists = '' ) {
+		public static function has_md_place( array $mod ) {
 
 			$wpsso =& Wpsso::get_instance();
 
-			if ( ! is_object( $mod['obj'] ) ) {	// just in case
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
+
+			if ( ! isset( $mod['obj'] ) || ! is_object( $mod['obj'] ) ) {	// Just in case.
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'exiting early: no module object defined' );
+				}
 				return false;
 			}
 
-			$md_opts = self::get_md_options( $mod );
+			$md_opts = self::get_md_options( $mod );	// Always returns an array.
 
-			/**
-			 * Check for a specific index key.
-			 */
-			if ( ! empty( $idx_exists ) ) {
-				if ( isset( $md_opts[$idx_exists] ) ) {
-					if ( ! isset( $md_opts['plm_place_id'] ) ) {
-						$md_opts['plm_place_id'] = 'custom';
-					}
-					if ( $wpsso->debug->enabled ) {
-						$wpsso->debug->log( 'returning place options - index key ' . $idx_exists . ' exists' );
-						$wpsso->debug->log_arr( 'md_opts', $md_opts );
-					}
-					return $md_opts;
-				}
-			} elseif ( is_array( $md_opts  ) ) {
-				foreach ( self::$place_mt as $key => $mt_name ) {
-					if ( ! empty( $md_opts[$key] ) ) {
-						if ( $wpsso->debug->enabled ) {
-							$wpsso->debug->log( 'returning place options - one or more option keys found' );
-							$wpsso->debug->log_arr( 'md_opts', $md_opts );
-						}
-						return $md_opts;
-					}
-				}
+			if ( ! empty( $md_opts['plm_place_id'] ) && $md_opts['plm_place_id'] !== 'none' ) {
+				return $md_opts;
 			}
 
 			return false;
@@ -324,33 +338,25 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$place_opts = false;
-
-			if ( is_object( $mod['obj'] ) ) {	// Just in case.
-				if ( ( $place_opts = self::has_md_days( $mod ) ) === false ) {
-					if ( $wpsso->debug->enabled ) {
-						$wpsso->debug->log( 'no business days from module object' );
-					}
-				}
-			} elseif ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( 'not home index and no module object' );
-			}
-
-			return $place_opts;
+			return self::has_md_days( $mod );	// Returns a place array.
 		}
 
 		public static function has_md_days( array $mod ) {
 
-			if ( ! is_object( $mod['obj'] ) ) {	// just in case
-				return false;
-			}
 			$wpsso =& Wpsso::get_instance();
 
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
 			}
 
-			$md_opts = self::get_md_options( $mod );
+			if ( ! isset( $mod['obj'] ) || ! is_object( $mod['obj'] ) ) {	// Just in case.
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'exiting early: no module object defined' );
+				}
+				return false;
+			}
+
+			$md_opts = self::get_md_options( $mod );	// Always returns an array.
 
 			if ( is_array( $md_opts  ) ) {
 				foreach ( $wpsso->cf['form']['weekdays'] as $day => $label ) {
@@ -371,37 +377,32 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$place_opts = false;
-
-			if ( is_object( $mod['obj'] ) ) {	// Just in case.
-
-				if ( ( $place_opts = self::has_md_geo( $mod ) ) === false ) {
-					if ( $wpsso->debug->enabled ) {
-						$wpsso->debug->log( 'no geo coordinates from module object' );
-					}
-				}
-
-			} elseif ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( 'not home index and no module object' );
-			}
-
-			return $place_opts;
+			return self::has_md_geo( $mod );	// Returns a place array.
 		}
 
 		public static function has_md_geo( array $mod ) {
 
-			if ( ! is_object( $mod['obj'] ) ) {	// just in case
+			$wpsso =& Wpsso::get_instance();
+
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
+
+			if ( ! isset( $mod['obj'] ) || ! is_object( $mod['obj'] ) ) {	// Just in case.
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'exiting early: no module object defined' );
+				}
 				return false;
 			}
 
-			$md_opts = self::get_md_options( $mod );
+			$md_opts = self::get_md_options( $mod );	// Always returns an array.
 
 			if ( is_array( $md_opts  ) ) {
 
 				/**
-				 * Allow for latitude and/or longitude of 0.
+				 * Allow for 0 degrees latitude (aka the Equator) and 0 degrees longitude (aka the Prime Meridian).
 				 */
-				if ( isset( $md_opts['plm_place_latitude'] ) && $md_opts['plm_place_latitude']!== '' && 
+				if ( isset( $md_opts['plm_place_latitude'] ) && $md_opts['plm_place_latitude'] !== '' && 
 					isset( $md_opts['plm_place_longitude'] ) && $md_opts['plm_place_longitude'] !== '' ) {
 
 					return $md_opts;
