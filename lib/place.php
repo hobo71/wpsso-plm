@@ -73,15 +73,15 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 				if ( ! empty( $children ) ) {	// Just in case.
 
-					foreach ( $place_names as $num => $name ) {
+					foreach ( $place_names as $place_id => $name ) {
 
-						if ( ! empty( $wpsso->options['plm_place_schema_type_' . $num] ) && 
-							in_array( $wpsso->options['plm_place_schema_type_' . $num], $children ) ) {
+						if ( ! empty( $wpsso->options['plm_place_schema_type_' . $place_id] ) && 
+							in_array( $wpsso->options['plm_place_schema_type_' . $place_id], $children ) ) {
 
 							continue;
 
 						} else {
-							unset( $place_names[$num] );
+							unset( $place_names[$place_id] );
 						}
 					}
 				}
@@ -108,26 +108,26 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 		}
 
 		/**
-		 * Get a specific place id. If $id is 'custom' then $mixed must be a $mod array.
+		 * Get a specific place id. If $place_id is 'custom' then $mixed must be a $mod array.
 		 */
-		public static function get_id( $id, $mixed = 'current' ) {
+		public static function get_id( $place_id, $mixed = 'current' ) {
 
 			$wpsso =& Wpsso::get_instance();
 
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log_args( array( 
-					'id'    => $id,
-					'mixed' => $mixed,
+					'place_id' => $place_id,
+					'mixed'    => $mixed,
 				) );
 			}
 
 			$place_opts = array();
 
-			if ( $id === 'none' ) {	// Just in case.
+			if ( $place_id === 'none' ) {	// Just in case.
 
 				return false;
 
-			} elseif ( $id === 'custom' ) {
+			} elseif ( $place_id === 'custom' ) {
 
 				if ( ! isset( $mixed['obj'] ) || ! is_object( $mixed['obj'] ) ) {
 					if ( $wpsso->debug->enabled ) {
@@ -136,22 +136,22 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 					return false; 
 				}
 				
-				$md_opts = self::get_md_options( $mixed );				// Always returns and array.
+				$md_opts = self::get_md_options( $mixed );	// Always returns and array.
 
 				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*)(#.*)?$/', $md_opts, false, '$1' ) as $opt_idx => $value ) {
 					$place_opts[$opt_idx] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
 				}
 
-			} elseif ( is_numeric( $id ) ) {
+			} elseif ( is_numeric( $place_id ) ) {
 
 				/**
 				 * Get the list of non-localized option names.
 				 */
-				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*_)' . $id . '(#.*)?$/', $wpsso->options, false, '$1' ) as $opt_prefix => $value ) {
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*_)' . $place_id . '(#.*)?$/', $wpsso->options, false, '$1' ) as $opt_prefix => $value ) {
 
 					$opt_idx = rtrim( $opt_prefix, '_' );
 
-					$place_opts[$opt_idx] = SucomUtil::get_key_value( $opt_prefix . $id, $wpsso->options, $mixed );
+					$place_opts[$opt_idx] = SucomUtil::get_key_value( $opt_prefix . $place_id, $wpsso->options, $mixed );
 				}
 			}
 
@@ -278,8 +278,8 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 					}
 
 					if ( empty( $md_opts['plm_place_country'] ) ) {
-						$md_opts['plm_place_country'] = isset( $wpsso->options['plm_place_def_country'] ) ?
-							$wpsso->options['plm_place_def_country'] : 'none';
+						$md_opts['plm_place_country'] = isset( $wpsso->options['plm_def_country'] ) ?
+							$wpsso->options['plm_def_country'] : 'none';
 					}
 
 				} elseif ( $wpsso->debug->enabled ) {
@@ -303,7 +303,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			return self::has_md_place( $mod );	// Returns a place array.
+			return self::has_md_place( $mod );	// Returns false or place array.
 		}
 
 		public static function has_md_place( array $mod ) {
@@ -338,7 +338,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			return self::has_md_days( $mod );	// Returns a place array.
+			return self::has_md_days( $mod );	// Returns false or place array.
 		}
 
 		public static function has_md_days( array $mod ) {
@@ -377,7 +377,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			return self::has_md_geo( $mod );	// Returns a place array.
+			return self::has_md_geo( $mod );	// Returns false or place array.
 		}
 
 		public static function has_md_geo( array $mod ) {

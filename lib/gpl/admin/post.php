@@ -38,6 +38,8 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			unset( $form->options['plm_place_id'] );
 
+			$table_rows[] = '<td colspan="4">' . $this->p->msgs->get( 'info-plm-place' ) . '</td>';
+
 			$table_rows[] = '<td colspan="4">' . $this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssoplm' ) ) . '</td>';
 
 			$table_rows['plm_place_id'] = '' . 
@@ -49,17 +51,9 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			'<td class="blank" colspan="3">' . $form->get_no_select( 'plm_place_schema_type', $place_types_select,
 				'schema_type', '', true ) . '</td>';
 
-			$table_rows['plm_place_name'] = '' . 
-			$form->get_th_html( _x( 'Place Name', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_name' ) .  
-			'<td class="blank" colspan="3">' . $form->get_no_input_value( '', 'long_name required' ) . '</td>';
-
 			$table_rows['plm_place_name_alt'] = '' . 
 			$form->get_th_html( _x( 'Place Alternate Name', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_name_alt' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_input_value( '', 'long_name' ) . '</td>';
-
-			$table_rows['plm_place_desc'] = '' . 
-			$form->get_th_html( _x( 'Place Description', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_desc' ) .  
-			'<td class="blank" colspan="3">' . $form->get_no_textarea_value() . '</td>';
 
 			$table_rows['plm_place_street_address'] = '' . 
 			$form->get_th_html( _x( 'Street Address', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_street_address' ) .  

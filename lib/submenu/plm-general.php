@@ -98,7 +98,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$def_schema_type = WpssoPlmConfig::$cf['form']['plm_place_opts']['plm_place_schema_type'];
 
 						$this->form->defaults['plm_place_schema_type_' . $id] = $def_schema_type;
-						$this->form->defaults['plm_place_country_' . $id]     = $this->p->options['plm_place_def_country'];
+						$this->form->defaults['plm_place_country_' . $id]     = $this->p->options['plm_def_country'];
 
 						foreach ( $this->p->cf['form']['weekdays'] as $day => $day_label ) {
 							$this->form->defaults['plm_place_day_' . $day . '_' . $id]       = '0';
@@ -271,9 +271,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'plm-settings':
 
-					$table_rows['plm_place_def_country'] = '' . 
-					$this->form->get_th_html( _x( 'Place Default Country', 'option label', 'wpsso-plm' ), '', 'plm_place_def_country' ) . 
-					'<td>' . $this->form->get_select_country( 'plm_place_def_country' ) . '</td>';
+					$table_rows['plm_def_country'] = '' . 
+					$this->form->get_th_html( _x( 'Place Default Country', 'option label', 'wpsso-plm' ), '', 'plm_def_country' ) . 
+					'<td>' . $this->form->get_select_country( 'plm_def_country' ) . '</td>';
 
 					$add_to_checkboxes = '';
 
