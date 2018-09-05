@@ -123,7 +123,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			$place_opts = array();
 
-			if ( $place_id === 'none' ) {	// Just in case.
+			if ( $place_id === '' || $place_id === 'none' ) {	// Just in case.
 
 				return false;
 
@@ -186,15 +186,15 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				'plm_place_state',
 				'plm_place_zipcode',
 				'plm_place_country',
-			) as $key ) {
+			) as $opt_key ) {
 
-				if ( isset( $place_opts[$key] ) && $place_opts[$key] !== '' && $place_opts[$key] !== 'none' ) {
+				if ( isset( $place_opts[$opt_key] ) && $place_opts[$opt_key] !== '' && $place_opts[$opt_key] !== 'none' ) {
 
-					switch ( $key ) {
+					switch ( $opt_key ) {
 
 						case 'plm_place_name':
 
-							$place_opts[$key] = preg_replace( '/\s*,\s*/', ' ', $place_opts[$key] );	// Just in case.
+							$place_opts[$opt_key] = preg_replace( '/\s*,\s*/', ' ', $place_opts[$opt_key] );	// Just in case.
 
 							break;
 
@@ -205,7 +205,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 							break;
 					}
 
-					$address .= $place_opts[$key] . ', ';
+					$address .= $place_opts[$opt_key] . ', ';
 				}
 			}
 
@@ -323,7 +323,9 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			$md_opts = self::get_md_options( $mod );	// Always returns an array.
 
-			if ( ! empty( $md_opts['plm_place_id'] ) && $md_opts['plm_place_id'] !== 'none' ) {
+			$opt_key = 'plm_place_id';
+
+			if ( isset( $md_opts[$opt_key] ) && $md_opts[$opt_key] !== '' && $md_opts[$opt_key] !== 'none' ) {	// Allow for place ID 0.
 				return $md_opts;
 			}
 
