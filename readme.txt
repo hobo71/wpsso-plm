@@ -119,7 +119,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-dev.11 (2018/09/05)**
+**Version 3.0.0-b.1 (2018/09/05)**
 
 * *New Features*
 	* Extended the Schema type selection for places / locations from LocalBusiness to Place (which includes LocalBusiness).
@@ -187,7 +187,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-dev.11 =
+= 3.0.0-b.1 =
 
 (2018/09/05) Extended the Schema type selection for places / locations from LocalBusiness to Place. Refactored the settings page and tab in the Document SSO metabox.
 
