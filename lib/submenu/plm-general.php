@@ -79,7 +79,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$def_id = $this->form->options['plm_place_id'];
 
 						/**
-						 * Test if the place name is missing or blank.
+						 * Test if the default language place name is missing or blank.
 						 */
 						if ( ! isset( $this->p->options['plm_place_name_' . $def_id] ) ||
 							trim( $this->p->options['plm_place_name_' . $def_id] ) === '' ) {
@@ -130,12 +130,14 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$table_rows['plm_place_name_' . $id] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Name', 'option label', 'wpsso-plm' ), '', 'plm_place_name',
 							array( 'is_locale' => true ) ) .
-						'<td colspan="3">' . $this->form->get_input( 'plm_place_name_' . $id, 'long_name required' ) . '</td>';
+						'<td colspan="3">' . $this->form->get_input( SucomUtil::get_key_locale( 'plm_place_name_' . $id,
+							$this->form->options ), 'long_name required' ) . '</td>';
 
 						$table_rows['plm_place_name_alt_' . $id] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Alternate Name', 'option label', 'wpsso-plm' ), '', 'plm_place_name_alt',
 							array( 'is_locale' => true ) ) .
-						'<td colspan="3">' . $this->form->get_input( 'plm_place_name_alt_' . $id, 'long_name' ) . '</td>';
+						'<td colspan="3">' . $this->form->get_input( SucomUtil::get_key_locale( 'plm_place_name_alt_' . $id,
+							$this->form->options ), 'long_name' ) . '</td>';
 
 						$table_rows['plm_place_desc_' . $id] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Description', 'option label', 'wpsso-plm' ), '', 'plm_place_desc',

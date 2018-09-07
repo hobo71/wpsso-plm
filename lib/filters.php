@@ -845,13 +845,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				case 'tooltip-plm_place_desc':
 
-					$text = __( 'A description for this place. The place description may appear in forms and in the Schema Place "description" property.', 'wpsso-plm' );
+					$text = __( 'A description for this place. The place description may appear in the Schema Place "description" property.', 'wpsso-plm' );
 
 					break;
 
 				case 'tooltip-plm_place_street_address':
 
-					$text = __( 'An optional street address used for Pinterest Rich Pin / Schema Place meta tags and related markup.', 'wpsso-plm' );
+					$text = __( 'An optional street address for Pinterest Rich Pin / Schema Place meta tags and related markup.', 'wpsso-plm' );
 
 					break;
 
@@ -914,9 +914,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				case 'tooltip-plm_place_img_id':	// Place Image ID
 
-					$text = __( 'An image ID and media library selection for this place (ie. an image of the business location).', 'wpsso-plm' ) . ' ';
+					$text = __( 'An image ID and media library selection for this place (ie. an image of the business storefront or location).', 'wpsso-plm' ) . ' ';
 					
-					$text .= __( 'The place image is used in the Schema LocalBusiness markup for the \'location\' Schema property.', 'wpsso-plm' ).' ';
+					$text .= __( 'The place image is used in the Schema LocalBusiness markup for the Schema "location" property.', 'wpsso-plm' ).' ';
 					
 					$text .= __( 'The business location image is not used when a place is added to a post, page, or custom post type.', 'wpsso-plm' );
 
@@ -988,7 +988,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					$text = __( 'A comma-delimited list of website and mobile app URLs to order products.', 'wpsso-plm' ).' ';
 					
-					$text .= __( 'The WPSSO JSON add-on is required to add these Order Action URL(s) to the Schema potentialAction property.', 'wpsso-plm' );
+					$text .= __( 'The WPSSO JSON add-on is required to add these Order Action URL(s) to the Schema "potentialAction" property.', 'wpsso-plm' );
 
 					break;
 
@@ -1003,7 +1003,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );	// Use wpsso's text domain.
 					$metabox_tab   = _x( 'Place for Content', 'metabox tab', 'wpsso-plm' );
 
-					$text = sprintf( __( 'A "%1$s" tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific place information for that webpage content (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), $metabox_tab, $metabox_title );
+					$text = sprintf( __( 'A "%1$s" tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to select or enter place information for the webpage content (ie. street address, GPS coordinates, opening hours, etc.).', 'wpsso-plm' ), $metabox_tab, $metabox_title );
 
 					break;
 
