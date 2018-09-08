@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(			// Plugin acronym.
-					'version'     => '3.0.0-rc.1',	// Plugin version.
+					'version'     => '3.0.0-rc.2',	// Plugin version.
 					'opt_version' => '22',		// Increment when changing default option values.
 					'short'       => 'WPSSO PLM',	// Short plugin name.
 					'name'        => 'WPSSO Place / Location and Local Business Meta',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.12.0-rc.1',
+						'min_version' => '4.12.0-rc.2',
 					),
 					'img' => array(
 						'icons' => array(
@@ -132,12 +132,12 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 				return;
 			}
 
-			define( 'WPSSOPLM_VERSION', self::$cf['plugin']['wpssoplm']['version'] );						
 			define( 'WPSSOPLM_FILEPATH', $plugin_filepath );						
+			define( 'WPSSOPLM_PLUGINBASE', self::$cf['plugin']['wpssoplm']['base'] );	// wpsso-plm/wpsso-plm.php
 			define( 'WPSSOPLM_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
 			define( 'WPSSOPLM_PLUGINSLUG', self::$cf['plugin']['wpssoplm']['slug'] );	// wpsso-plm
-			define( 'WPSSOPLM_PLUGINBASE', self::$cf['plugin']['wpssoplm']['base'] );	// wpsso-plm/wpsso-plm.php
 			define( 'WPSSOPLM_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
+			define( 'WPSSOPLM_VERSION', self::$cf['plugin']['wpssoplm']['version'] );						
 		}
 
 		public static function require_libs( $plugin_filepath ) {
