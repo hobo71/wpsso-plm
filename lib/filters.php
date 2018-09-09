@@ -772,6 +772,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					$text .= '<p>';
 
+					$text .= sprintf( __( 'You may select or enter custom place information for your content subject. Please make sure your content subject is about a single specific place or location - for example, the <a href="%s">Eiffel Tower</a>.', 'wpsso-plm' ), 'https://en.wikipedia.org/wiki/Eiffel_Tower' );
+
+					$text .= '</p><p>';
+
 					$text .= __( 'Selecting a place will force the webpage Open Graph type to "place" and the Schema type to the Schema type / sub-type selected below.', 'wpsso-plm' );
 
 					$text .= '</p>';
