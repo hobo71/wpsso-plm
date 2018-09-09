@@ -776,7 +776,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					$text .= '</p><p>';
 
-					$text .= __( 'Selecting a place will force the webpage Open Graph type to "place" and the Schema type to the Schema type / sub-type selected below.', 'wpsso-plm' );
+					$text .= __( 'Selecting a place will force both the webpage Open Graph type to "place" and the Schema type to the one selected below.', 'wpsso-plm' );
 
 					$text .= '</p>';
 

@@ -68,8 +68,8 @@ msgstr ""
 
 #: lib/filters.php:779
 msgid ""
-"Selecting a place will force the webpage Open Graph type to \"place\" and "
-"the Schema type to the Schema type / sub-type selected below."
+"Selecting a place will force both the webpage Open Graph type to \"place\" "
+"and the Schema type to the one selected below."
 msgstr ""
 
 #: lib/filters.php:806
