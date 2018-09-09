@@ -23,15 +23,13 @@ WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Sc
 
 Include Pinterest Rich Pin *Place*, Facebook / Open Graph *Location*, and Google *Local Business / Local SEO* meta tags in your webpages.
 
-**The WPSSO Place / Location and Local Business Meta add-on can be used in two different ways:**
+**The WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) add-on can be used in two different ways:**
 
-* To provide location information for the webpage content (ie. the content is about a specific physical place / location).
+* To provide location information for the webpage content (ie. the content subject is about a specific physical place / location).
 
 * To provide location information for an Organization, which in turn may be related to the content (ie. the content Publisher, event Organizer, etc.).
 
-The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*.
-
-If you're using a static front page, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
+The Free version of WPSSO PLM can provide location information for the [WPSSO Organization Markup](https://wordpress.org/plugins/wpsso-organization/) (aka WPSSO ORG) add-on. The WPSSO ORG add-on is required to select a place / location for an organization / local business.
 
 <h3>WPSSO PLM Free / Standard Features</h3>
 
@@ -67,8 +65,6 @@ If you're using a static front page, or would like to include location informati
 		* Serves Cuisine
 		* Food Menu URL
 		* Order Action URL(s)
-
-* Combine the WPSSO Place / Location and Local Business Meta add-on with the [WPSSO Schema JSON-LD Markup Pro](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) add-on to provide place and local business / local SEO information using the Schema JSON-LD markup format.
 
 * Download the Free version from [GitHub](https://surniaulula.github.io/wpsso-plm/) or [WordPress.org](https://wordpress.org/plugins/wpsso-plm/).
 

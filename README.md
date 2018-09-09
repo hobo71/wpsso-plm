@@ -19,16 +19,14 @@
 
 <p>Include Pinterest Rich Pin <em>Place</em>, Facebook / Open Graph <em>Location</em>, and Google <em>Local Business / Local SEO</em> meta tags in your webpages.</p>
 
-<p><strong>The WPSSO Place / Location and Local Business Meta add-on can be used in two different ways:</strong></p>
+<p><strong>The WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) add-on can be used in two different ways:</strong></p>
 
 <ul>
-<li><p>To provide location information for the webpage content (ie. the content is about a specific physical place / location).</p></li>
+<li><p>To provide location information for the webpage content (ie. the content subject is about a specific physical place / location).</p></li>
 <li><p>To provide location information for an Organization, which in turn may be related to the content (ie. the content Publisher, event Organizer, etc.).</p></li>
 </ul>
 
-<p>The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a <em>blog front page</em>.</p>
-
-<p>If you're using a static front page, or would like to include location information for the content of other posts / pages, you'll need the Pro version.</p>
+<p>The Free version of WPSSO PLM can provide location information for the <a href="https://wordpress.org/plugins/wpsso-organization/">WPSSO Organization Markup</a> (aka WPSSO ORG) add-on. The WPSSO ORG add-on is required to select a place / location for an organization / local business.</p>
 
 <h3>WPSSO PLM Free / Standard Features</h3>
 
@@ -72,7 +70,6 @@
 <li>Order Action URL(s)</li>
 </ul></li>
 </ul></li>
-<li><p>Combine the WPSSO Place / Location and Local Business Meta add-on with the <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO Schema JSON-LD Markup Pro</a> add-on to provide place and local business / local SEO information using the Schema JSON-LD markup format.</p></li>
 <li><p>Download the Free version from <a href="https://surniaulula.github.io/wpsso-plm/">GitHub</a> or <a href="https://wordpress.org/plugins/wpsso-plm/">WordPress.org</a>.</p></li>
 </ul>
 
