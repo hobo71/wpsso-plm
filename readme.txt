@@ -122,9 +122,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Improvements*
 	* Added a static local cache to the WpssoOrgOrganization::get_id() method.
 * *Bugfixes*
-	* None.
+	* Fixed setting place Open Graph and Schema type when reading post options.
 * *Developer Notes*
-	* None.
+	* Added a new WpssoPlmFilters::set_post_options() private method called by both the 'save_post_options' and 'get_post_options' filter hooks.
 
 **Version 3.0.0 (2018/09/09)**
 
