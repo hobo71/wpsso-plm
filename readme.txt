@@ -115,6 +115,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.0.1-dev.4 (2018/09/13)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* Added a static local cache to the WpssoOrgOrganization::get_id() method.
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* None.
+
 **Version 3.0.0 (2018/09/09)**
 
 * *New Features*
@@ -126,62 +137,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* None.
 
-**Version 2.6.1 (2018/08/11)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* None.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* Renamed the SucomForm::get_cache() method to WpssoUtil::get_form_cache() for WPSSO v4.10.0.
-
-**Version 2.6.0 (2018/07/22)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Maintenance release.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
-**Version 2.5.6 (2018/06/23)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Added a new "Place Telephone" option, which may be different than the main "Business Telephone" option value.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
-**Version 2.5.5 (2018/06/16)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* None.
-* *Bugfixes*
-	* Add 'acceptsreservations', 'hasMenu', and 'servesCuisine' meta tags only for FoodEstablishment instead of any LocalBusiness.
-* *Developer Notes*
-	* None.
-
-**Version 2.5.4 (2018/05/21)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Added an image dimension check for the "Place Image ID" option value.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
 == Upgrade Notice ==
+
+= 3.0.1-dev.4 =
+
+(2018/09/13) Added a static local cache to the WpssoOrgOrganization::get_id() method.
 
 = 3.0.0 =
 
