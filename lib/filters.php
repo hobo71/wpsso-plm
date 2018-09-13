@@ -26,6 +26,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults'                               => 1,
 				'get_md_defaults'                            => 1,
+				'get_post_options'                           => 3,
 				'og_type'                                    => 3,
 				'og_seed'                                    => 2,
 				'schema_type_id'                             => 3,
@@ -43,17 +44,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				$this->p->util->add_plugin_filters( $this, array( 
 					'save_post_options'      => 4,
-				), 1000 );
-
-				$this->p->util->add_plugin_filters( $this, array( 
-					'option_type'            => 2,
 					'save_options'           => 4,
+					'option_type'            => 2,
 					'post_custom_meta_tabs'  => 3,
 					'messages_info'          => 2,
 					'messages_tooltip'       => 2,
 					'messages_tooltip_post'  => 2,
 					'form_cache_place_names' => 1,
-				) );
+				), 1000 );
 
 				$this->p->util->add_plugin_filters( $this, array( 
 					'status_pro_features' => 4,
@@ -540,95 +538,69 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		 */
 		public function filter_save_post_options( $md_opts, $post_id, $rel_id, $mod ) {
 
-			$opt_key = 'plm_place_id';
-
-			if ( isset( $md_opts[$opt_key] ) && $md_opts[$opt_key] !== '' && $md_opts[$opt_key] !== 'none' ) {	// Allow for place ID 0.
-				
-				$def_schema_type = WpssoPlmConfig::$cf['form']['plm_place_opts']['plm_place_schema_type'];
-
-				$md_opts['og_type'] = 'place';
-				$md_opts['schema_type'] = empty( $md_opts['plm_place_schema_type'] ) ?
-					$def_schema_type : $md_opts['plm_place_schema_type'];
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
 			}
+
+			$this->set_post_options( $md_opts, $post_id, $mod );
 
 			return $md_opts;
 		}
 
-		public function filter_option_type( $type, $base_key ) {
+		public function filter_get_post_options( $md_opts, $post_id, $mod ) {
+			
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			$this->set_post_options( $md_opts, $post_id, $mod );
+
+			return $md_opts;
+		}
+
+		private function set_post_options( &$md_opts, $post_id, $mod ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! empty( $type ) ) {
-				return $type;
-			} elseif ( strpos( $base_key, 'plm_' ) !== 0 ) {
-				return $type;
+			$is_admin   = is_admin();
+			$place_id   = isset( $md_opts['plm_place_id'] ) ? $md_opts['plm_place_id'] : 'none';
+			$place_type = false;
+
+			if ( $place_id === '' && $place_id === 'none' ) {	// Nothing to do.
+				return $md_opts;
 			}
 
-			switch ( $base_key ) {
+			if ( is_numeric( $place_id ) ) {	// Value is "0" or more.
 
-				case 'plm_def_country':
-				case 'plm_place_id':
-				case 'plm_place_schema_type':
-				case ( preg_match( '/^plm_place_(country|type)$/', $base_key ) ? true : false ):
+				$place_opts = WpssoPlmPlace::get_id( $place_id, $mod );
 
-					return 'not_blank';
+				$place_type = empty( $place_opts['plm_place_schema_type'] ) ?
+					$def_schema_type : $place_opts['plm_place_schema_type'];
 
-					break;
+			} elseif ( $place_id === 'custom' ) {	// Value is "custom".
 
-				case ( preg_match( '/^plm_place_(name|name_alt|desc|phone|street_address|city|state|zipcode)$/', $base_key ) ? true : false ):
-				case ( preg_match( '/^plm_place_(phone|price_range|cuisine)$/', $base_key ) ? true : false ):
-
-					return 'ok_blank';
-
-					break;
-
-				case ( preg_match( '/^plm_place_(currencies_accepted|payment_accepted)$/', $base_key ) ? true : false ):
-
-					return 'csv_blank';
-
-					break;
-
-				case ( preg_match( '/^plm_place_(latitude|longitude|altitude|service_radius|po_box_number)$/', $base_key ) ? true : false ):
-
-					return 'blank_num';
-
-					break;
-
-				case ( preg_match( '/^plm_place_day_[a-z]+_(open|close)$/', $base_key ) ? true : false ):
-
-					return 'time';
-
-					break;
-
-				case ( preg_match( '/^plm_place_season_(from|to)_date$/', $base_key ) ? true : false ):
-
-					return 'date';
-
-					break;
-
-				case 'plm_place_menu_url':
-
-					return 'url';
-
-					break;
-
-				case 'plm_place_order_urls':
-
-					return 'csv_urls';
-
-					break;
-
-				case 'plm_place_accept_res':
-				case ( preg_match( '/^plm_place_day_[a-z]+$/', $base_key ) ? true : false ):
-
-					return 'checkbox';
-
-					break;
+				$place_type = empty( $md_opts['plm_place_schema_type'] ) ?
+					$def_schema_type : $md_opts['plm_place_schema_type'];
 			}
 
-			return $type;
+			$md_opts['og_type'] = 'place';
+
+			if ( $is_admin ) {
+				$md_opts['og_type:is'] = 'disabled';
+			}
+
+			if ( $place_type ) {
+
+				$md_opts['schema_type'] = $place_type;
+
+				if ( $is_admin ) {
+					$md_opts['schema_type:is'] = 'disabled';
+				}
+			}
+
+			return $md_opts;
 		}
 
 		/**
@@ -737,6 +709,83 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$og_single_image = $this->p->media->get_opts_single_image( $opts, $size_name, $opt_img_pre, $opt_num );
 
 			$this->p->notice->unset_ref( $settings_page_link );
+		}
+
+		public function filter_option_type( $type, $base_key ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( ! empty( $type ) ) {
+				return $type;
+			} elseif ( strpos( $base_key, 'plm_' ) !== 0 ) {
+				return $type;
+			}
+
+			switch ( $base_key ) {
+
+				case 'plm_def_country':
+				case 'plm_place_id':
+				case 'plm_place_schema_type':
+				case ( preg_match( '/^plm_place_(country|type)$/', $base_key ) ? true : false ):
+
+					return 'not_blank';
+
+					break;
+
+				case ( preg_match( '/^plm_place_(name|name_alt|desc|phone|street_address|city|state|zipcode)$/', $base_key ) ? true : false ):
+				case ( preg_match( '/^plm_place_(phone|price_range|cuisine)$/', $base_key ) ? true : false ):
+
+					return 'ok_blank';
+
+					break;
+
+				case ( preg_match( '/^plm_place_(currencies_accepted|payment_accepted)$/', $base_key ) ? true : false ):
+
+					return 'csv_blank';
+
+					break;
+
+				case ( preg_match( '/^plm_place_(latitude|longitude|altitude|service_radius|po_box_number)$/', $base_key ) ? true : false ):
+
+					return 'blank_num';
+
+					break;
+
+				case ( preg_match( '/^plm_place_day_[a-z]+_(open|close)$/', $base_key ) ? true : false ):
+
+					return 'time';
+
+					break;
+
+				case ( preg_match( '/^plm_place_season_(from|to)_date$/', $base_key ) ? true : false ):
+
+					return 'date';
+
+					break;
+
+				case 'plm_place_menu_url':
+
+					return 'url';
+
+					break;
+
+				case 'plm_place_order_urls':
+
+					return 'csv_urls';
+
+					break;
+
+				case 'plm_place_accept_res':
+				case ( preg_match( '/^plm_place_day_[a-z]+$/', $base_key ) ? true : false ):
+
+					return 'checkbox';
+
+					break;
+			}
+
+			return $type;
 		}
 
 		public function filter_post_custom_meta_tabs( $tabs, $mod, $metabox_id ) {

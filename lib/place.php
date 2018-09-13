@@ -14,7 +14,6 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 	class WpssoPlmPlace {
 
 		private $p;
-		private static $mod_md_opts = array();	// get_md_options() meta data cache.
 
 		public static $place_mt = array(
 			'plm_place_name'           => 'place:name',
@@ -144,6 +143,17 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			} elseif ( is_numeric( $place_id ) ) {
 
+				static $local_cache = array();	// Cache for single page load.
+
+				if ( isset( $local_cache[ $place_id ] ) ) {
+
+					if ( $wpsso->debug->enabled ) {
+						$wpsso->debug->log( 'returning options from static cache array for place ID ' . $place_id );
+					}
+
+					return $local_cache[ $place_id ];
+				}
+
 				/**
 				 * Get the list of non-localized option names.
 				 */
@@ -153,10 +163,12 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 					$place_opts[$opt_idx] = SucomUtil::get_key_value( $opt_prefix . $place_id, $wpsso->options, $mixed );
 				}
-			}
 
-			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log_arr( 'place_opts', $place_opts );
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'saving options to static cache array for place ID ' . $place_id );
+				}
+
+				$local_cache[ $place_id ] = $place_opts;
 			}
 
 			if ( empty( $place_opts ) ) {
@@ -224,30 +236,34 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			}
 
 			if ( ! isset( $mod['obj'] ) || ! is_object( $mod['obj'] ) ) {	// Just in case.
+
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: no module object defined' );
 				}
+
 				return array();
 			}
 
-			if ( ! isset( self::$mod_md_opts[$mod['name']][$mod['id']] ) ) {	// Make sure a cache entry exists.
+			static $local_cache = array();	// Cache for single page load.
+
+			if ( isset( $local_cache[$mod['name']][$mod['id']] ) ) {
 
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'getting new options for static cache array' );
+					$wpsso->debug->log( 'returning options from static cache array for ' . $mod['name'] . ' ID ' . $mod['id'] );
 				}
 
-				self::$mod_md_opts[$mod['name']][$mod['id']] = array();
+				return $local_cache[$mod['name']][$mod['id']];
 
 			} else {
 
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'returning options from static cache array' );
+					$wpsso->debug->log( 'getting new options for static cache array for ' . $mod['name'] . ' ID ' . $mod['id'] );
 				}
 
-				return self::$mod_md_opts[$mod['name']][$mod['id']];		// Return the cache entry.
+				$local_cache[$mod['name']][$mod['id']] = array();
 			}
 
-			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];		// Shortcut variable.
+			$md_opts =& $local_cache[$mod['name']][$mod['id']];		// Shortcut variable.
 
 			$md_opts = $mod['obj']->get_options( $mod['id'] );			// Returns empty string if no meta found.
 
@@ -270,7 +286,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				if ( ! empty( $md_opts ) ) { 
 
 					if ( $wpsso->debug->enabled ) {
-						$wpsso->debug->log( count( $md_opts ) . 'plm option keys found' );
+						$wpsso->debug->log( count( $md_opts ) . ' plm option keys found' );
 					}
 
 					if ( ! isset( $md_opts['plm_place_id'] ) ) {	// Just in case.
@@ -289,7 +305,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			}
 
 			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( 'result saved to static cache array' );
+				$wpsso->debug->log( 'result saved to static cache array for ' . $mod['name'] . ' ID ' . $mod['id'] );
 			}
 
 			return $md_opts;
