@@ -115,7 +115,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.1-dev.7 (2018/09/14)**
+**Version 3.0.1-dev.7 (2018/09/15)**
 
 * *New Features*
 	* None.
@@ -141,7 +141,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.0.1-dev.7 =
 
-(2018/09/14) Added a static local cache to the WpssoOrgOrganization::get_id() method.
+(2018/09/15) Added a static local cache to the WpssoOrgOrganization::get_id() method.
 
 = 3.0.0 =
 
