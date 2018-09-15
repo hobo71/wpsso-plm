@@ -838,28 +838,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $text;
 		}
 
-		public function filter_messages_tooltip_post( $text, $idx ) {
-
-			if ( $this->p->debug->enabled ) {
-				$this->p->debug->mark();
-			}
-
-			if ( strpos( $idx, 'tooltip-post-plm_' ) !== 0 ) {
-				return $text;
-			}
-
-			switch ( $idx ) {
-
-				case 'tooltip-post-plm_place_id':
-
-					$text = __( 'Select an existing place or enter a custom place below.', 'wpsso-plm' );
-
-					break;
-			}
-
-			return $text;
-		}
-
 		public function filter_messages_tooltip( $text, $idx ) {
 
 			if ( $this->p->debug->enabled ) {
@@ -1063,7 +1041,28 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			return $text;
+		}
 
+		public function filter_messages_tooltip_post( $text, $idx ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( strpos( $idx, 'tooltip-post-plm_' ) !== 0 ) {
+				return $text;
+			}
+
+			switch ( $idx ) {
+
+				case 'tooltip-post-plm_place_id':
+
+					$text = __( 'Select an existing place or enter a custom place below.', 'wpsso-plm' );
+
+					break;
+			}
+
+			return $text;
 		}
 
 		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {
