@@ -568,21 +568,21 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$place_id   = isset( $md_opts['plm_place_id'] ) ? $md_opts['plm_place_id'] : 'none';
 			$place_type = false;
 
-			if ( $place_id === '' && $place_id === 'none' ) {	// Nothing to do.
+			if ( $place_id === '' || $place_id === 'none' ) {	// Nothing to do.
+
 				return $md_opts;
-			}
-
-			if ( is_numeric( $place_id ) ) {	// Value is "0" or more.
-
-				$place_opts = WpssoPlmPlace::get_id( $place_id, $mod );
-
-				$place_type = empty( $place_opts['plm_place_schema_type'] ) ?
-					$def_schema_type : $place_opts['plm_place_schema_type'];
 
 			} elseif ( $place_id === 'custom' ) {	// Value is "custom".
 
 				$place_type = empty( $md_opts['plm_place_schema_type'] ) ?
 					$def_schema_type : $md_opts['plm_place_schema_type'];
+
+			} elseif ( is_numeric( $place_id ) ) {	// Value is "0" or more.
+
+				$place_opts = WpssoPlmPlace::get_id( $place_id, $mod );
+
+				$place_type = empty( $place_opts['plm_place_schema_type'] ) ?
+					$def_schema_type : $place_opts['plm_place_schema_type'];
 			}
 
 			$md_opts['og_type'] = 'place';
