@@ -115,14 +115,14 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.1-rc.1 (2018/09/15)**
+**Version 3.0.1 (2018/09/16)**
 
 * *New Features*
 	* None.
 * *Improvements*
-	* Added a static local cache to the WpssoOrgOrganization::get_id() method.
+	* Added a static local cache to the WpssoWpssoPlmPlace::get_id() method.
 * *Bugfixes*
-	* Fixed setting place Open Graph and Schema type when reading post options.
+	* Fixed incorrectly setting the Open Graph and Schema type when reading post options.
 * *Developer Notes*
 	* Added a new WpssoPlmFilters::set_post_options() private method called by both the 'save_post_options' and 'get_post_options' filter hooks.
 
@@ -139,11 +139,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.1-rc.1 =
+= 3.0.1 =
 
-(2018/09/15) Added a static local cache to the WpssoOrgOrganization::get_id() method.
-
-= 3.0.0 =
-
-(2018/09/09) Extended the Schema type selection for places / locations from LocalBusiness to Place. Refactored the settings page and tab in the Document SSO metabox.
+(2018/09/16) Added a static local cache to the WpssoWpssoPlmPlace::get_id() method. Fixed incorrectly setting the Open Graph and Schema type when reading post options.
 
