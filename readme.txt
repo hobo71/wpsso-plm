@@ -115,7 +115,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.1-b.1 (2018/09/15)**
+**Version 3.0.1-rc.1 (2018/09/15)**
 
 * *New Features*
 	* None.
@@ -139,7 +139,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.1-b.1 =
+= 3.0.1-rc.1 =
 
 (2018/09/15) Added a static local cache to the WpssoOrgOrganization::get_id() method.
 
