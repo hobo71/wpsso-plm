@@ -993,7 +993,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				case 'tooltip-plm_place_price_range':
 
-					$text = __( 'The price range of goods or services provided by the local business (example: $10-100).', 'wpsso-plm' );
+					$text = sprintf( __( 'The relative price of goods or services provided by the local business (example: %s).', 'wpsso-plm' ), '$$' );
 
 					break;
 

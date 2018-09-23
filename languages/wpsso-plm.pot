@@ -224,8 +224,8 @@ msgstr ""
 
 #: lib/filters.php:996
 msgid ""
-"The price range of goods or services provided by the local business "
-"(example: $10-100)."
+"The relative price of goods or services provided by the local business "
+"(example: %s)."
 msgstr ""
 
 #: lib/filters.php:1002
