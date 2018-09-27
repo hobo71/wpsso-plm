@@ -53,216 +53,221 @@ msgstr ""
 msgid "saving place \"%1$s\""
 msgstr ""
 
-#: lib/filters.php:799 lib/filters.php:1035
+#: lib/filters.php:799 lib/filters.php:1039
 msgctxt "metabox tab"
-msgid "Place for Content"
+msgid "Schema Place"
 msgstr ""
 
 #: lib/filters.php:824
 msgid ""
-"You may select or enter custom place information for your content subject. "
-"Please make sure your content subject is about a single specific place or "
-"location - for example, the <a href=\"%s\">Eiffel Tower</a>."
+"You may select a place, or enter custom place information, to further "
+"describe your content subject."
 msgstr ""
 
 #: lib/filters.php:828
 msgid ""
-"Selecting a place will force both the webpage Open Graph type to \"place\" "
-"and the Schema type to the one selected below."
+"Please make sure your content subject is about a single, specific place or "
+"location - for example, the <a href=\"%s\">Eiffel Tower</a>."
 msgstr ""
 
-#: lib/filters.php:855
+#: lib/filters.php:832
+msgid ""
+"Selecting a place will define the webpage Open Graph type to \"place\" and "
+"the Schema type to the one selected below."
+msgstr ""
+
+#: lib/filters.php:859
 msgid ""
 "Select a place to edit. The place information is used for Open Graph meta "
 "tags and Schema markup."
 msgstr ""
 
-#: lib/filters.php:861
+#: lib/filters.php:865
 msgid ""
 "You may optionally choose a different Schema type for this place / location "
 "(default is LocalBusiness)."
 msgstr ""
 
-#: lib/filters.php:867
+#: lib/filters.php:871
 msgid ""
 "A name for this place / location (required). The place name may appear in "
 "forms and in the Schema Place \"name\" property."
 msgstr ""
 
-#: lib/filters.php:873
+#: lib/filters.php:877
 msgid ""
 "An alternate name for this place. The place alternate name may appear in the "
 "Schema Place \"alternateName\" property."
 msgstr ""
 
-#: lib/filters.php:879
+#: lib/filters.php:883
 msgid ""
 "A description for this place. The place description may appear in the Schema "
 "Place \"description\" property."
 msgstr ""
 
-#: lib/filters.php:885
+#: lib/filters.php:889
 msgid ""
 "An optional street address for Pinterest Rich Pin / Schema Place meta tags "
 "and related markup."
 msgstr ""
 
-#: lib/filters.php:891
+#: lib/filters.php:895
 msgid ""
 "An optional post office box number for the Pinterest Rich Pin / Schema Place "
 "meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:897
+#: lib/filters.php:901
 msgid ""
 "An optional city name for the Pinterest Rich Pin / Schema Place meta tags "
 "and related markup."
 msgstr ""
 
-#: lib/filters.php:903
+#: lib/filters.php:907
 msgid ""
 "An optional state or Province name for the Pinterest Rich Pin / Schema Place "
 "meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:909
+#: lib/filters.php:913
 msgid ""
 "An optional zip or postal code for the Pinterest Rich Pin / Schema Place "
 "meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:915
+#: lib/filters.php:919
 msgid ""
 "An optional country for the Pinterest Rich Pin / Schema Place meta tags and "
 "related markup."
 msgstr ""
 
-#: lib/filters.php:921
+#: lib/filters.php:925
 msgid "An optional telephone number for this place / location."
 msgstr ""
 
-#: lib/filters.php:926
+#: lib/filters.php:930
 msgid "The numeric decimal degrees latitude for this place (required)."
 msgstr ""
 
-#: lib/filters.php:928 lib/filters.php:936
+#: lib/filters.php:932 lib/filters.php:940
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:934
+#: lib/filters.php:938
 msgid "The numeric decimal degrees longitude for this place (required)."
 msgstr ""
 
-#: lib/filters.php:942
+#: lib/filters.php:946
 msgid ""
 "An optional numeric altitude (in meters above sea level) for this place."
 msgstr ""
 
-#: lib/filters.php:948
+#: lib/filters.php:952
 msgid ""
 "An image ID and media library selection for this place (ie. an image of the "
 "business storefront or location)."
 msgstr ""
 
-#: lib/filters.php:950
+#: lib/filters.php:954
 msgid ""
 "The place image is used in the Schema LocalBusiness markup for the Schema "
 "\"location\" property."
 msgstr ""
 
-#: lib/filters.php:952
+#: lib/filters.php:956
 msgid ""
 "The business location image is not used when a place is added to a post, "
 "page, or custom post type."
 msgstr ""
 
-#: lib/filters.php:958
+#: lib/filters.php:962
 msgid ""
 "You can enter a place image URL (including the http:// prefix) instead of "
 "choosing an image ID &mdash; if a place image ID is specified, it has "
 "precedence and the image URL option is disabled."
 msgstr ""
 
-#: lib/filters.php:960
+#: lib/filters.php:964
 msgid ""
 "The image URL option allows you to use an image outside of a managed "
 "collection (WordPress Media Library or NextGEN Gallery), and/or a smaller "
 "logo style image."
 msgstr ""
 
-#: lib/filters.php:966
+#: lib/filters.php:970
 msgid "Select the days and hours this place / location is open."
 msgstr ""
 
-#: lib/filters.php:972
+#: lib/filters.php:976
 msgid ""
 "If this place is open seasonally, select the open and close dates of the "
 "season."
 msgstr ""
 
-#: lib/filters.php:978
+#: lib/filters.php:982
 msgid ""
 "The geographic area where a service is provided, in meters around the "
 "location."
 msgstr ""
 
-#: lib/filters.php:984
+#: lib/filters.php:988
 msgid ""
 "A comma-delimited list of <a href=\"https://en.wikipedia.org/wiki/"
 "ISO_4217\">ISO 4217 currency codes</a> accepted by the local business "
 "(example: USD, CAD)."
 msgstr ""
 
-#: lib/filters.php:990
+#: lib/filters.php:994
 msgid ""
 "A comma-delimited list of payment options accepted by the local business "
 "(example: Cash, Credit Card)."
 msgstr ""
 
-#: lib/filters.php:996
+#: lib/filters.php:1000
 msgid ""
 "The relative price of goods or services provided by the local business "
 "(example: %s)."
 msgstr ""
 
-#: lib/filters.php:1002
+#: lib/filters.php:1006
 msgid "This food establishment accepts reservations."
 msgstr ""
 
-#: lib/filters.php:1008
+#: lib/filters.php:1012
 msgid "The menu URL for this food establishment."
 msgstr ""
 
-#: lib/filters.php:1014
+#: lib/filters.php:1018
 msgid "The cuisine served by this food establishment."
 msgstr ""
 
-#: lib/filters.php:1020
+#: lib/filters.php:1024
 msgid ""
 "A comma-delimited list of website and mobile app URLs to order products."
 msgstr ""
 
-#: lib/filters.php:1022
+#: lib/filters.php:1026
 msgid ""
 "The WPSSO JSON add-on is required to add these Order Action URL(s) to the "
 "Schema \"potentialAction\" property."
 msgstr ""
 
-#: lib/filters.php:1028
+#: lib/filters.php:1032
 msgid "A default country to use when creating a new place / location."
 msgstr ""
 
-#: lib/filters.php:1037
+#: lib/filters.php:1041
 msgid ""
 "A \"%1$s\" tab can be added to the %2$s metabox on Posts, Pages, and custom "
 "post types, allowing you to select or enter place information for the "
 "webpage content (ie. street address, GPS coordinates, opening hours, etc.)."
 msgstr ""
 
-#: lib/filters.php:1060
+#: lib/filters.php:1064
 msgid "Select an existing place or enter a custom place below."
 msgstr ""
 

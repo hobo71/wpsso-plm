@@ -796,7 +796,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			if ( $metabox_id === $this->p->cf['meta']['id'] ) {
 				if ( ! empty( $this->p->options['plm_add_to_'.$mod['post_type']] ) ) {
-					SucomUtil::add_after_key( $tabs, 'media', 'plm', _x( 'Place for Content', 'metabox tab', 'wpsso-plm' ) );
+					SucomUtil::add_after_key( $tabs, 'media', 'plm', _x( 'Schema Place', 'metabox tab', 'wpsso-plm' ) );
 				}
 			}
 
@@ -821,11 +821,15 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					$text .= '<p>';
 
-					$text .= sprintf( __( 'You may select or enter custom place information for your content subject. Please make sure your content subject is about a single specific place or location - for example, the <a href="%s">Eiffel Tower</a>.', 'wpsso-plm' ), 'https://en.wikipedia.org/wiki/Eiffel_Tower' );
+					$text .= __( 'You may select a place, or enter custom place information, to further describe your content subject.', 'wpsso-plm' );
 
 					$text .= '</p><p>';
 
-					$text .= __( 'Selecting a place will force both the webpage Open Graph type to "place" and the Schema type to the one selected below.', 'wpsso-plm' );
+					$text .= sprintf( __( 'Please make sure your content subject is about a single, specific place or location - for example, the <a href="%s">Eiffel Tower</a>.', 'wpsso-plm' ), 'https://en.wikipedia.org/wiki/Eiffel_Tower' );
+
+					$text .= '</p><p>';
+
+					$text .= __( 'Selecting a place will define the webpage Open Graph type to "place" and the Schema type to the one selected below.', 'wpsso-plm' );
 
 					$text .= '</p>';
 
@@ -1032,7 +1036,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'tooltip-plm_add_to':
 
 					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );	// Use wpsso's text domain.
-					$metabox_tab   = _x( 'Place for Content', 'metabox tab', 'wpsso-plm' );
+					$metabox_tab   = _x( 'Schema Place', 'metabox tab', 'wpsso-plm' );
 
 					$text = sprintf( __( 'A "%1$s" tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to select or enter place information for the webpage content (ie. street address, GPS coordinates, opening hours, etc.).', 'wpsso-plm' ), $metabox_tab, $metabox_title );
 
