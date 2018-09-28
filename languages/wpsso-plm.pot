@@ -216,9 +216,8 @@ msgstr ""
 
 #: lib/filters.php:988
 msgid ""
-"A comma-delimited list of <a href=\"https://en.wikipedia.org/wiki/"
-"ISO_4217\">ISO 4217 currency codes</a> accepted by the local business "
-"(example: USD, CAD)."
+"A comma-delimited list of <a href=\"%1$s\">ISO 4217 currency codes</a> "
+"accepted by the local business (example: %2$s)."
 msgstr ""
 
 #: lib/filters.php:994
@@ -507,7 +506,7 @@ msgstr ""
 
 #: lib/submenu/plm-general.php:277
 msgctxt "option label"
-msgid "Place Default Country"
+msgid "Default Country"
 msgstr ""
 
 #: lib/submenu/plm-general.php:291

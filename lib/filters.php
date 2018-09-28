@@ -985,7 +985,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				case 'tooltip-plm_place_currencies_accepted':
 
-					$text = __( 'A comma-delimited list of <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency codes</a> accepted by the local business (example: USD, CAD).', 'wpsso-plm' );
+					$text = sprintf( __( 'A comma-delimited list of <a href="%1$s">ISO 4217 currency codes</a> accepted by the local business (example: %2$s).', 'wpsso-plm' ), 'https://en.wikipedia.org/wiki/ISO_4217', 'USD, CAD' );
 
 					break;
 

@@ -274,7 +274,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 				case 'plm-settings':
 
 					$table_rows['plm_def_country'] = '' . 
-					$this->form->get_th_html( _x( 'Place Default Country', 'option label', 'wpsso-plm' ), '', 'plm_def_country' ) . 
+					$this->form->get_th_html( _x( 'Default Country', 'option label', 'wpsso-plm' ), '', 'plm_def_country' ) . 
 					'<td>' . $this->form->get_select_country( 'plm_def_country' ) . '</td>';
 
 					$add_to_checkboxes = '';
