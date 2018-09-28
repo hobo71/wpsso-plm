@@ -821,11 +821,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					$text .= '<p>';
 
-					$text .= __( 'You may select a place, or enter custom place information, to further describe your content subject.', 'wpsso-plm' );
+					$text .= __( 'You may select a place, or enter custom place information, to further describe the content subject.', 'wpsso-plm' );
 
 					$text .= '</p><p>';
 
-					$text .= sprintf( __( 'Please make sure your content subject is about a single, specific place or location - for example, the <a href="%s">Eiffel Tower</a>.', 'wpsso-plm' ), 'https://en.wikipedia.org/wiki/Eiffel_Tower' );
+					$text .= sprintf( __( 'Please make sure the content subject is about a single, specific place or location - for example, <a href="%s">The Eiffel Tower</a>.', 'wpsso-plm' ), __( 'https://en.wikipedia.org/wiki/Eiffel_Tower', 'wpsso-plm' ) );
 
 					$text .= '</p><p>';
 

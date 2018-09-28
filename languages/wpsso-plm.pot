@@ -61,13 +61,17 @@ msgstr ""
 #: lib/filters.php:824
 msgid ""
 "You may select a place, or enter custom place information, to further "
-"describe your content subject."
+"describe the content subject."
 msgstr ""
 
 #: lib/filters.php:828
 msgid ""
-"Please make sure your content subject is about a single, specific place or "
-"location - for example, the <a href=\"%s\">Eiffel Tower</a>."
+"Please make sure the content subject is about a single, specific place or "
+"location - for example, <a href=\"%s\">The Eiffel Tower</a>."
+msgstr ""
+
+#: lib/filters.php:828
+msgid "https://en.wikipedia.org/wiki/Eiffel_Tower"
 msgstr ""
 
 #: lib/filters.php:832
