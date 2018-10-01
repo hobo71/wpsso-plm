@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'json_array_schema_type_ids'                 => 2,
 				'json_prop_https_schema_org_potentialaction' => 5,
 				'get_place_options'                          => 3,
-				'get_event_place_id'                         => 3,
+				'get_event_location_id'                      => 3,
 				'rename_options_keys'                        => 1,
 				'rename_md_options_keys'                     => 1,
 			) );
@@ -113,25 +113,31 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			if ( $is_custom ) {
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'exiting early: custom og type is true' );
 				}
+
 				return $og_type;
 			}
 
 			if ( $og_type === 'place' ) {	// Just in case.
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'exiting early: og type is already "place"' );
 				}
+
 				return $og_type;
 			}
 
 			$place_opts = WpssoPlmPlace::has_place( $mod );	// Returns false or place array.
 
 			if ( empty( $place_opts ) ) {
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'exiting early: no place options found' );
 				}
+
 				return $og_type;	// Stop here.
 			}
 
@@ -151,9 +157,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$place_opts = WpssoPlmPlace::has_place( $mod );	// Returns false or place array.
 
 			if ( empty( $place_opts ) ) {
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'exiting early: no place options found' );
 				}
+
 				return $mt_og;     // Stop here.
 			}
 
@@ -293,9 +301,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$place_opts = WpssoPlmPlace::has_place( $mod );	// Returns false or place array.
 
 			if ( empty( $place_opts ) ) {
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'exiting early: no place options found' );
 				}
+
 				return $mt_schema;	// Stop here.
 			}
 
@@ -431,9 +441,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$place_opts = WpssoPlmPlace::has_place( $mod );	// Returns false or place array.
 
 			if ( empty( $place_opts ) ) {
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'exiting early: no place options found' );
 				}
+
 				return $type_ids;	// Stop here.
 			}
 
@@ -504,7 +516,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $opts;
 		}
 
-		public function filter_get_event_place_id( $place_id, array $mod, $event_id ) {
+		public function filter_get_event_location_id( $place_id, array $mod, $event_id ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
@@ -513,9 +525,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$place_opts = WpssoPlmPlace::has_place( $mod );	// Returns false or place array.
 
 			if ( empty( $place_opts ) ) {
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'exiting early: no place options found' );
 				}
+
 				return $place_id;	// Stop here.
 			}
 
