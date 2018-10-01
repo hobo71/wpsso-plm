@@ -115,6 +115,18 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.0.2-dev.3 (2018/10/01)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* Minor changes for code style and standardization.
+	* Renamed the 'wpsso_get_event_place_id' filter to 'wpsso_get_event_location_id' for WPSSO v4.14.2.
+
 **Version 3.0.1 (2018/09/16)**
 
 * *New Features*
@@ -138,6 +150,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 
 == Upgrade Notice ==
+
+= 3.0.2-dev.3 =
+
+(2018/10/01) Minor changes for code style and standardization.
 
 = 3.0.1 =
 
