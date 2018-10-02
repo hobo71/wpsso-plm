@@ -1089,7 +1089,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$features['(tool) Custom Place / Location and Local Business Meta'] = array( 
+			$features['(feature) Custom Place / Location and Local Business Meta'] = array( 
 				'td_class' => $pkg['pp'] ? '' : 'blank',
 				'purchase' => $pkg['purchase'],
 				'status'   => $pkg['pp'] ? 'on' : 'off',
