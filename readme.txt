@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.8
-Stable Tag: 3.0.1
+Stable Tag: 3.0.2
 
 WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
 
@@ -115,7 +115,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.2-dev.6 (2018/10/03)**
+**Version 3.0.2 (2018/10/04)**
 
 * *New Features*
 	* None.
@@ -151,11 +151,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.2-dev.6 =
+= 3.0.2 =
 
-(2018/10/03) Minor changes for code style and standardization.
-
-= 3.0.1 =
-
-(2018/09/16) Added a static local cache to the WpssoWpssoPlmPlace::get_id() method. Fixed incorrectly setting the Open Graph and Schema type when reading post options.
+(2018/10/04) Minor changes for code style and standardization.
 
