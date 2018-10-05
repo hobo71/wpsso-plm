@@ -809,8 +809,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			if ( $metabox_id === $this->p->cf['meta']['id'] ) {
-				if ( ! empty( $this->p->options['plm_add_to_'.$mod['post_type']] ) ) {
-					SucomUtil::add_after_key( $tabs, 'media', 'plm', _x( 'Schema Place', 'metabox tab', 'wpsso-plm' ) );
+				if ( ! empty( $this->p->options['plm_add_to_' . $mod['post_type']] ) ) {
+					SucomUtil::add_after_key( $tabs, 'media', 'place', _x( 'Schema Place', 'metabox tab', 'wpsso-plm' ) );
 				}
 			}
 
