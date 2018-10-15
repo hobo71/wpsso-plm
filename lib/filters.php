@@ -964,10 +964,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'tooltip-plm_place_img_id':	// Place Image ID
 
 					$text = __( 'An image ID and media library selection for this place (ie. an image of the business storefront or location).', 'wpsso-plm' ) . ' ';
-					
+
 					$text .= __( 'The place image is used in the Schema LocalBusiness markup for the Schema "location" property.', 'wpsso-plm' ).' ';
-					
-					$text .= __( 'The business location image is not used when a place is added to a post, page, or custom post type.', 'wpsso-plm' );
+
+					$text .= __( 'The Schema LocalBusiness location image is not used when a place is selected for the post, page, or custom post type content &mdash in this case, the custom and/or featured image is used.', 'wpsso-plm' );
 
 					break;
 
@@ -976,6 +976,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'You can enter a place image URL (including the http:// prefix) instead of choosing an image ID &mdash; if a place image ID is specified, it has precedence and the image URL option is disabled.', 'wpsso-plm' ).' ';
 					
 					$text .= __( 'The image URL option allows you to use an image outside of a managed collection (WordPress Media Library or NextGEN Gallery), and/or a smaller logo style image.', 'wpsso-plm' );
+
+					$text .= __( 'The place image is used in the Schema LocalBusiness markup for the Schema "location" property.', 'wpsso-plm' ).' ';
+
+					$text .= __( 'The Schema LocalBusiness location image is not used when a place is selected for the post, page, or custom post type content &mdash in this case, the custom and/or featured image is used.', 'wpsso-plm' );
 
 					break;
 

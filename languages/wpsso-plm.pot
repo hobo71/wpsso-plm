@@ -53,7 +53,7 @@ msgstr ""
 msgid "saving place \"%1$s\""
 msgstr ""
 
-#: lib/filters.php:813 lib/filters.php:1053
+#: lib/filters.php:813 lib/filters.php:1057
 msgctxt "metabox tab"
 msgid "Schema Place"
 msgstr ""
@@ -176,16 +176,17 @@ msgid ""
 "business storefront or location)."
 msgstr ""
 
-#: lib/filters.php:968
+#: lib/filters.php:968 lib/filters.php:980
 msgid ""
 "The place image is used in the Schema LocalBusiness markup for the Schema "
 "\"location\" property."
 msgstr ""
 
-#: lib/filters.php:970
+#: lib/filters.php:970 lib/filters.php:982
 msgid ""
-"The business location image is not used when a place is added to a post, "
-"page, or custom post type."
+"The Schema LocalBusiness location image is not used when a place is selected "
+"for the post, page, or custom post type content &mdash in this case, the "
+"custom and/or featured image is used."
 msgstr ""
 
 #: lib/filters.php:976
@@ -202,75 +203,75 @@ msgid ""
 "logo style image."
 msgstr ""
 
-#: lib/filters.php:984
+#: lib/filters.php:988
 msgid "Select the days and hours this place / location is open."
 msgstr ""
 
-#: lib/filters.php:990
+#: lib/filters.php:994
 msgid ""
 "If this place is open seasonally, select the open and close dates of the "
 "season."
 msgstr ""
 
-#: lib/filters.php:996
+#: lib/filters.php:1000
 msgid ""
 "The geographic area where a service is provided, in meters around the "
 "location."
 msgstr ""
 
-#: lib/filters.php:1002
+#: lib/filters.php:1006
 msgid ""
 "A comma-delimited list of <a href=\"%1$s\">ISO 4217 currency codes</a> "
 "accepted by the local business (example: %2$s)."
 msgstr ""
 
-#: lib/filters.php:1008
+#: lib/filters.php:1012
 msgid ""
 "A comma-delimited list of payment options accepted by the local business "
 "(example: Cash, Credit Card)."
 msgstr ""
 
-#: lib/filters.php:1014
+#: lib/filters.php:1018
 msgid ""
 "The relative price of goods or services provided by the local business "
 "(example: %s)."
 msgstr ""
 
-#: lib/filters.php:1020
+#: lib/filters.php:1024
 msgid "This food establishment accepts reservations."
 msgstr ""
 
-#: lib/filters.php:1026
+#: lib/filters.php:1030
 msgid "The menu URL for this food establishment."
 msgstr ""
 
-#: lib/filters.php:1032
+#: lib/filters.php:1036
 msgid "The cuisine served by this food establishment."
 msgstr ""
 
-#: lib/filters.php:1038
+#: lib/filters.php:1042
 msgid ""
 "A comma-delimited list of website and mobile app URLs to order products."
 msgstr ""
 
-#: lib/filters.php:1040
+#: lib/filters.php:1044
 msgid ""
 "The WPSSO JSON add-on is required to add these Order Action URL(s) to the "
 "Schema \"potentialAction\" property."
 msgstr ""
 
-#: lib/filters.php:1046
+#: lib/filters.php:1050
 msgid "A default country to use when creating a new place / location."
 msgstr ""
 
-#: lib/filters.php:1055
+#: lib/filters.php:1059
 msgid ""
 "A \"%1$s\" tab can be added to the %2$s metabox on Posts, Pages, and custom "
 "post types, allowing you to select or enter place information for the "
 "webpage content (ie. street address, GPS coordinates, opening hours, etc.)."
 msgstr ""
 
-#: lib/filters.php:1078
+#: lib/filters.php:1082
 msgid "Select an existing place or enter a custom place below."
 msgstr ""
 
