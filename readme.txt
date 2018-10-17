@@ -115,6 +115,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.0.0-dev.1 (TBD)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* None.
+
 **Version 3.0.2 (2018/10/04)**
 
 * *New Features*
@@ -150,6 +161,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 
 == Upgrade Notice ==
+
+= 4.0.0-dev.1 =
+
+(TBD) None.
 
 = 3.0.2 =
 
