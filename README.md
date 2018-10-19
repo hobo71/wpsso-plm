@@ -49,6 +49,7 @@
 <li>Place Latitude</li>
 <li>Place Longitude</li>
 <li>Place Altitude</li>
+<li>Google Place ID</li>
 <li>Place Image ID</li>
 <li>or Place Image URL</li>
 <li>Open Days / Hours</li>

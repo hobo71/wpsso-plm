@@ -51,6 +51,7 @@ The Free version of WPSSO PLM can provide location information for the [WPSSO Or
 	* Place Latitude
 	* Place Longitude
 	* Place Altitude
+	* Google Place ID
 	* Place Image ID
 	* or Place Image URL
 	* Open Days / Hours
@@ -115,12 +116,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.0-dev.1 (TBD)**
+**Version 3.1.0-dev.4 (2018/10/19)**
 
 * *New Features*
 	* None.
 * *Improvements*
-	* None.
+	* Added a new "Google Place ID" option.
 * *Bugfixes*
 	* None.
 * *Developer Notes*
@@ -162,9 +163,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.0.0-dev.1 =
+= 3.1.0-dev.4 =
 
-(TBD) None.
+(2018/10/19) Added a new "Google Place ID" option.
 
 = 3.0.2 =
 
