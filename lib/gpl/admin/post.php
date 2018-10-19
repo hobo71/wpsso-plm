@@ -86,17 +86,21 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			$table_rows['plm_place_latitude'] = '' . 
 			$form->get_th_html( _x( 'Place Latitude', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_latitude' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_input( '', 'required' ) . ' ' . 
-				_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
+			_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
 
 			$table_rows['plm_place_longitude'] = '' . 
 			$form->get_th_html( _x( 'Place Longitude', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_longitude' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_input( '', 'required' ) . ' ' . 
-				_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
+			_x( 'decimal degrees', 'option comment', 'wpsso-plm' ) . '</td>';
 
 			$table_rows['plm_place_altitude'] = '' . 
 			$form->get_th_html( _x( 'Place Altitude', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_altitude' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_input() . ' ' . 
-				_x( 'meters above sea level', 'option comment', 'wpsso-plm' ) . '</td>';
+			_x( 'meters above sea level', 'option comment', 'wpsso-plm' ) . '</td>';
+
+			$table_rows[ 'plm_place_google_place_id' ] = '' . 
+			$form->get_th_html( _x( 'Google Place ID', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_google_place_id' ) .  
+			'<td class="blank" colspan="3">' . $form->get_no_input() . '</td>';
 
 			$row_number = 1;
 

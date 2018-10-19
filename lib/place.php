@@ -74,8 +74,8 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 					foreach ( $place_names as $place_id => $name ) {
 
-						if ( ! empty( $wpsso->options['plm_place_schema_type_' . $place_id] ) && 
-							in_array( $wpsso->options['plm_place_schema_type_' . $place_id], $children ) ) {
+						if ( ! empty( $wpsso->options[ 'plm_place_schema_type_' . $place_id ] ) && 
+							in_array( $wpsso->options[ 'plm_place_schema_type_' . $place_id ], $children ) ) {
 
 							continue;
 
@@ -138,7 +138,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$md_opts = self::get_md_options( $mixed );	// Always returns and array.
 
 				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*)(#.*)?$/', $md_opts, false, '$1' ) as $opt_idx => $value ) {
-					$place_opts[$opt_idx] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
+					$place_opts[ $opt_idx ] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
 				}
 
 			} elseif ( is_numeric( $place_id ) ) {
@@ -174,7 +174,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			if ( empty( $place_opts ) ) {
 				return false; 
 			} else {
-				return array_merge( WpssoPlmConfig::$cf['form']['plm_place_opts'], $place_opts );	// Complete the array.
+				return array_merge( WpssoPlmConfig::$cf[ 'form' ][ 'plm_place_opts' ], $place_opts );	// Complete the array.
 			}
 		}
 
@@ -263,18 +263,18 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$local_cache[$mod['name']][$mod['id']] = array();
 			}
 
-			$md_opts =& $local_cache[$mod['name']][$mod['id']];		// Shortcut variable.
+			$md_opts =& $local_cache[$mod['name']][$mod['id']];	// Shortcut variable.
 
-			$md_opts = $mod['obj']->get_options( $mod['id'] );			// Returns empty string if no meta found.
+			$md_opts = $mod['obj']->get_options( $mod['id'] );	// Returns empty string if no meta found.
 
 			if ( is_array( $md_opts  ) ) {
 
-				if ( isset( $md_opts['plm_place_id'] ) && is_numeric( $md_opts['plm_place_id'] ) ) {	// Allow for 0.
+				if ( isset( $md_opts[ 'plm_place_id' ] ) && is_numeric( $md_opts[ 'plm_place_id' ] ) ) {	// Allow for 0.
 
-					if ( ( $place_opts = self::get_id( $md_opts['plm_place_id'] ) ) !== false ) {
+					if ( ( $place_opts = self::get_id( $md_opts[ 'plm_place_id' ] ) ) !== false ) {
 
 						if ( $wpsso->debug->enabled ) {
-							$wpsso->debug->log( 'using place id ' . $md_opts['plm_place_id'] . ' options' );
+							$wpsso->debug->log( 'using place id ' . $md_opts[ 'plm_place_id' ] . ' options' );
 						}
 
 						$md_opts = array_merge( $md_opts, $place_opts );
@@ -289,12 +289,12 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 						$wpsso->debug->log( count( $md_opts ) . ' plm option keys found' );
 					}
 
-					if ( ! isset( $md_opts['plm_place_id'] ) ) {	// Just in case.
-						$md_opts['plm_place_id'] = 'custom';
+					if ( ! isset( $md_opts[ 'plm_place_id' ] ) ) {	// Just in case.
+						$md_opts[ 'plm_place_id' ] = 'custom';
 					}
 
-					if ( empty( $md_opts['plm_place_country'] ) ) {
-						$md_opts['plm_place_country'] = isset( $wpsso->options['plm_def_country'] ) ?
+					if ( empty( $md_opts[ 'plm_place_country' ] ) ) {
+						$md_opts[ 'plm_place_country' ] = isset( $wpsso->options[ 'plm_def_country' ] ) ?
 							$wpsso->options['plm_def_country'] : 'none';
 					}
 
@@ -341,7 +341,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			$opt_key = 'plm_place_id';
 
-			if ( isset( $md_opts[$opt_key] ) && $md_opts[$opt_key] !== '' && $md_opts[$opt_key] !== 'none' ) {	// Allow for place ID 0.
+			if ( isset( $md_opts[ $opt_key ] ) && $md_opts[ $opt_key ] !== '' && $md_opts[ $opt_key ] !== 'none' ) {	// Allow for place ID 0.
 				return $md_opts;
 			}
 
@@ -378,7 +378,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			if ( is_array( $md_opts  ) ) {
 				foreach ( $wpsso->cf['form']['weekdays'] as $day => $label ) {
-					if ( ! empty( $md_opts['plm_place_day_' . $day] ) ) {
+					if ( ! empty( $md_opts[ 'plm_place_day_' . $day ] ) ) {
 						return $md_opts;
 					}
 				}
@@ -420,8 +420,8 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				/**
 				 * Allow for 0 degrees latitude (aka the Equator) and 0 degrees longitude (aka the Prime Meridian).
 				 */
-				if ( isset( $md_opts['plm_place_latitude'] ) && $md_opts['plm_place_latitude'] !== '' && 
-					isset( $md_opts['plm_place_longitude'] ) && $md_opts['plm_place_longitude'] !== '' ) {
+				if ( isset( $md_opts[ 'plm_place_latitude' ] ) && $md_opts[ 'plm_place_latitude' ] !== '' && 
+					isset( $md_opts[ 'plm_place_longitude' ] ) && $md_opts[ 'plm_place_longitude' ] !== '' ) {
 
 					return $md_opts;
 				}

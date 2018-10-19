@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(			// Plugin acronym.
-					'version'     => '4.0.0-dev.1',	// Plugin version.
+					'version'     => '3.1.0-dev.4',	// Plugin version.
 					'opt_version' => '22',		// Increment when changing default option values.
 					'short'       => 'WPSSO PLM',	// Short plugin name.
 					'name'        => 'WPSSO Place / Location and Local Business Meta',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.16.1',
+						'min_version' => '4.16.2-dev.4',
 					),
 					'img' => array(
 						'icons' => array(
@@ -79,6 +79,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_place_latitude'                 => '',			// Place Latitude
 					'plm_place_longitude'                => '',			// Place Longitude
 					'plm_place_altitude'                 => '',			// Place Altitude
+					'plm_place_google_place_id'          => '',			// Google Place ID
 					'plm_place_img_id'                   => '',			// Place Image ID
 					'plm_place_img_id_pre'               => 'wp',
 					'plm_place_img_url'                  => '',			// or Place Image URL
@@ -144,7 +145,6 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 
 		public static function require_libs( $plugin_filepath ) {
 
-			require_once WPSSOPLM_PLUGINDIR . 'lib/db.php';
 			require_once WPSSOPLM_PLUGINDIR . 'lib/filters.php';
 			require_once WPSSOPLM_PLUGINDIR . 'lib/place.php';
 			require_once WPSSOPLM_PLUGINDIR . 'lib/register.php';

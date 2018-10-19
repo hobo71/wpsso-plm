@@ -961,6 +961,17 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					break;
 
+				case 'tooltip-plm_place_google_place_id':	// Google Place ID
+
+					$text = __( 'The Google place ID for this place / location.', 'wpsso-plm' ) . ' ';
+					
+					$text .= __( 'Place IDs uniquely identify a place in the Google Places database and on Google Maps.', 'wpsso-plm' ) . ' ';
+					
+					$text .= sprintf( __( '<a href="%s">Use the Google place ID finder</a> to search for a place and get its ID.', 'wpsso-plm' ),
+						'https://developers.google.com/places/place-id' );
+
+					break;
+
 				case 'tooltip-plm_place_img_id':	// Place Image ID
 
 					$text = __( 'An image ID and media library selection for this place (ie. an image of the business storefront or location).', 'wpsso-plm' ) . ' ';
