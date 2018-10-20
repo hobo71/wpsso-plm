@@ -116,7 +116,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.0-dev.5 (2018/10/19)**
+**Version 3.1.0-dev.5 (2018/10/20)**
 
 * *New Features*
 	* None.
@@ -165,7 +165,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.1.0-dev.5 =
 
-(2018/10/19) Added a new "Google Place ID" option.
+(2018/10/20) Added a new "Google Place ID" option.
 
 = 3.0.2 =
 
