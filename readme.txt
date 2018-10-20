@@ -73,7 +73,7 @@ The Free version of WPSSO PLM can provide location information for the [WPSSO Or
 
 * Extends the features of WPSSO Core Pro (requires an active and licensed <a href="https://wpsso.com/">WPSSO Core Pro plugin</a>).
 
-* Add a Place / Location settings tab to Posts, Pages, and custom post types and optionally select an existing address, or enter custom address information, for the content.
+* Adds a Schema Place tab in the Document SSO metabox to select an address or enter custom address information for the content.
 
 <h3>Markup Examples</h3>
 
