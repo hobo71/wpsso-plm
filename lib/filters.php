@@ -741,6 +741,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				case 'plm_def_country':
 				case 'plm_place_id':
+				case 'plm_place_google_place_id':
 				case 'plm_place_schema_type':
 				case ( preg_match( '/^plm_place_(country|type)$/', $base_key ) ? true : false ):
 

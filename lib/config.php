@@ -50,6 +50,9 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 							'admin' => array(
 								'post' => 'Extend Post Settings',
 							),
+							'util' => array(
+								'place_details' => '(api) Place Details Service APIs',
+							),
 						),
 					),
 				),

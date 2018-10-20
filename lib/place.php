@@ -128,7 +128,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			} elseif ( $place_id === 'custom' ) {
 
-				if ( ! isset( $mixed['obj'] ) || ! is_object( $mixed['obj'] ) ) {
+				if ( ! isset( $mixed[ 'obj' ] ) || ! is_object( $mixed[ 'obj' ] ) ) {
 					if ( $wpsso->debug->enabled ) {
 						$wpsso->debug->log( 'exiting early: no module object defined' );
 					}
@@ -235,7 +235,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			if ( ! isset( $mod['obj'] ) || ! is_object( $mod['obj'] ) ) {	// Just in case.
+			if ( ! isset( $mod[ 'obj' ] ) || ! is_object( $mod[ 'obj' ] ) ) {	// Just in case.
 
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: no module object defined' );
@@ -246,26 +246,26 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 			static $local_cache = array();	// Cache for single page load.
 
-			if ( isset( $local_cache[$mod['name']][$mod['id']] ) ) {
+			if ( isset( $local_cache[ $mod[ 'name' ] ][ $mod[ 'id' ] ] ) ) {
 
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'returning options from static cache array for ' . $mod['name'] . ' ID ' . $mod['id'] );
+					$wpsso->debug->log( 'returning options from static cache array for ' . $mod[ 'name' ] . ' ID ' . $mod[ 'id' ] );
 				}
 
-				return $local_cache[$mod['name']][$mod['id']];
+				return $local_cache[ $mod[ 'name' ] ][ $mod[ 'id' ] ];
 
 			} else {
 
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'getting new options for static cache array for ' . $mod['name'] . ' ID ' . $mod['id'] );
+					$wpsso->debug->log( 'getting new options for static cache array for ' . $mod[ 'name' ] . ' ID ' . $mod[ 'id' ] );
 				}
 
-				$local_cache[$mod['name']][$mod['id']] = array();
+				$local_cache[ $mod[ 'name' ] ][ $mod[ 'id' ] ] = array();
 			}
 
-			$md_opts =& $local_cache[$mod['name']][$mod['id']];	// Shortcut variable.
+			$md_opts =& $local_cache[ $mod[ 'name' ] ][ $mod[ 'id' ] ];	// Shortcut variable.
 
-			$md_opts = $mod['obj']->get_options( $mod['id'] );	// Returns empty string if no meta found.
+			$md_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );	// Returns empty string if no meta found.
 
 			if ( is_array( $md_opts  ) ) {
 
@@ -305,7 +305,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			}
 
 			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( 'result saved to static cache array for ' . $mod['name'] . ' ID ' . $mod['id'] );
+				$wpsso->debug->log( 'result saved to static cache array for ' . $mod[ 'name' ] . ' ID ' . $mod[ 'id' ] );
 			}
 
 			return $md_opts;
@@ -330,7 +330,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			if ( ! isset( $mod['obj'] ) || ! is_object( $mod['obj'] ) ) {	// Just in case.
+			if ( ! isset( $mod[ 'obj' ] ) || ! is_object( $mod[ 'obj' ] ) ) {	// Just in case.
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: no module object defined' );
 				}
@@ -367,7 +367,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			if ( ! isset( $mod['obj'] ) || ! is_object( $mod['obj'] ) ) {	// Just in case.
+			if ( ! isset( $mod[ 'obj' ] ) || ! is_object( $mod[ 'obj' ] ) ) {	// Just in case.
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: no module object defined' );
 				}
@@ -406,7 +406,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			if ( ! isset( $mod['obj'] ) || ! is_object( $mod['obj'] ) ) {	// Just in case.
+			if ( ! isset( $mod[ 'obj' ] ) || ! is_object( $mod[ 'obj' ] ) ) {	// Just in case.
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: no module object defined' );
 				}
