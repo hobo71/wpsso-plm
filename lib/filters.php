@@ -59,33 +59,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 		}
 
-		/**
-		 * Add our place names to the place cache array.
-		 */
-		public function filter_form_cache_place_names( $mixed ) {
-
-			if ( $this->p->debug->enabled ) {
-				$this->p->debug->mark();
-			}
-
-			$ret = WpssoPlmPlace::get_names();
-
-			if ( is_array( $mixed ) ) {
-				$ret = $mixed + $ret;
-			}
-
-			return $ret;
-		}
-
 		public function filter_get_defaults( $def_opts ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
 			}
 
-			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array(
-				'plm_add_to' => 1,
-			) );
+			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array( 'plm_add_to' => 1 ) );
 
 			return $def_opts;
 		}
@@ -96,14 +76,23 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$md_defs = array_merge( $md_defs, WpssoPlmConfig::$cf['form']['plm_place_opts'],
-				array(
-					'plm_place_id'      => 'none',
-					'plm_place_country' => $this->p->options['plm_def_country'],
-				)
-			);
+			$md_defs = array_merge( $md_defs, WpssoPlmConfig::$cf['form']['plm_place_opts'], array(
+				'plm_place_id'      => 'none',
+				'plm_place_country' => $this->p->options['plm_def_country'],
+			) );
 
 			return $md_defs;
+		}
+
+		public function filter_get_post_options( $md_opts, $post_id, $mod ) {
+			
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			$this->update_md_opts( $md_opts, $post_id, $mod );
+
+			return $md_opts;
 		}
 
 		public function filter_og_type( $og_type, $mod, $is_custom ) {
@@ -266,18 +255,22 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			if ( $is_custom ) {
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'exiting early: custom schema type id is true' );
 				}
+
 				return $type_id;
 			}
 
 			$place_opts = WpssoPlmPlace::has_place( $mod );	// Returns false or place array.
 
 			if ( empty( $place_opts ) ) {
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'exiting early: no place options found' );
 				}
+
 				return $type_id;
 			}
 
@@ -317,6 +310,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			foreach ( array(
 				'plm_place_phone' => 'telephone',	// Place phone number.
 			) as $opt_key => $mt_name ) {
+
 				$mt_schema[$mt_name] = isset( $place_opts[$opt_key] ) ? $place_opts[$opt_key] : '';
 			}
 
@@ -556,23 +550,12 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$this->set_post_options( $md_opts, $post_id, $mod );
+			$this->update_md_opts( $md_opts, $post_id, $mod );
 
 			return $md_opts;
 		}
 
-		public function filter_get_post_options( $md_opts, $post_id, $mod ) {
-			
-			if ( $this->p->debug->enabled ) {
-				$this->p->debug->mark();
-			}
-
-			$this->set_post_options( $md_opts, $post_id, $mod );
-
-			return $md_opts;
-		}
-
-		private function set_post_options( &$md_opts, $post_id, $mod ) {
+		private function update_md_opts( &$md_opts, $post_id, $mod ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
@@ -599,7 +582,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$def_schema_type : $place_opts['plm_place_schema_type'];
 			}
 
-			$md_opts['og_type'] = 'place';
+			$md_opts['og_type'] = 'place';	// Overwrite the WPSSO option value.
 
 			if ( $is_admin ) {
 				$md_opts['og_type:is'] = 'disabled';
@@ -607,7 +590,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			if ( $place_type ) {
 
-				$md_opts['schema_type'] = $place_type;
+				$md_opts['schema_type'] = $place_type;	// Overwrite the WPSSO option value.
 
 				if ( $is_admin ) {
 					$md_opts['schema_type:is'] = 'disabled';
@@ -1097,6 +1080,24 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			return $text;
+		}
+
+		/**
+		 * Add our place names to the place cache array.
+		 */
+		public function filter_form_cache_place_names( $mixed ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			$ret = WpssoPlmPlace::get_names();
+
+			if ( is_array( $mixed ) ) {
+				$ret = $mixed + $ret;
+			}
+
+			return $ret;
 		}
 
 		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {

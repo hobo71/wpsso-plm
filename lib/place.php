@@ -37,6 +37,10 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			}
 		}
 
+		/**
+		 * Return an associative array of organization IDs and names.
+		 * Optionally add 'none', 'new', and 'custom' at the top of the array.
+		 */
 		public static function get_names( $schema_type = '', $add_none = false, $add_new = false, $add_custom = false ) {
 
 			$wpsso =& Wpsso::get_instance();
@@ -49,11 +53,11 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			$place_names = array();
 
 			if ( $add_none ) {
-				$first_names['none'] = $wpsso->cf['form']['place_select']['none'];
+				$first_names[ 'none' ] = $wpsso->cf['form']['place_select']['none'];
 			}
 
 			if ( $add_custom ) {
-				$first_names['custom'] = $wpsso->cf['form']['place_select']['custom'];
+				$first_names[ 'custom' ] = $wpsso->cf['form']['place_select']['custom'];
 			}
 
 			if ( $wpsso->debug->enabled ) {
@@ -80,7 +84,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 							continue;
 
 						} else {
-							unset( $place_names[$place_id] );
+							unset( $place_names[ $place_id ] );
 						}
 					}
 				}
@@ -107,7 +111,11 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 		}
 
 		/**
-		 * Get a specific place id. If $place_id is 'custom' then $mixed must be a $mod array.
+		 * Get a specific place id. Returns an array of localized values.
+		 * If $place_id is 'custom' then $mixed must be a $mod array.
+		 *
+		 * $place_id = 'custom' | place ID.
+		 * $mixed    = 'default' | 'current' | post ID | $mod array.
 		 */
 		public static function get_id( $place_id, $mixed = 'current' ) {
 
@@ -407,9 +415,11 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			}
 
 			if ( ! isset( $mod[ 'obj' ] ) || ! is_object( $mod[ 'obj' ] ) ) {	// Just in case.
+
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: no module object defined' );
 				}
+
 				return false;
 			}
 
