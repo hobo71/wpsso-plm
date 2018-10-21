@@ -962,7 +962,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					$text .= __( 'The place image is used in the Schema LocalBusiness markup for the Schema "location" property.', 'wpsso-plm' ) . ' ';
 
-					$text .= __( 'The Schema LocalBusiness location image is not used when a place is selected for the post, page, or custom post type content &mdash in this case, the custom and/or featured image is used.', 'wpsso-plm' );
+					$text .= __( 'The place image is not used when a place is selected for the post, page, or custom post type content &mdash; in this case, the custom and/or featured image is used.', 'wpsso-plm' );
 
 					break;
 
@@ -974,7 +974,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					$text .= __( 'The place image is used in the Schema LocalBusiness markup for the Schema "location" property.', 'wpsso-plm' ) . ' ';
 
-					$text .= __( 'The Schema LocalBusiness location image is not used when a place is selected for the post, page, or custom post type content &mdash in this case, the custom and/or featured image is used.', 'wpsso-plm' );
+					$text .= __( 'The place image is not used when a place is selected for the post, page, or custom post type content &mdash; in this case, the custom and/or featured image is used.', 'wpsso-plm' );
 
 					break;
 

@@ -201,9 +201,9 @@ msgstr ""
 
 #: lib/filters.php:965 lib/filters.php:977
 msgid ""
-"The Schema LocalBusiness location image is not used when a place is selected "
-"for the post, page, or custom post type content &mdash in this case, the "
-"custom and/or featured image is used."
+"The place image is not used when a place is selected for the post, page, or "
+"custom post type content &mdash; in this case, the custom and/or featured "
+"image is used."
 msgstr ""
 
 #: lib/filters.php:971
