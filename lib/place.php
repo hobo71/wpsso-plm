@@ -297,10 +297,6 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 						$wpsso->debug->log( count( $md_opts ) . ' plm option keys found' );
 					}
 
-					if ( ! isset( $md_opts[ 'plm_place_id' ] ) ) {	// Just in case.
-						$md_opts[ 'plm_place_id' ] = 'custom';
-					}
-
 					if ( empty( $md_opts[ 'plm_place_country' ] ) ) {
 						$md_opts[ 'plm_place_country' ] = isset( $wpsso->options[ 'plm_def_country' ] ) ?
 							$wpsso->options['plm_def_country'] : 'none';
@@ -339,21 +335,23 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			}
 
 			if ( ! isset( $mod[ 'obj' ] ) || ! is_object( $mod[ 'obj' ] ) ) {	// Just in case.
+
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: no module object defined' );
 				}
+
 				return false;
 			}
 
 			$md_opts = self::get_md_options( $mod );	// Always returns an array.
 
-			$opt_key = 'plm_place_id';
+			$place_id = isset( $md_opts[ 'plm_place_id' ] ) ? $md_opts[ 'plm_place_id' ] : 'none';
 
-			if ( isset( $md_opts[ $opt_key ] ) && $md_opts[ $opt_key ] !== '' && $md_opts[ $opt_key ] !== 'none' ) {	// Allow for place ID 0.
-				return $md_opts;
+			if ( $place_id === '' || $place_id === 'none' ) {	// Nothing to do.
+				return false;
 			}
 
-			return false;
+			return $md_opts;
 		}
 
 		public static function has_days( array $mod ) {

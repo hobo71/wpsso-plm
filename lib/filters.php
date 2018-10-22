@@ -567,6 +567,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			if ( $place_id === '' || $place_id === 'none' ) {	// Nothing to do.
 
+				$md_opts = SucomUtil::preg_grep_keys( '/^plm_place_/', $md_opts, true );
+
 				return $md_opts;
 
 			} elseif ( $place_id === 'custom' ) {	// Value is "custom".
