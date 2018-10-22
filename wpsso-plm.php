@@ -163,8 +163,6 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			if ( is_admin() ) {
 				$this->p->avail['admin']['post'] = true;
 			}
-
-			$this->p->avail['util']['place_details'] = true;
 		}
 
 		public function wpsso_init_objects() {
@@ -187,7 +185,9 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			}
 
 			if ( ! $this->have_req_min ) {
+
 				$this->min_version_notice();
+
 				return;	// stop here
 			}
 		}
