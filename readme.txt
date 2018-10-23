@@ -116,17 +116,16 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.0-dev.8 (2018/10/23)**
+**Version 3.0.3-b.1 (2018/10/23)**
 
 * *New Features*
 	* None.
 * *Improvements*
-	* Added a new "Google Place ID" option.
-	* Added a new "Google Places API" integration module (Pro version).
+	* None.
 * *Bugfixes*
 	* None.
 * *Developer Notes*
-	* None.
+	* Maintenance release for WPSSO Core v4.16.3.
 
 **Version 3.0.2 (2018/10/04)**
 
@@ -164,9 +163,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.1.0-dev.8 =
+= 3.0.3-b.1 =
 
-(2018/10/23) Added a new "Google Place ID" option. Added a new "Google Places API" integration module (Pro version).
+(2018/10/23) Maintenance release for WPSSO Core v4.16.3.
 
 = 3.0.2 =
 
