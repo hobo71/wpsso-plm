@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(			// Plugin acronym.
-					'version'     => '3.1.0-dev.7',	// Plugin version.
-					'opt_version' => '22',		// Increment when changing default option values.
+					'version'     => '3.1.0-dev.8',	// Plugin version.
+					'opt_version' => '23',		// Increment when changing default option values.
 					'short'       => 'WPSSO PLM',	// Short plugin name.
 					'name'        => 'WPSSO Place / Location and Local Business Meta',
 					'desc'        => 'WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.16.3-dev.7',
+						'min_version' => '4.16.3-dev.8',
 					),
 					'img' => array(
 						'icons' => array(
@@ -59,11 +59,22 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 			),
 			'opt' => array(
 				'defaults' => array(
-					'plm_place_id'          => 0,
-					'plm_def_country'       => 'none',
-					'plm_add_to_post'       => 0,
-					'plm_add_to_page'       => 1,
-					'plm_add_to_attachment' => 0,
+					'plugin_place_details_cache_exp' => DAY_IN_SECONDS,
+					'plm_place_id'                   => 0,
+					'plm_def_country'                => 'none',
+					'plm_add_to_post'                => 0,
+					'plm_add_to_page'                => 1,
+					'plm_add_to_attachment'          => 0,
+				),
+			),
+			'wp' => array(				// WordPress
+				'transient' => array(
+					'wpsso_p_' => array(
+						'label'       => 'Place Details',
+						'text_domain' => 'wpsso-plm',
+						'opt_key'     => 'plugin_place_details_cache_exp',
+						'filter'      => 'wpsso_cache_expire_place_details',
+					),
 				),
 			),
 			'form' => array(

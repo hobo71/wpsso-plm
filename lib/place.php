@@ -137,9 +137,11 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			} elseif ( $place_id === 'custom' ) {
 
 				if ( ! isset( $mixed[ 'obj' ] ) || ! is_object( $mixed[ 'obj' ] ) ) {
+
 					if ( $wpsso->debug->enabled ) {
 						$wpsso->debug->log( 'exiting early: no module object defined' );
 					}
+
 					return false; 
 				}
 				
@@ -169,7 +171,20 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 					$opt_idx = rtrim( $opt_prefix, '_' );
 
-					$place_opts[$opt_idx] = SucomUtil::get_key_value( $opt_prefix . $place_id, $wpsso->options, $mixed );
+					$place_opts[ $opt_idx ] = SucomUtil::get_key_value( $opt_prefix . $place_id, $wpsso->options, $mixed );
+				}
+
+				if ( ! empty( $place_opts[ 'plm_place_google_place_id' ] ) ) {
+
+					$place_details = apply_filters( $wpsso->lca . '_get_place_details', array(),
+						'google', $place_opts[ 'plm_place_google_place_id' ], $opt_prefix = 'plm_place' );
+
+					/**
+					 * Merge place details with a preference for local place values.
+					 */
+					if ( is_array( $place_details ) && ! empty( $place_details ) ) {
+						$place_opts = array_merge( $place_details, $place_opts );
+					}
 				}
 
 				if ( $wpsso->debug->enabled ) {

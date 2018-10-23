@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta 3.1.0-"
-"dev.7\n"
+"dev.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2018-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -29,16 +29,21 @@ msgid "local.business"
 msgstr ""
 
 #: lib/config-gettext-extract.php:6
+msgctxt "option label"
+msgid "Place Details"
+msgstr ""
+
+#: lib/config-gettext-extract.php:7
 msgctxt "lib file description"
 msgid "Place / Location"
 msgstr ""
 
-#: lib/config-gettext-extract.php:7
+#: lib/config-gettext-extract.php:8
 msgctxt "option value"
 msgid "wp"
 msgstr ""
 
-#: lib/config-gettext-extract.php:8
+#: lib/config-gettext-extract.php:9
 msgctxt "plugin description"
 msgid ""
 "WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph "
