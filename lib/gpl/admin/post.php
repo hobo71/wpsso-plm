@@ -98,9 +98,11 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			'<td class="blank" colspan="3">' . $form->get_no_input() . ' ' . 
 			_x( 'meters above sea level', 'option comment', 'wpsso-plm' ) . '</td>';
 
+			/*
 			$table_rows[ 'plm_place_google_place_id' ] = '' . 
 			$form->get_th_html( _x( 'Google Place ID', 'option label', 'wpsso-plm' ), 'medium', 'plm_place_google_place_id' ) .  
 			'<td class="blank" colspan="3">' . $form->get_no_input() . '</td>';
+			*/
 
 			$row_number = 1;
 

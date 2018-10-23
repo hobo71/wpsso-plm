@@ -73,11 +73,12 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 					$this->form->defaults['plm_place_id'] = $place_first_num;	// Set default value.
 
+					/*
 					$google_place_id_disabled = empty( $this->p->options['plugin_google_places'] ) ? true : false;
-
 					$google_place_api_msg = $google_place_id_disabled ? ' <span class="ext-req-msg">' . 
 					$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_apikeys',
 						_x( 'Google Places API must be enabled', 'option comment', 'wpsso' ) ) . '</span> ' : '';
+					*/
 
 					/**
 					 * Check to make sure the selected id exists - if not, then unset and use the default.
@@ -196,10 +197,12 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_altitude_' . $id ) . ' ' . 
 						_x( 'meters above sea level', 'option comment', 'wpsso-plm' ) . '</td>';
 
+						/*
 						$table_rows[ 'plm_place_google_place_id_' . $id ] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Google Place ID', 'option label', 'wpsso-plm' ), '', 'plm_place_google_place_id' ) .  
 						'<td colspan="3">' . $this->form->get_input( 'plm_place_google_place_id_' . $id,
 							'api_key mono', '', 0, '', $google_place_id_disabled ) . $google_place_api_msg . '</td>';
+						*/
 
 						$table_rows[ 'plm_place_img_id_' . $id ] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Image ID', 'option label', 'wpsso-plm' ), '', 'plm_place_img_id',

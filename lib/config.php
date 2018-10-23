@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(			// Plugin acronym.
-					'version'     => '3.1.0-dev.8',	// Plugin version.
+					'version'     => '3.0.3-b.1',	// Plugin version.
 					'opt_version' => '23',		// Increment when changing default option values.
 					'short'       => 'WPSSO PLM',	// Short plugin name.
 					'name'        => 'WPSSO Place / Location and Local Business Meta',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.16.3-dev.8',
+						'min_version' => '4.16.3-b.1',
 					),
 					'img' => array(
 						'icons' => array(
@@ -50,9 +50,11 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 							'admin' => array(
 								'post' => 'Extend Post Settings',
 							),
+							/*
 							'places' => array(
 								'google_places' => '(api) Google Places API',
 							),
+							*/
 						),
 					),
 				),
@@ -67,6 +69,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_add_to_attachment'          => 0,
 				),
 			),
+			/*
 			'wp' => array(				// WordPress
 				'transient' => array(
 					'wpsso_p_' => array(
@@ -77,6 +80,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					),
 				),
 			),
+			*/
 			'form' => array(
 				'plm_place_opts' => array(
 					'plm_place_schema_type'              => 'local.business',	// Place Schema Type
@@ -93,7 +97,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_place_latitude'                 => '',			// Place Latitude
 					'plm_place_longitude'                => '',			// Place Longitude
 					'plm_place_altitude'                 => '',			// Place Altitude
-					'plm_place_google_place_id'          => '',			// Google Place ID
+					//'plm_place_google_place_id'        => '',			// Google Place ID
 					'plm_place_img_id'                   => '',			// Place Image ID
 					'plm_place_img_id_pre'               => 'wp',
 					'plm_place_img_url'                  => '',			// or Place Image URL
