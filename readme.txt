@@ -116,12 +116,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.0-dev.7 (2018/10/20)**
+**Version 3.1.0-dev.8 (2018/10/23)**
 
 * *New Features*
 	* None.
 * *Improvements*
 	* Added a new "Google Place ID" option.
+	* Added a new "Google Places API" integration module (Pro version).
 * *Bugfixes*
 	* None.
 * *Developer Notes*
@@ -163,9 +164,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.1.0-dev.7 =
+= 3.1.0-dev.8 =
 
-(2018/10/20) Added a new "Google Place ID" option.
+(2018/10/23) Added a new "Google Place ID" option. Added a new "Google Places API" integration module (Pro version).
 
 = 3.0.2 =
 
