@@ -116,7 +116,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.3-b.1 (2018/10/23)**
+**Version 3.0.3 (2018/10/24)**
 
 * *New Features*
 	* None.
@@ -127,47 +127,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* Maintenance release for WPSSO Core v4.16.3.
 
-**Version 3.0.2 (2018/10/04)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* None.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* Minor changes for code style and standardization.
-	* Renamed the 'wpsso_get_event_place_id' filter to 'wpsso_get_event_location_id' for WPSSO v4.14.2.
-
-**Version 3.0.1 (2018/09/16)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Added a static local cache to the WpssoWpssoPlmPlace::get_id() method.
-* *Bugfixes*
-	* Fixed incorrectly setting the Open Graph and Schema type when reading post options.
-* *Developer Notes*
-	* Added a new WpssoPlmFilters::set_post_options() private method called by both the 'save_post_options' and 'get_post_options' filter hooks.
-
-**Version 3.0.0 (2018/09/09)**
-
-* *New Features*
-	* Extended the Schema type selection for places / locations from LocalBusiness to Place (which includes LocalBusiness).
-* *Improvements*
-	* Refactored the Place / Location settings page and tab in the Document SSO metabox.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
 == Upgrade Notice ==
 
-= 3.0.3-b.1 =
+= 3.0.3 =
 
-(2018/10/23) Maintenance release for WPSSO Core v4.16.3.
-
-= 3.0.2 =
-
-(2018/10/04) Minor changes for code style and standardization.
+(2018/10/24) Maintenance release for WPSSO Core v4.16.3.
 
