@@ -32,15 +32,19 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 		 */
 		protected function add_meta_boxes() {
 
+			$this->maybe_show_language_notice();
+
 			$metabox_id      = 'place';
 			$metabox_title   = _x( 'Places / Locations and Settings', 'metabox title', 'wpsso-plm' );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
 			$metabox_prio    = 'default';
+			$callback_args   = array(	// Second argument passed to the callback function / method.
+			);
 
 			add_meta_box( $this->pagehook . '_' . $metabox_id, $metabox_title,
 				array( $this, 'show_metabox_place' ), $metabox_screen,
-					$metabox_context, $metabox_prio );
+					$metabox_context, $metabox_prio, $callback_args );
 		}
 
 		public function show_metabox_place() {
