@@ -116,6 +116,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.0.4-dev.3 (2018/10/29)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* None.
+
 **Version 3.0.3 (2018/10/24)**
 
 * *New Features*
@@ -128,6 +139,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Maintenance release for WPSSO Core v4.16.3.
 
 == Upgrade Notice ==
+
+= 3.0.4-dev.3 =
+
+(2018/10/29) None.
 
 = 3.0.3 =
 
