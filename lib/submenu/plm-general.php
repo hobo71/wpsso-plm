@@ -110,7 +110,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$table_rows[ 'plm_place_id'] = '' . 
 					$this->form->get_th_html( _x( 'Edit a Place', 'option label', 'wpsso-plm' ), '', 'plm_place_id' ) . 
 					'<td colspan="3">' . $this->form->get_select( 'plm_place_id', $place_names_select,
-						'long_name', '', true, false, true, 'unhide_rows' ) . '</td>';
+						'long_name', '', true, false, true, 'on_change_unhide_rows' ) . '</td>';
 
 					foreach ( $place_names_select as $id => $name ) {
 
@@ -144,7 +144,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$table_rows[ 'plm_place_schema_type_' . $id ] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Schema Type', 'option label', 'wpsso-plm' ), '', 'plm_place_schema_type' ) .  
 						'<td colspan="3">' . $this->form->get_select( 'plm_place_schema_type_' . $id, $place_types_select,
-							'schema_type', '', true, false, true, 'unhide_rows_on_show' ) . '</td>';
+							'schema_type', '', true, false, true, 'on_show_unhide_rows' ) . '</td>';
 	
 						$table_rows[ 'plm_place_name_' . $id ] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Name', 'option label', 'wpsso-plm' ), '', 'plm_place_name',
