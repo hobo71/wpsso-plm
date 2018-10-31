@@ -978,7 +978,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 					break;
 
-				case 'tooltip-plm_place_days':	// Open Days / Hours
+				case 'tooltip-plm_place_days':		// Open Days / Hours
 
 					$text = __( 'Select the days and hours this place / location is open.', 'wpsso-plm' );
 
