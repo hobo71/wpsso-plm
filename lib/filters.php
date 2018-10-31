@@ -233,15 +233,19 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				if ( isset( $place_opts[$opt_key] ) ) {
 
 					if ( $opt_key === 'plm_place_accept_res' ) {
-						$mt_og[$mt_name] = empty( $place_opts[$opt_key] ) ? 'false' : 'true';
+
+						$mt_og[ $mt_name ] = empty( $place_opts[$opt_key] ) ? false : true;
+
 					} elseif ( $opt_key === 'plm_place_order_urls' ) {
-						$mt_og[$mt_name] = SucomUtil::explode_csv( $place_opts[$opt_key] );
+
+						$mt_og[ $mt_name ] = SucomUtil::explode_csv( $place_opts[$opt_key] );
+
 					} else {
-						$mt_og[$mt_name] = $place_opts[$opt_key];
+						$mt_og[ $mt_name ] = $place_opts[$opt_key];
 					}
 
 				} else {
-					$mt_og[$mt_name] = '';
+					$mt_og[ $mt_name ] = '';
 				}
 			}
 
@@ -592,10 +596,15 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			if ( $place_type ) {
 
-				$md_opts['schema_type'] = $place_type;	// Overwrite the WPSSO option value.
+				$md_opts['schema_type'] = $place_type;
+
+				$md_opts['schema_organization_org_id'] = 'none';
 
 				if ( $is_admin ) {
+
 					$md_opts['schema_type:is'] = 'disabled';
+
+					$md_opts['schema_organization_org_id:is'] = 'disabled';
 				}
 			}
 
@@ -803,17 +812,17 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $tabs;
 		}
 
-		public function filter_messages_info( $text, $idx ) {
+		public function filter_messages_info( $text, $msg_key ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
 			}
 
-			if ( strpos( $idx, 'info-plm-' ) !== 0 ) {
+			if ( strpos( $msg_key, 'info-plm-' ) !== 0 ) {
 				return $text;
 			}
 
-			switch ( $idx ) {
+			switch ( $msg_key ) {
 
 				case 'info-plm-place':
 
@@ -842,17 +851,17 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $text;
 		}
 
-		public function filter_messages_tooltip( $text, $idx ) {
+		public function filter_messages_tooltip( $text, $msg_key ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
 			}
 
-			if ( strpos( $idx, 'tooltip-plm_' ) !== 0 ) {
+			if ( strpos( $msg_key, 'tooltip-plm_' ) !== 0 ) {
 				return $text;
 			}
 
-			switch ( $idx ) {
+			switch ( $msg_key ) {
 
 				case 'tooltip-plm_place_id':
 
@@ -1060,17 +1069,17 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $text;
 		}
 
-		public function filter_messages_tooltip_post( $text, $idx ) {
+		public function filter_messages_tooltip_post( $text, $msg_key ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
 			}
 
-			if ( strpos( $idx, 'tooltip-post-plm_' ) !== 0 ) {
+			if ( strpos( $msg_key, 'tooltip-post-plm_' ) !== 0 ) {
 				return $text;
 			}
 
-			switch ( $idx ) {
+			switch ( $msg_key ) {
 
 				case 'tooltip-post-plm_place_id':
 

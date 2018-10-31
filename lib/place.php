@@ -147,8 +147,8 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				
 				$md_opts = self::get_md_options( $mixed );	// Always returns and array.
 
-				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*)(#.*)?$/', $md_opts, false, '$1' ) as $opt_idx => $value ) {
-					$place_opts[ $opt_idx ] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*)(#.*)?$/', $md_opts, false, '$1' ) as $opt_key => $value ) {
+					$place_opts[ $opt_key ] = SucomUtil::get_key_value( $opt_key, $md_opts, $mixed );
 				}
 
 			} elseif ( is_numeric( $place_id ) ) {
@@ -169,9 +169,9 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				 */
 				foreach ( SucomUtil::preg_grep_keys( '/^(plm_place_.*_)' . $place_id . '(#.*)?$/', $wpsso->options, false, '$1' ) as $opt_prefix => $value ) {
 
-					$opt_idx = rtrim( $opt_prefix, '_' );
+					$opt_key = rtrim( $opt_prefix, '_' );
 
-					$place_opts[ $opt_idx ] = SucomUtil::get_key_value( $opt_prefix . $place_id, $wpsso->options, $mixed );
+					$place_opts[ $opt_key ] = SucomUtil::get_key_value( $opt_prefix . $place_id, $wpsso->options, $mixed );
 				}
 
 				/*
