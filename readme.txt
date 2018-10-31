@@ -116,7 +116,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.4-b.1 (2018/10/31)**
+**Version 3.0.4-b.2 (2018/10/31)**
 
 * *New Features*
 	* None.
@@ -140,7 +140,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.4-b.1 =
+= 3.0.4-b.2 =
 
 (2018/10/31) Updated the SucomForm::get_select() method event argument values for WPSSO v4.16.4.
 
