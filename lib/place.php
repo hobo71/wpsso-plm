@@ -220,13 +220,13 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				'plm_place_country',
 			) as $opt_key ) {
 
-				if ( isset( $place_opts[$opt_key] ) && $place_opts[$opt_key] !== '' && $place_opts[$opt_key] !== 'none' ) {
+				if ( isset( $place_opts[ $opt_key ] ) && $place_opts[ $opt_key ] !== '' && $place_opts[ $opt_key ] !== 'none' ) {
 
 					switch ( $opt_key ) {
 
 						case 'plm_place_name':
 
-							$place_opts[$opt_key] = preg_replace( '/\s*,\s*/', ' ', $place_opts[$opt_key] );	// Just in case.
+							$place_opts[ $opt_key ] = preg_replace( '/\s*,\s*/', ' ', $place_opts[ $opt_key ] );	// Just in case.
 
 							break;
 
@@ -237,7 +237,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 							break;
 					}
 
-					$address .= $place_opts[$opt_key] . ', ';
+					$address .= $place_opts[ $opt_key ] . ', ';
 				}
 			}
 

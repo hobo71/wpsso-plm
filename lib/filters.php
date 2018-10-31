@@ -213,7 +213,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 						$mt_key  = 'place:opening_hours:day:' . $weekday . ':' . $hour;
 						$opt_key = 'plm_place_day_' . $weekday . '_' . $hour;
 
-						$mt_og[$mt_key] = isset( $place_opts[$opt_key] ) ? $place_opts[$opt_key] : $place_defs[$opt_key];
+						$mt_og[$mt_key] = isset( $place_opts[ $opt_key ] ) ? $place_opts[ $opt_key ] : $place_defs[ $opt_key ];
 					}
 				}
 			}
@@ -230,18 +230,18 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'plm_place_order_urls'          => 'place:business:order_url',
 			) as $opt_key => $mt_name ) {
 
-				if ( isset( $place_opts[$opt_key] ) ) {
+				if ( isset( $place_opts[ $opt_key ] ) ) {
 
 					if ( $opt_key === 'plm_place_accept_res' ) {
 
-						$mt_og[ $mt_name ] = empty( $place_opts[$opt_key] ) ? false : true;
+						$mt_og[ $mt_name ] = empty( $place_opts[ $opt_key ] ) ? false : true;
 
 					} elseif ( $opt_key === 'plm_place_order_urls' ) {
 
-						$mt_og[ $mt_name ] = SucomUtil::explode_csv( $place_opts[$opt_key] );
+						$mt_og[ $mt_name ] = SucomUtil::explode_csv( $place_opts[ $opt_key ] );
 
 					} else {
-						$mt_og[ $mt_name ] = $place_opts[$opt_key];
+						$mt_og[ $mt_name ] = $place_opts[ $opt_key ];
 					}
 
 				} else {
@@ -315,7 +315,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'plm_place_phone' => 'telephone',	// Place phone number.
 			) as $opt_key => $mt_name ) {
 
-				$mt_schema[$mt_name] = isset( $place_opts[$opt_key] ) ? $place_opts[$opt_key] : '';
+				$mt_schema[$mt_name] = isset( $place_opts[ $opt_key ] ) ? $place_opts[ $opt_key ] : '';
 			}
 
 			/**
@@ -333,7 +333,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'plm_place_price_range'         => 'priceRange',
 				) as $opt_key => $mt_name ) {
 
-					$mt_schema[$mt_name] = isset( $place_opts[$opt_key] ) ? $place_opts[$opt_key] : '';
+					$mt_schema[$mt_name] = isset( $place_opts[ $opt_key ] ) ? $place_opts[ $opt_key ] : '';
 				}
 
 			} elseif ( $this->p->debug->enabled ) {
@@ -356,9 +356,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				) as $opt_key => $mt_name ) {
 
 					if ( $opt_key === 'plm_place_accept_res' ) {
-						$mt_schema[$mt_name] = empty( $place_opts[$opt_key] ) ? 'false' : 'true';
+						$mt_schema[$mt_name] = empty( $place_opts[ $opt_key ] ) ? 'false' : 'true';
 					} else {
-						$mt_schema[$mt_name] = isset( $place_opts[$opt_key] ) ? $place_opts[$opt_key] : '';
+						$mt_schema[$mt_name] = isset( $place_opts[ $opt_key ] ) ? $place_opts[ $opt_key ] : '';
 					}
 				}
 			}
