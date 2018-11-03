@@ -116,7 +116,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.4-rc.1 (2018/11/02)**
+**Version 3.0.4 (2018/11/03)**
 
 * *New Features*
 	* None.
@@ -127,24 +127,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* Updated the SucomForm::get_select() method event argument values for WPSSO v4.16.4.
 
-**Version 3.0.3 (2018/10/24)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* None.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* Maintenance release for WPSSO Core v4.16.3.
-
 == Upgrade Notice ==
 
-= 3.0.4-rc.1 =
+= 3.0.4 =
 
-(2018/11/02) Updated the SucomForm::get_select() method event argument values for WPSSO v4.16.4.
-
-= 3.0.3 =
-
-(2018/10/24) Maintenance release for WPSSO Core v4.16.3.
+(2018/11/03) Updated the SucomForm::get_select() method event argument values for WPSSO v4.16.4.
 
