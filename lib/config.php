@@ -154,11 +154,11 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 			}
 
 			define( 'WPSSOPLM_FILEPATH', $plugin_filepath );						
-			define( 'WPSSOPLM_PLUGINBASE', self::$cf[ 'plugin' ]['wpssoplm'][ 'base' ] );	// wpsso-plm/wpsso-plm.php
+			define( 'WPSSOPLM_PLUGINBASE', self::$cf[ 'plugin' ][ 'wpssoplm' ][ 'base' ] );	// wpsso-plm/wpsso-plm.php
 			define( 'WPSSOPLM_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
-			define( 'WPSSOPLM_PLUGINSLUG', self::$cf[ 'plugin' ]['wpssoplm'][ 'slug' ] );	// wpsso-plm
+			define( 'WPSSOPLM_PLUGINSLUG', self::$cf[ 'plugin' ][ 'wpssoplm' ][ 'slug' ] );	// wpsso-plm
 			define( 'WPSSOPLM_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
-			define( 'WPSSOPLM_VERSION', self::$cf[ 'plugin' ]['wpssoplm'][ 'version' ] );						
+			define( 'WPSSOPLM_VERSION', self::$cf[ 'plugin' ][ 'wpssoplm' ][ 'version' ] );						
 		}
 
 		public static function require_libs( $plugin_filepath ) {

@@ -1130,7 +1130,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$options_keys['wpssoplm'] = array(
+			$options_keys[ 'wpssoplm' ] = array(
 				16 => array(
 					'plm_addr_alt_name' => 'plm_place_name_alt',
 				),
@@ -1204,7 +1204,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$options_keys['wpssoplm'] = array(
+			$options_keys[ 'wpssoplm' ] = array(
 				8 => array(
 					'plm_streetaddr'    => 'plm_place_street_address',
 					'plm_po_box_number' => 'plm_place_po_box_number',
