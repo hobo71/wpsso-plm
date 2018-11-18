@@ -537,7 +537,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'returning place id ' . $place_id . ' ' .
-						( $event_id !== false ? 'for event id ' . $event_id : '(event id is false)' ) );
+						( false !== $event_id ? 'for event id ' . $event_id : '(event id is false)' ) );
 				}
 			}
 

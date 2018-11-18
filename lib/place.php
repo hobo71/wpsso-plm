@@ -291,7 +291,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 
 				if ( isset( $md_opts[ 'plm_place_id' ] ) && is_numeric( $md_opts[ 'plm_place_id' ] ) ) {	// Allow for 0.
 
-					if ( ( $place_opts = self::get_id( $md_opts[ 'plm_place_id' ] ) ) !== false ) {
+					if ( false !== ( $place_opts = self::get_id( $md_opts[ 'plm_place_id' ] ) ) ) {
 
 						if ( $wpsso->debug->enabled ) {
 							$wpsso->debug->log( 'using place id ' . $md_opts[ 'plm_place_id' ] . ' options' );
