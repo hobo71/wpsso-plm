@@ -165,7 +165,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			$this->p->avail['p_ext']['plm'] = true;	// Signal that this extension / add-on is available.
 
 			if ( is_admin() ) {
-				$this->p->avail['admin']['post'] = true;
+				$this->p->avail['admin'][ 'post' ] = true;
 			}
 		}
 
