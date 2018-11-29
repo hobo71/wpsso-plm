@@ -174,7 +174,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 * place:telephone
 			 */
 			foreach ( WpssoPlmPlace::$place_mt as $key => $mt_name ) {
-				$mt_og[$mt_name] = isset( $place_opts[$key] ) && $place_opts[$key] !== 'none' ? $place_opts[$key] : '';
+				$mt_og[ $mt_name ] = isset( $place_opts[ $key ] ) && $place_opts[ $key ] !== 'none' ? $place_opts[ $key ] : '';
 			}
 
 			/**
