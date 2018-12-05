@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 5.0
-Stable Tag: 3.0.4
+Stable Tag: 3.0.5
 
 WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
 
@@ -94,9 +94,8 @@ WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) is an add-on for 
 
 == Screenshots ==
 
-01. WPSSO PLM settings page includes options to manage location addresses, geo location, business hours, service radius, price and currency information, restaurant menu URL, and more.
-02. WPSSO PLM tab in the Document SSO metabox provides options to manage custom location addresses, geo location, business hours, service radius, price and currency information, restaurant menu URL, and more (Pro version).
-03. WPSSO PLM meta tag example for the Schema https://schema.org/Restaurant type shown in Google's Structured Data Testing Tool (only a section of the complete Schema markup is shown).
+01. The settings page includes options to manage location addresses, geo location, business hours, service radius, price and currency information, restaurant menu URL, and more.
+02. When editing a post / page, the Schema Place tab provides options to manage custom location addresses, geo location, business hours, service radius, price and currency information, restaurant menu URL, and more (Pro version).
 
 == Changelog ==
 
@@ -116,20 +115,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.4 (2018/11/03)**
+**Version 3.0.5 (2018/12/05)**
 
 * *New Features*
 	* None.
 * *Improvements*
-	* None.
+	* Maintenance release.
 * *Bugfixes*
 	* None.
 * *Developer Notes*
-	* Updated the SucomForm::get_select() method event argument values for WPSSO v4.16.4.
+	* None.
 
 == Upgrade Notice ==
 
-= 3.0.4 =
+= 3.0.5 =
 
-(2018/11/03) Updated the SucomForm::get_select() method event argument values for WPSSO v4.16.4.
+(2018/12/05) Maintenance release.
 
