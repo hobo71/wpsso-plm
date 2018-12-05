@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(			// Plugin acronym.
-					'version'     => '3.0.4',	// Plugin version.
+					'version'     => '3.0.5',	// Plugin version.
 					'opt_version' => '23',		// Increment when changing default option values.
 					'short'       => 'WPSSO PLM',	// Short plugin name.
 					'name'        => 'WPSSO Place / Location and Local Business Meta',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.17.1',
+						'min_version' => '4.17.3',
 					),
 					'img' => array(
 						'icons' => array(
@@ -97,7 +97,6 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_place_latitude'                 => '',			// Place Latitude
 					'plm_place_longitude'                => '',			// Place Longitude
 					'plm_place_altitude'                 => '',			// Place Altitude
-					//'plm_place_google_place_id'        => '',			// Google Place ID
 					'plm_place_img_id'                   => '',			// Place Image ID
 					'plm_place_img_id_pre'               => 'wp',
 					'plm_place_img_url'                  => '',			// or Place Image URL

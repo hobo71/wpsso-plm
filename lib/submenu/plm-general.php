@@ -76,50 +76,43 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'plm-place':
 
-					$place_names_select = WpssoPlmPlace::get_names( '', false, true, false );	// $add_none is false, $add_new is true.
+					$place_names_select = WpssoPlmPlace::get_names( $schema_type = '', $add_none = false, $add_new = true, $add_custom = false );
 					$place_first_num    = SucomUtil::get_first_num( $place_names_select );
 					$place_types_select = $this->p->util->get_form_cache( 'place_types_select' );
 					$half_hours         = $this->p->util->get_form_cache( 'half_hours' );
 
-					$this->form->defaults['plm_place_id'] = $place_first_num;	// Set default value.
-
-					/*
-					$google_place_id_disabled = empty( $this->p->options['plugin_google_places'] ) ? true : false;
-					$google_place_api_msg = $google_place_id_disabled ? ' <span class="ext-req-msg">' . 
-					$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_apikeys',
-						_x( 'Google Places API must be enabled', 'option comment', 'wpsso' ) ) . '</span> ' : '';
-					*/
+					$this->form->defaults[ 'plm_place_id' ] = $place_first_num;	// Set default value.
 
 					/**
 					 * Check to make sure the selected id exists - if not, then unset and use the default.
 					 */
-					if ( isset( $this->form->options['plm_place_id'] ) ) {
+					if ( isset( $this->form->options[ 'plm_place_id' ] ) ) {
 
-						$def_id = $this->form->options['plm_place_id'];
+						$def_id = $this->form->options[ 'plm_place_id' ];
 
 						/**
 						 * Test if the default language place name is missing or blank.
 						 */
-						if ( ! isset( $this->p->options['plm_place_name_' . $def_id] ) ||
-							trim( $this->p->options['plm_place_name_' . $def_id] ) === '' ) {
+						if ( ! isset( $this->p->options[ 'plm_place_name_' . $def_id ] ) ||
+							trim( $this->p->options[ 'plm_place_name_' . $def_id ] ) === '' ) {
 
-							unset( $this->form->options['plm_place_id'] );
+							unset( $this->form->options[ 'plm_place_id' ] );
 						}
 					}
 
-					$table_rows[ 'plm_place_id'] = '' . 
+					$table_rows[ 'plm_place_id' ] = '' . 
 					$this->form->get_th_html( _x( 'Edit a Place', 'option label', 'wpsso-plm' ), '', 'plm_place_id' ) . 
 					'<td colspan="2">' . $this->form->get_select( 'plm_place_id', $place_names_select,
 						'long_name', '', true, false, true, 'on_change_unhide_rows' ) . '</td>';
 
 					foreach ( $place_names_select as $id => $name ) {
 
-						$def_schema_type = WpssoPlmConfig::$cf['form']['plm_place_opts']['plm_place_schema_type'];
+						$def_schema_type = WpssoPlmConfig::$cf[ 'form' ][ 'plm_place_opts' ][ 'plm_place_schema_type' ];
 
-						$this->form->defaults['plm_place_schema_type_' . $id ] = $def_schema_type;
-						$this->form->defaults['plm_place_country_' . $id ]     = $this->p->options['plm_def_country'];
+						$this->form->defaults[ 'plm_place_schema_type_' . $id ] = $def_schema_type;
+						$this->form->defaults[ 'plm_place_country_' . $id ]     = $this->p->options[ 'plm_def_country' ];
 
-						foreach ( $this->p->cf['form']['weekdays'] as $day => $day_label ) {
+						foreach ( $this->p->cf[ 'form' ][ 'weekdays' ] as $day => $day_label ) {
 
 							$day_opt_prefix = 'plm_place_day_' . $day;
 
@@ -210,13 +203,6 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						'<td colspan="2">' . $this->form->get_input( 'plm_place_altitude_' . $id ) . ' ' . 
 						_x( 'meters above sea level', 'option comment', 'wpsso-plm' ) . '</td>';
 
-						/*
-						$table_rows[ 'plm_place_google_place_id_' . $id ] = $tr_hide_place_html . 
-						$this->form->get_th_html( _x( 'Google Place ID', 'option label', 'wpsso-plm' ), '', 'plm_place_google_place_id' ) .  
-						'<td colspan="2">' . $this->form->get_input( 'plm_place_google_place_id_' . $id,
-							'api_key mono', '', 0, '', $google_place_id_disabled ) . $google_place_api_msg . '</td>';
-						*/
-
 						$table_rows[ 'plm_place_img_id_' . $id ] = $tr_hide_place_html . 
 						$this->form->get_th_html( _x( 'Place Image ID', 'option label', 'wpsso-plm' ), '', 'plm_place_img_id',
 							array( 'is_locale' => true ) ) .
@@ -229,7 +215,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 						$row_number = 1;
 
-						foreach ( $this->p->cf['form']['weekdays'] as $day => $day_label ) {
+						foreach ( $this->p->cf[ 'form' ][ 'weekdays' ] as $day => $day_label ) {
 
 							$day_opt_prefix   = 'plm_place_day_' . $day;
 							$day_label_transl = _x( $day_label, 'option value', 'wpsso' );
@@ -302,7 +288,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'plm-settings':
 
-					$table_rows[ 'plm_def_country'] = '' . 
+					$table_rows[ 'plm_def_country' ] = '' . 
 					$this->form->get_th_html( _x( 'Default Country', 'option label', 'wpsso-plm' ), '', 'plm_def_country' ) . 
 					'<td>' . $this->form->get_select_country( 'plm_def_country' ) . '</td>';
 
@@ -316,7 +302,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							'</p>';
 					}
 
-					$table_rows[ 'plm_add_to'] = '' . 
+					$table_rows[ 'plm_add_to' ] = '' . 
 					$this->form->get_th_html( _x( 'Show Tab on Post Types', 'option label', 'wpsso-plm' ), '', 'plm_add_to' ) . 
 					'<td>' . $add_to_checkboxes . '</td>';
 
