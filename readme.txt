@@ -31,7 +31,7 @@ Include Pinterest Rich Pin *Place*, Facebook / Open Graph *Location*, and Google
 
 The Free version of WPSSO PLM can provide location information for the [WPSSO Organization Markup](https://wordpress.org/plugins/wpsso-organization/) (aka WPSSO ORG) add-on. The WPSSO ORG add-on is required to select a place / location for an organization / local business.
 
-<h3>WPSSO PLM Free / Standard Features</h3>
+<h3>WPSSO PLM Standard Features</h3>
 
 * Extends the features of the WPSSO Core Free or Pro plugin.
 
@@ -69,7 +69,7 @@ The Free version of WPSSO PLM can provide location information for the [WPSSO Or
 
 * Download the Free version from [GitHub](https://surniaulula.github.io/wpsso-plm/) or [WordPress.org](https://wordpress.org/plugins/wpsso-plm/).
 
-<h3>WPSSO PLM Pro / Additional Features</h3>
+<h3>WPSSO PLM Additional Features (Pro version)</h3>
 
 * Extends the features of WPSSO Core Pro (requires an active and licensed <a href="https://wpsso.com/">WPSSO Core Pro plugin</a>).
 
