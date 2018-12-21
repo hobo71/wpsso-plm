@@ -251,8 +251,8 @@ msgstr ""
 #: lib/gettext-config.php:7
 msgctxt "plugin description"
 msgid ""
-"WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph "
-"Location, Schema Local Business, and Local SEO meta tags."
+"WPSSO Core add-on provides Pinterest Place, Facebook / Open Graph Location, "
+"Schema Local Business and Local SEO meta tags."
 msgstr ""
 
 #: lib/gettext-config.php:8
@@ -584,8 +584,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"WPSSO Core add-on to provide Pinterest Place, Facebook / Open Graph "
-"Location, Schema Local Business, and Local SEO meta tags."
+"WPSSO Core add-on provides Pinterest Place, Facebook / Open Graph Location, "
+"Schema Local Business and Local SEO meta tags."
 msgstr ""
 
 #. Author of the plugin/theme
