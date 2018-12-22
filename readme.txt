@@ -1,4 +1,4 @@
-=== WPSSO Place / Location and Local Business Meta - Local SEO for Facebook, Google Rich Cards, and Pinterest ===
+=== WPSSO Place / Location and Local Business Meta for Facebook, Google Rich Cards, and Pinterest ===
 Plugin Name: WPSSO Place / Location and Local Business Meta
 Plugin Slug: wpsso-plm
 Text Domain: wpsso-plm
@@ -13,7 +13,7 @@ Requires At Least: 3.8
 Tested Up To: 5.0
 Stable Tag: 3.0.5
 
-WPSSO Core add-on provides Pinterest Place, Facebook / Open Graph Location, Schema Local Business and Local SEO meta tags.
+WPSSO Core add-on provides Facebook / Open Graph Location, Pinterest Place, Schema Local Business and Local SEO meta tags.
 
 == Description ==
 
