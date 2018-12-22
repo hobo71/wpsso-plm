@@ -1,4 +1,4 @@
-=== WPSSO Place / Location and Local Business Meta - aka Local SEO for Facebook, Google, and Pinterest ===
+=== WPSSO Place / Location and Local Business Meta - Local SEO for Facebook, Google Rich Cards, and Pinterest ===
 Plugin Name: WPSSO Place / Location and Local Business Meta
 Plugin Slug: wpsso-plm
 Text Domain: wpsso-plm
@@ -27,9 +27,11 @@ Include Pinterest Rich Pin *Place*, Facebook / Open Graph *Location*, and Google
 
 * To provide location information for the webpage content (ie. the content subject is about a specific physical place / location).
 
-* To provide location information for an Organization, which in turn may be related to the content (ie. the content Publisher, event Organizer, etc.).
+* To provide location information for an Organization, which in turn may be related to the content (ie. the content publisher, event organizer, etc.).
 
-The Free version of WPSSO PLM can provide location information for the [WPSSO Organization Markup](https://wordpress.org/plugins/wpsso-organization/) (aka WPSSO ORG) add-on. The WPSSO ORG add-on is required to select a place / location for an organization / local business.
+The Free version of WPSSO PLM can provide location information for the [WPSSO Organization Markup](https://wordpress.org/plugins/wpsso-organization/) (aka WPSSO ORG) add-on.
+
+The WPSSO Organization Markup (aka WPSSO ORG) add-on is required to select a place / location for an organization / local business.
 
 <h3>WPSSO PLM Standard Features</h3>
 
@@ -66,8 +68,6 @@ The Free version of WPSSO PLM can provide location information for the [WPSSO Or
 		* Serves Cuisine
 		* Food Menu URL
 		* Order Action URL(s)
-
-* Download the Free version from [GitHub](https://surniaulula.github.io/wpsso-plm/) or [WordPress.org](https://wordpress.org/plugins/wpsso-plm/).
 
 <h3>WPSSO PLM Additional Features (Pro version)</h3>
 

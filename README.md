@@ -1,4 +1,4 @@
-<h1>WPSSO Place / Location and Local Business Meta</h1><h3>aka Local SEO for Facebook, Google, and Pinterest</h3>
+<h1>WPSSO Place / Location and Local Business Meta</h1><h3>Local SEO for Facebook, Google Rich Cards, and Pinterest</h3>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place / Location and Local Business Meta</td></tr>
@@ -23,10 +23,12 @@
 
 <ul>
 <li><p>To provide location information for the webpage content (ie. the content subject is about a specific physical place / location).</p></li>
-<li><p>To provide location information for an Organization, which in turn may be related to the content (ie. the content Publisher, event Organizer, etc.).</p></li>
+<li><p>To provide location information for an Organization, which in turn may be related to the content (ie. the content publisher, event organizer, etc.).</p></li>
 </ul>
 
-<p>The Free version of WPSSO PLM can provide location information for the <a href="https://wordpress.org/plugins/wpsso-organization/">WPSSO Organization Markup</a> (aka WPSSO ORG) add-on. The WPSSO ORG add-on is required to select a place / location for an organization / local business.</p>
+<p>The Free version of WPSSO PLM can provide location information for the <a href="https://wordpress.org/plugins/wpsso-organization/">WPSSO Organization Markup</a> (aka WPSSO ORG) add-on.</p>
+
+<p>The WPSSO Organization Markup (aka WPSSO ORG) add-on is required to select a place / location for an organization / local business.</p>
 
 <h3>WPSSO PLM Standard Features</h3>
 
@@ -71,7 +73,6 @@
 <li>Order Action URL(s)</li>
 </ul></li>
 </ul></li>
-<li><p>Download the Free version from <a href="https://surniaulula.github.io/wpsso-plm/">GitHub</a> or <a href="https://wordpress.org/plugins/wpsso-plm/">WordPress.org</a>.</p></li>
 </ul>
 
 <h3>WPSSO PLM Additional Features (Pro version)</h3>
