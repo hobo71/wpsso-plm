@@ -24,7 +24,7 @@ Include Pinterest Rich Pin *Place*, Facebook / Open Graph *Location*, and Google
 
 **The WPSSO Place / Location and Local Business Meta (aka WPSSO PLM) add-on can be used in two different ways:**
 
-* To provide location information for the webpage content (ie. the content subject is about a specific physical place / location).
+* To provide location information for the webpage content (ie. the post/page content is about a specific physical place / location).
 
 * To provide location information for an Organization, which in turn may be related to the content (ie. the content publisher, event organizer, etc.).
 
