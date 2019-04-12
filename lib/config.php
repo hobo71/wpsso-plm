@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 								'post' => 'Extend Post Settings',
 							),
 						),
-						'submenu' => array(	// Note that submenu elements must have unique keys.
+						'submenu' => array(
 							'plm-general' => 'Place / Location',
 						),
 					),
