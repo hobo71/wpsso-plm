@@ -38,9 +38,6 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						),
 					),
 					'lib' => array(
-						'submenu' => array(	// Note that submenu elements must have unique keys.
-							'plm-general' => 'Place / Location',
-						),
 						'gpl' => array(
 							'admin' => array(
 								'post' => 'Extend Post Settings',
@@ -50,11 +47,9 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 							'admin' => array(
 								'post' => 'Extend Post Settings',
 							),
-							/*
-							'places' => array(
-								'google_places' => '(api) Google Places API',
-							),
-							*/
+						),
+						'submenu' => array(	// Note that submenu elements must have unique keys.
+							'plm-general' => 'Place / Location',
 						),
 					),
 				),
