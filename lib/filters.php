@@ -76,9 +76,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$md_defs = array_merge( $md_defs, WpssoPlmConfig::$cf['form']['plm_place_opts'], array(
+			$md_defs = array_merge( $md_defs, WpssoPlmConfig::$cf[ 'form' ][ 'plm_place_opts' ], array(
 				'plm_place_id'      => 'none',
-				'plm_place_country' => $this->p->options['plm_def_country'],
+				'plm_place_country' => $this->p->options[ 'plm_def_country' ],
 			) );
 
 			return $md_defs;
@@ -161,7 +161,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			/**
 			 * og:type
 			 */
-			$og['og:type'] = 'place';	// Pre-define to optimize.
+			$og[ 'og:type' ] = 'place';	// Pre-define to optimize.
 
 			/**
 			 * place:name
@@ -185,16 +185,16 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 * place:location:longitude
 			 * place:location:altitude
 			 */
-			if ( isset( $place_opts['plm_place_latitude'] ) && $place_opts['plm_place_latitude'] !== '' && 
-				isset( $place_opts['plm_place_longitude'] ) && $place_opts['plm_place_longitude'] !== '' ) {
+			if ( isset( $place_opts[ 'plm_place_latitude' ] ) && $place_opts[ 'plm_place_latitude' ] !== '' && 
+				isset( $place_opts[ 'plm_place_longitude' ] ) && $place_opts[ 'plm_place_longitude' ] !== '' ) {
 
 				foreach( array( 'place:location', 'og' ) as $mt_prefix ) {
 
-					$mt_og[$mt_prefix . ':latitude']  = $place_opts['plm_place_latitude'];
-					$mt_og[$mt_prefix . ':longitude'] = $place_opts['plm_place_longitude'];
+					$mt_og[$mt_prefix . ':latitude' ]  = $place_opts[ 'plm_place_latitude' ];
+					$mt_og[$mt_prefix . ':longitude' ] = $place_opts[ 'plm_place_longitude' ];
 
-					if ( ! empty( $place_opts['plm_altitude'] ) ) {
-						$mt_og[$mt_prefix . ':altitude'] = $place_opts['plm_place_altitude'];
+					if ( ! empty( $place_opts[ 'plm_altitude' ] ) ) {
+						$mt_og[$mt_prefix . ':altitude' ] = $place_opts[ 'plm_place_altitude' ];
 					}
 				}
 			}
@@ -202,11 +202,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			/**
 			 * Non-standard meta tags for internal use.
 			 */
-			$place_defs = WpssoPlmConfig::$cf['form']['plm_place_opts'];
+			$place_defs = WpssoPlmConfig::$cf[ 'form' ][ 'plm_place_opts' ];
 
-			foreach ( $this->p->cf['form']['weekdays'] as $weekday => $label ) {
+			foreach ( $this->p->cf[ 'form' ][ 'weekdays' ] as $weekday => $label ) {
 
-				if ( ! empty( $place_opts['plm_place_day_' . $weekday] ) ) {
+				if ( ! empty( $place_opts[ 'plm_place_day_' . $weekday] ) ) {
 
 					foreach ( array( 'open', 'close' ) as $hour ) {
 
@@ -278,9 +278,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				return $type_id;
 			}
 
-			$def_schema_type = WpssoPlmConfig::$cf['form']['plm_place_opts']['plm_place_schema_type'];
+			$def_schema_type = WpssoPlmConfig::$cf[ 'form' ][ 'plm_place_opts' ][ 'plm_place_schema_type' ];
 
-			$type_id = empty( $place_opts['plm_place_schema_type'] ) ? $def_schema_type : $place_opts['plm_place_schema_type'];
+			$type_id = empty( $place_opts[ 'plm_place_schema_type' ] ) ? $def_schema_type : $place_opts[ 'plm_place_schema_type' ];
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->log( 'returning schema type id "' . $type_id . '"' );
@@ -309,7 +309,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			/**
 			 * Place properties.
 			 */
-			$mt_schema['address'] = WpssoPlmPlace::get_address( $place_opts );
+			$mt_schema[ 'address' ] = WpssoPlmPlace::get_address( $place_opts );
 
 			foreach ( array(
 				'plm_place_phone' => 'telephone',	// Place phone number.
@@ -388,12 +388,12 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				if ( ! empty( $mt_opening_hours ) ) {
 
-					foreach ( $this->p->cf['form']['weekdays'] as $weekday => $label ) {
+					foreach ( $this->p->cf[ 'form' ][ 'weekdays' ] as $weekday => $label ) {
 
 						$mt_weekday = array();
 
-						if ( ! empty( $mt_opening_hours['place:opening_hours:day:' . $weekday . ':open'] ) &&
-							! empty( $mt_opening_hours['place:opening_hours:day:' . $weekday . ':close'] ) ) {
+						if ( ! empty( $mt_opening_hours[ 'place:opening_hours:day:' . $weekday . ':open' ] ) &&
+							! empty( $mt_opening_hours[ 'place:opening_hours:day:' . $weekday . ':close' ] ) ) {
 	
 							$mt_weekday[] = array( array( '<noscript itemprop="openingHoursSpecification" ' . 
 								'itemscope itemtype="https://schema.org/OpeningHoursSpecification">' . "\n" ) );
@@ -457,9 +457,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 *	[local.business] => 1
 			 * )
 			 */
-			$def_schema_type = WpssoPlmConfig::$cf['form']['plm_place_opts']['plm_place_schema_type'];
+			$def_schema_type = WpssoPlmConfig::$cf[ 'form' ][ 'plm_place_opts' ][ 'plm_place_schema_type' ];
 
-			$type_id = empty( $place_opts['plm_place_schema_type'] ) ? $def_schema_type : $place_opts['plm_place_schema_type'];
+			$type_id = empty( $place_opts[ 'plm_place_schema_type' ] ) ? $def_schema_type : $place_opts[ 'plm_place_schema_type' ];
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->log( 'adding schema type id "' . $type_id . '"' );
@@ -480,14 +480,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				return $action_data;
 			}
 
-			if ( empty( $mt_og['place:business:order_url'] ) ) {
+			if ( empty( $mt_og[ 'place:business:order_url' ] ) ) {
 				return $action_data;
 			}
 
 			$action_data[] = array(
 				'@context' => 'https://schema.org',
 				'@type'    => 'OrderAction',
-				'target'   => $mt_og['place:business:order_url'],
+				'target'   => $mt_og[ 'place:business:order_url' ],
 			);
 
 			return $action_data;
@@ -531,9 +531,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				return $place_id;	// Stop here.
 			}
 
-			if ( isset( $place_opts['plm_place_id'] ) && $place_opts['plm_place_id'] !== 'none' ) {	// Allow for place ID 0.
+			if ( isset( $place_opts[ 'plm_place_id' ] ) && $place_opts[ 'plm_place_id' ] !== 'none' ) {	// Allow for place ID 0.
 
-				$place_id = $place_opts['plm_place_id'];
+				$place_id = $place_opts[ 'plm_place_id' ];
 
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'returning place id ' . $place_id . ' ' .
@@ -566,7 +566,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			$is_admin   = is_admin();
-			$place_id   = isset( $md_opts['plm_place_id'] ) ? $md_opts['plm_place_id'] : 'none';
+			$place_id   = isset( $md_opts[ 'plm_place_id' ] ) ? $md_opts[ 'plm_place_id' ] : 'none';
 			$place_type = false;
 
 			if ( $place_id === '' || $place_id === 'none' ) {	// Nothing to do.
@@ -577,34 +577,34 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			} elseif ( $place_id === 'custom' ) {	// Value is "custom".
 
-				$place_type = empty( $md_opts['plm_place_schema_type'] ) ?
-					$def_schema_type : $md_opts['plm_place_schema_type'];
+				$place_type = empty( $md_opts[ 'plm_place_schema_type' ] ) ?
+					$def_schema_type : $md_opts[ 'plm_place_schema_type' ];
 
 			} elseif ( is_numeric( $place_id ) ) {	// Value is "0" or more.
 
 				$place_opts = WpssoPlmPlace::get_id( $place_id, $mod );
 
-				$place_type = empty( $place_opts['plm_place_schema_type'] ) ?
-					$def_schema_type : $place_opts['plm_place_schema_type'];
+				$place_type = empty( $place_opts[ 'plm_place_schema_type' ] ) ?
+					$def_schema_type : $place_opts[ 'plm_place_schema_type' ];
 			}
 
-			$md_opts['og_type'] = 'place';	// Overwrite the WPSSO option value.
+			$md_opts[ 'og_type' ] = 'place';	// Overwrite the WPSSO option value.
 
 			if ( $is_admin ) {
-				$md_opts['og_type:is'] = 'disabled';
+				$md_opts[ 'og_type:is' ] = 'disabled';
 			}
 
 			if ( $place_type ) {
 
-				$md_opts['schema_type'] = $place_type;
+				$md_opts[ 'schema_type' ] = $place_type;
 
-				$md_opts['schema_organization_org_id'] = 'none';
+				$md_opts[ 'schema_organization_org_id' ] = 'none';
 
 				if ( $is_admin ) {
 
-					$md_opts['schema_type:is'] = 'disabled';
+					$md_opts[ 'schema_type:is' ] = 'disabled';
 
-					$md_opts['schema_organization_org_id:is'] = 'disabled';
+					$md_opts[ 'schema_organization_org_id:is' ] = 'disabled';
 				}
 			}
 
@@ -634,13 +634,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				/**
 				 * Remove empty "New Place".
 				 */
-				if ( ! empty( $opts['plm_place_delete_' . $place_id] ) || ( $name === '' && $place_id === $plm_last_num ) ) {
+				if ( ! empty( $opts[ 'plm_place_delete_' . $place_id] ) || ( $name === '' && $place_id === $plm_last_num ) ) {
 
 					/**
 					 * Maybe reset the currently selected place ID.
 					 */
-					if ( isset( $opts['plm_place_id'] ) && $opts['plm_place_id'] === $place_id ) {
-						unset( $opts['plm_place_id'] );
+					if ( isset( $opts[ 'plm_place_id' ] ) && $opts[ 'plm_place_id' ] === $place_id ) {
+						unset( $opts[ 'plm_place_id' ] );
 					}
 
 					/**
@@ -658,17 +658,17 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$name = sprintf( _x( 'Place #%d', 'option value', 'wpsso-plm' ), $place_id );
 				}
 
-				$opts['plm_place_name_' . $place_id] = $name;
+				$opts[ 'plm_place_name_' . $place_id] = $name;
 
-				if ( ! empty( $opts['plm_place_img_id_' . $place_id] ) ) {	// Image id 0 is not valid.
+				if ( ! empty( $opts[ 'plm_place_img_id_' . $place_id] ) ) {	// Image id 0 is not valid.
 
 					/**
 					 * Remove the image url options if we have an image id.
 					 */
 					unset(
-						$opts['plm_place_img_url_' . $place_id],
-						$opts['plm_place_img_url:width_' . $place_id],
-						$opts['plm_place_img_url:height_' . $place_id]
+						$opts[ 'plm_place_img_url_' . $place_id],
+						$opts[ 'plm_place_img_url:width_' . $place_id],
+						$opts[ 'plm_place_img_url:height_' . $place_id]
 					);
 
 					/**
@@ -802,8 +802,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( $metabox_id === $this->p->cf['meta'][ 'id' ] ) {
-				if ( ! empty( $this->p->options['plm_add_to_' . $mod[ 'post_type' ]] ) ) {
+			if ( $metabox_id === $this->p->cf[ 'meta' ][ 'id' ] ) {
+				if ( ! empty( $this->p->options[ 'plm_add_to_' . $mod[ 'post_type' ]] ) ) {
 					SucomUtil::add_after_key( $tabs, 'media', 'place', _x( 'Schema Place', 'metabox tab', 'wpsso-plm' ) );
 				}
 			}
@@ -1047,7 +1047,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				case 'tooltip-plm_add_to':
 
-					$metabox_title = _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' );	// Use wpsso's text domain.
+					$metabox_title = _x( $this->p->cf[ 'meta' ][ 'title' ], 'metabox title', 'wpsso' );	// Use wpsso's text domain.
 					$metabox_tab   = _x( 'Schema Place', 'metabox tab', 'wpsso-plm' );
 
 					$text = sprintf( __( 'A "%1$s" tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to select or enter place information for the webpage content (ie. street address, GPS coordinates, opening hours, etc.).', 'wpsso-plm' ), $metabox_tab, $metabox_title );
@@ -1105,9 +1105,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$features['(feature) Custom Schema Place Meta'] = array( 
+			$features[ '(feature) Custom Schema Place Meta' ] = array( 
 				'td_class' => $pkg[ 'pp' ] ? '' : 'blank',
-				'purchase' => $pkg['purchase'],
+				'purchase' => $pkg[ 'purchase' ],
 				'status'   => $pkg[ 'pp' ] ? 'on' : 'off',
 			);
 
